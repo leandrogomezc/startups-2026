@@ -1,5 +1,7 @@
+import { setRequestLocale } from "next-intl/server";
 import { About } from "@/components/landing/About";
 import { Challenge } from "@/components/landing/Challenge";
+import { Classes } from "@/components/landing/Classes";
 import { FinalCta } from "@/components/landing/FinalCta";
 import { Footer } from "@/components/landing/Footer";
 import { Header } from "@/components/landing/Header";
@@ -8,7 +10,14 @@ import { Learnings } from "@/components/landing/Learnings";
 import { Roadmap } from "@/components/landing/Roadmap";
 import { Thesis } from "@/components/landing/Thesis";
 
-export default function Home() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function HomePage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <Header />
@@ -16,6 +25,7 @@ export default function Home() {
         <Hero />
         <About />
         <Challenge />
+        <Classes />
         <Roadmap />
         <Learnings />
         <Thesis />

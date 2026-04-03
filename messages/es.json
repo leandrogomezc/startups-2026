@@ -1,0 +1,236 @@
+{
+  "Meta": {
+    "title": "Leandro Gómez Cano — 12 productos en 12 meses",
+    "description": "Director Regional de Operaciones en tizo. Lanzo una idea de producto por mes hasta fin de año y documento el proceso en público: startups, operaciones, growth, IA y ejecución.",
+    "ogDescription": "Un producto nuevo cada mes hasta diciembre. Documentación pública del proceso, decisiones y métricas. Operaciones, growth e IA aplicada.",
+    "twitterDescription": "Build in public: lanzamientos mensuales, aprendizajes y resultados. Operador de startups y producto."
+  },
+  "Common": {
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "navLabel": "Principal",
+    "themeLight": "Modo claro",
+    "themeDark": "Modo oscuro",
+    "languageEs": "Español",
+    "languageEn": "English",
+    "languageSwitch": "Idioma"
+  },
+  "Nav": {
+    "brandSubtitle": "— ops & product",
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "challenge": "Reto",
+    "roadmap": "Roadmap",
+    "learnings": "Aprendizajes",
+    "thesis": "Tesis",
+    "classes": "Clases",
+    "follow": "Seguir"
+  },
+  "Hero": {
+    "badge": "Build in public · 2026",
+    "footnote": "Documento vivo · decisiones y métricas cuando aporten contexto",
+    "ctaPrimary": "Ver proyectos",
+    "ctaSecondary": "Seguir el reto"
+  },
+  "About": {
+    "eyebrow": "Sobre mí",
+    "title": "Operación y producto, en el mismo plano",
+    "lead": "Conecto estrategia con ejecución: diseño sistemas que convierten prioridades en entregas medibles.",
+    "body": "Soy Leandro Gómez Cano, Director Regional de Operaciones en tizo. Trabajo con startups y equipos de alto ritmo en operaciones, growth, inteligencia artificial y construcción de productos. Mi foco no es el discurso: es el sistema que sostiene el crecimiento."
+  },
+  "Challenge": {
+    "eyebrow": "El reto",
+    "title": "Construir en público, con cadencia mensual",
+    "blocks": [
+      {
+        "label": "Qué es",
+        "text": "Un compromiso hasta diciembre: cada mes una nueva idea de producto, desde la definición del problema hasta el lanzamiento y la iteración mínima viable."
+      },
+      {
+        "label": "Por qué",
+        "text": "La velocidad obliga a decidir. Documentar en abierto fuerza claridad, reduce autoengaño y acelera el aprendizaje frente a mercados reales."
+      },
+      {
+        "label": "Qué voy a construir",
+        "text": "Prototipos y MVPs accionables: herramientas, flujos y experimentos que puedan validarse con usuarios sin depender de narrativa vacía."
+      },
+      {
+        "label": "Qué comparto",
+        "text": "Decisiones de alcance, trade-offs, métricas que importan, errores y ajustes. Sin glamour: criterio y números cuando aplique."
+      },
+      {
+        "label": "Qué quiero aprender",
+        "text": "Cómo comprimir tiempo de validación, qué repetir en operación y cómo integrar IA en el ciclo de producto sin perder foco en el negocio."
+      }
+    ]
+  },
+  "Classes": {
+    "eyebrow": "Clases",
+    "title": "Formación práctica, aparte del reto mensual",
+    "subtitle": "Sesiones enfocadas en herramientas y criterio operativo. Complementan el build in public sin reemplazarlo.",
+    "items": [
+      {
+        "title": "Chatbot con IA para Emprendedores",
+        "description": "Cómo diseñar y desplegar un chatbot con IA alineado a tu oferta, tus datos y tu operación: no un demo genérico. Pensado para founders y equipos que necesitan conversión y claridad, no solo tecnología.",
+        "statusMicrocopy": "Calendario por confirmar",
+        "footnote": "Detalles e inscripción: próximamente."
+      }
+    ]
+  },
+  "Roadmap": {
+    "eyebrow": "Roadmap de productos",
+    "title": "Un lanzamiento por mes · 2026",
+    "subtitle": "Meses restantes del año en curso. Estados y aprendizajes se actualizan con cada ciclo.",
+    "keyLearningLabel": "Aprendizaje clave",
+    "detailCta": "Ver detalle",
+    "statusLabels": {
+      "Idea": "Idea",
+      "Validando": "Validando",
+      "Construyendo": "Construyendo",
+      "Lanzado": "Lanzado",
+      "Iterando": "Iterando"
+    },
+    "items": [
+      {
+        "month": "Abril 2026",
+        "productName": "Peluditos",
+        "status": "Construyendo",
+        "statusMicrocopy": "En progreso",
+        "description": "Producto para adopción de mascotas: conectar refugios y adoptantes con criterio claro, filtros útiles y proceso de solicitud sin fricción innecesaria.",
+        "keyLearning": "Primer ciclo en curso: validar oferta de mascotas y criterios de adopción antes de escalar funcionalidades."
+      },
+      {
+        "month": "Mayo 2026",
+        "productName": "TBD",
+        "status": "Idea",
+        "statusMicrocopy": "Calendario abierto",
+        "description": "Mes reservado para el siguiente lanzamiento; el alcance se define al cerrar el ciclo anterior.",
+        "keyLearning": "Pendiente de definición."
+      },
+      {
+        "month": "Junio 2026",
+        "productName": "TBD",
+        "status": "Idea",
+        "statusMicrocopy": "Calendario abierto",
+        "description": "Mes reservado para el siguiente lanzamiento; el alcance se define al cerrar el ciclo anterior.",
+        "keyLearning": "Pendiente de definición."
+      },
+      {
+        "month": "Julio 2026",
+        "productName": "TBD",
+        "status": "Idea",
+        "statusMicrocopy": "Calendario abierto",
+        "description": "Mes reservado para el siguiente lanzamiento; el alcance se define al cerrar el ciclo anterior.",
+        "keyLearning": "Pendiente de definición."
+      },
+      {
+        "month": "Agosto 2026",
+        "productName": "TBD",
+        "status": "Idea",
+        "statusMicrocopy": "Calendario abierto",
+        "description": "Mes reservado para el siguiente lanzamiento; el alcance se define al cerrar el ciclo anterior.",
+        "keyLearning": "Pendiente de definición."
+      },
+      {
+        "month": "Septiembre 2026",
+        "productName": "TBD",
+        "status": "Idea",
+        "statusMicrocopy": "Calendario abierto",
+        "description": "Mes reservado para el siguiente lanzamiento; el alcance se define al cerrar el ciclo anterior.",
+        "keyLearning": "Pendiente de definición."
+      },
+      {
+        "month": "Octubre 2026",
+        "productName": "TBD",
+        "status": "Idea",
+        "statusMicrocopy": "Calendario abierto",
+        "description": "Mes reservado para el siguiente lanzamiento; el alcance se define al cerrar el ciclo anterior.",
+        "keyLearning": "Pendiente de definición."
+      },
+      {
+        "month": "Noviembre 2026",
+        "productName": "TBD",
+        "status": "Idea",
+        "statusMicrocopy": "Calendario abierto",
+        "description": "Mes reservado para el siguiente lanzamiento; el alcance se define al cerrar el ciclo anterior.",
+        "keyLearning": "Pendiente de definición."
+      },
+      {
+        "month": "Diciembre 2026",
+        "productName": "TBD",
+        "status": "Idea",
+        "statusMicrocopy": "Calendario abierto · cierre de año",
+        "description": "Cierre de ciclo anual; el entregable se define según aprendizajes de los meses previos.",
+        "keyLearning": "Pendiente de definición."
+      }
+    ]
+  },
+  "Learnings": {
+    "eyebrow": "Aprendizajes",
+    "title": "Bitácora del proceso",
+    "subtitle": "Notas breves, sin postureo. Lo que importa es qué cambió el criterio.",
+    "notes": [
+      {
+        "tag": "Lo que funcionó",
+        "tagMicrocopy": "Bitácora abierta",
+        "title": "Publicar el criterio, no solo el resultado",
+        "body": "Cuando documenté por qué maté un feature, aparecieron conversaciones con más señal que cuando solo mostré el demo."
+      },
+      {
+        "tag": "Lo que falló",
+        "tagMicrocopy": "Sin anestesia",
+        "title": "Demasiado alcance en el segundo sprint",
+        "body": "Intenté cubrir dos segmentos a la vez. El aprendizaje se diluyó. Volví a un segmento y un job-to-be-done."
+      },
+      {
+        "tag": "Lo que cambiaría",
+        "tagMicrocopy": "Próxima iteración",
+        "title": "Medir antes de embellecer",
+        "body": "Reservaría un bloque fijo para definición de métricas el mismo día del kickoff, antes del diseño de UI."
+      },
+      {
+        "tag": "Velocidad",
+        "tagMicrocopy": "Ver lo aprendido",
+        "title": "Lanzar más rápido expone el cuello de botella real",
+        "body": "La fricción no estaba en el código: estaba en la oferta y en el canal. El lanzamiento temprano lo dejó en evidencia."
+      },
+      {
+        "tag": "Operación",
+        "tagMicrocopy": "En progreso",
+        "title": "Playbooks improvisados no escalan",
+        "body": "Pasé de notas sueltas a checklist repetible para onboarding de usuarios piloto. Menos caos, más señal."
+      }
+    ]
+  },
+  "Thesis": {
+    "eyebrow": "Mi tesis",
+    "title": "Ideas en las que apuesto",
+    "lines": [
+      "La ejecución vence a la teoría.",
+      "Construir en público acelera el aprendizaje.",
+      "La IA cambia cómo se diseñan y lanzan productos.",
+      "Latam necesita más operadores que conviertan ideas en sistemas.",
+      "Lo que no se mide se confunde con progreso.",
+      "La claridad es un activo competitivo: se entrena con decisiones explícitas."
+    ]
+  },
+  "FinalCta": {
+    "eyebrow": "Seguir el recorrido",
+    "title": "Si te interesa cómo se decide bajo presión, este es el lugar.",
+    "body": "Voy a publicar lanzamientos, métricas cuando aporten contexto y lecciones sin filtro ejecutivo. Elegí dónde seguir el reto.",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "newsletterLabel": "Newsletter",
+    "newsletterMicrocopy": "Lista en preparación",
+    "newsletterPlaceholder": "tu@email.com",
+    "newsletterHint": "Dejá tu mail cuando active el envío; por ahora es solo registro visual."
+  },
+  "Footer": {
+    "rights": "Todos los derechos reservados."
+  },
+  "Site": {
+    "headline": "12 meses. 12 productos.",
+    "heroSub": "Hasta fin de año lanzo una nueva idea de producto cada mes y documento en público el proceso: decisiones, aprendizajes, métricas y resultados.",
+    "role": "Director Regional de Operaciones"
+  }
+}

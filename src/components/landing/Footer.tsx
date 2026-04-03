@@ -1,18 +1,22 @@
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 import { InstagramGlyph, LinkedInGlyph } from "@/components/icons/SocialIcons";
 import { Container } from "@/components/ui/Container";
 import { site } from "@/lib/site";
 
-export function Footer() {
+export async function Footer() {
   const year = new Date().getFullYear();
+  const tf = await getTranslations("Footer");
+  const ts = await getTranslations("Site");
+
   return (
-    <footer className="border-t border-neutral-200 py-12">
+    <footer className="border-t border-border py-12">
       <Container>
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <p className="font-display text-lg text-foreground">{site.name}</p>
-            <p className="mt-1 text-sm text-muted">
-              {site.role} · {site.company}
+            <p className="text-muted-foreground mt-1 text-sm">
+              {ts("role")} · {site.company}
             </p>
           </div>
           <div className="flex gap-4">
@@ -20,7 +24,7 @@ export function Footer() {
               href={site.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg p-2 text-muted transition-colors hover:bg-neutral-100 hover:text-foreground"
+              className="text-muted-foreground hover:bg-muted hover:text-foreground rounded-lg p-2 transition-colors"
               aria-label="LinkedIn"
             >
               <LinkedInGlyph className="h-5 w-5" />
@@ -29,15 +33,15 @@ export function Footer() {
               href={site.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg p-2 text-muted transition-colors hover:bg-neutral-100 hover:text-foreground"
+              className="text-muted-foreground hover:bg-muted hover:text-foreground rounded-lg p-2 transition-colors"
               aria-label="Instagram"
             >
               <InstagramGlyph className="h-5 w-5" />
             </Link>
           </div>
         </div>
-        <p className="mt-10 text-xs text-neutral-500">
-          © {year} {site.name}. Todos los derechos reservados.
+        <p className="mt-10 text-xs text-muted-foreground">
+          © {year} {site.name}. {tf("rights")}
         </p>
       </Container>
     </footer>

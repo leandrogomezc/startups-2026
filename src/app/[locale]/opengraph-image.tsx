@@ -1,7 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt =
-  "Leandro Gómez Cano — 12 meses, 12 productos. Build in public.";
+export const alt = "Leandro Gómez Cano — build in public";
 
 export const size = {
   width: 1200,
@@ -10,7 +9,23 @@ export const size = {
 
 export const contentType = "image/png";
 
-export default function Image() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function Image({ params }: Props) {
+  const { locale } = await params;
+  const isEn = locale === "en";
+
+  const headline = isEn ? "12 months. 12 products." : "12 meses. 12 productos.";
+  const sub = isEn
+    ? "Operations, product & AI — documented month by month."
+    : "Operación, producto e IA — documentado mes a mes.";
+  const badge = "Build in public · 2026";
+  const role = isEn
+    ? "Regional Director of Operations · tizo"
+    : "Director Regional de Operaciones · tizo";
+
   return new ImageResponse(
     (
       <div
@@ -44,7 +59,7 @@ export default function Image() {
               background: "#4f46e5",
             }}
           />
-          Build in public · 2026
+          {badge}
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           <div
@@ -56,7 +71,7 @@ export default function Image() {
               letterSpacing: "-0.03em",
             }}
           >
-            12 meses. 12 productos.
+            {headline}
           </div>
           <div
             style={{
@@ -66,7 +81,7 @@ export default function Image() {
               color: "#525252",
             }}
           >
-            Operación, producto e IA — documentado mes a mes.
+            {sub}
           </div>
         </div>
         <div
@@ -79,12 +94,12 @@ export default function Image() {
           }}
         >
           <span style={{ fontWeight: 600 }}>Leandro Gómez Cano</span>
-          <span style={{ fontSize: 18, color: "#737373" }}>Director Regional de Operaciones · tizo</span>
+          <span style={{ fontSize: 18, color: "#737373" }}>{role}</span>
         </div>
       </div>
     ),
     {
       ...size,
-    },
+    }
   );
 }

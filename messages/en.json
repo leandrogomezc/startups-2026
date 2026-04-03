@@ -1,0 +1,236 @@
+{
+  "Meta": {
+    "title": "Leandro Gómez Cano — 12 products in 12 months",
+    "description": "Regional Director of Operations at tizo. I ship one product idea per month until year-end and document the process in public: startups, operations, growth, AI, and execution.",
+    "ogDescription": "One new product each month until December. Public documentation of process, decisions, and metrics. Operations, growth, and applied AI.",
+    "twitterDescription": "Build in public: monthly launches, learnings, and outcomes. Startup operator and product builder."
+  },
+  "Common": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "navLabel": "Main",
+    "themeLight": "Light mode",
+    "themeDark": "Dark mode",
+    "languageEs": "Español",
+    "languageEn": "English",
+    "languageSwitch": "Language"
+  },
+  "Nav": {
+    "brandSubtitle": "— ops & product",
+    "home": "Home",
+    "about": "About",
+    "challenge": "Challenge",
+    "roadmap": "Roadmap",
+    "learnings": "Learnings",
+    "thesis": "Thesis",
+    "classes": "Classes",
+    "follow": "Follow"
+  },
+  "Hero": {
+    "badge": "Build in public · 2026",
+    "footnote": "Living doc · decisions and metrics when they add context",
+    "ctaPrimary": "View projects",
+    "ctaSecondary": "Follow the challenge"
+  },
+  "About": {
+    "eyebrow": "About",
+    "title": "Operations and product on the same plane",
+    "lead": "I connect strategy with execution: I design systems that turn priorities into measurable delivery.",
+    "body": "I'm Leandro Gómez Cano, Regional Director of Operations at tizo. I work with startups and high-tempo teams on operations, growth, artificial intelligence, and product. My focus isn't talk—it's the system that sustains growth."
+  },
+  "Challenge": {
+    "eyebrow": "The challenge",
+    "title": "Building in public, monthly cadence",
+    "blocks": [
+      {
+        "label": "What it is",
+        "text": "A commitment through December: each month a new product idea—from problem definition to launch and a minimum viable iteration."
+      },
+      {
+        "label": "Why",
+        "text": "Speed forces decisions. Documenting in the open enforces clarity, cuts self-deception, and accelerates learning against real markets."
+      },
+      {
+        "label": "What I'll build",
+        "text": "Actionable prototypes and MVPs: tools, flows, and experiments that can be validated with users without empty narrative."
+      },
+      {
+        "label": "What I share",
+        "text": "Scope decisions, trade-offs, metrics that matter, mistakes, and adjustments. No glamour: judgment and numbers when relevant."
+      },
+      {
+        "label": "What I want to learn",
+        "text": "How to compress validation time, what to repeat in operations, and how to fold AI into the product cycle without losing business focus."
+      }
+    ]
+  },
+  "Classes": {
+    "eyebrow": "Classes",
+    "title": "Hands-on training, beyond the monthly challenge",
+    "subtitle": "Sessions focused on tools and operational judgment. They complement build in public; they do not replace it.",
+    "items": [
+      {
+        "title": "AI chatbot for entrepreneurs",
+        "description": "How to design and ship an AI chatbot aligned with your offer, data, and operations—not a generic demo. For founders and teams who need conversion and clarity, not just technology.",
+        "statusMicrocopy": "Schedule to be confirmed",
+        "footnote": "Details and enrollment: coming soon."
+      }
+    ]
+  },
+  "Roadmap": {
+    "eyebrow": "Product roadmap",
+    "title": "One launch per month · 2026",
+    "subtitle": "Remaining months of the year. Status and learnings update each cycle.",
+    "keyLearningLabel": "Key learning",
+    "detailCta": "View detail",
+    "statusLabels": {
+      "Idea": "Idea",
+      "Validando": "Validating",
+      "Construyendo": "Building",
+      "Lanzado": "Shipped",
+      "Iterando": "Iterating"
+    },
+    "items": [
+      {
+        "month": "April 2026",
+        "productName": "Peluditos",
+        "status": "Construyendo",
+        "statusMicrocopy": "In progress",
+        "description": "A product for pet adoption: connect shelters and adopters with clear criteria, useful filters, and an application flow without unnecessary friction.",
+        "keyLearning": "First cycle in progress: validate pet supply and adoption criteria before scaling features."
+      },
+      {
+        "month": "May 2026",
+        "productName": "TBD",
+        "status": "Idea",
+        "statusMicrocopy": "Open calendar",
+        "description": "Month reserved for the next launch; scope is set after the previous cycle closes.",
+        "keyLearning": "To be defined."
+      },
+      {
+        "month": "June 2026",
+        "productName": "TBD",
+        "status": "Idea",
+        "statusMicrocopy": "Open calendar",
+        "description": "Month reserved for the next launch; scope is set after the previous cycle closes.",
+        "keyLearning": "To be defined."
+      },
+      {
+        "month": "July 2026",
+        "productName": "TBD",
+        "status": "Idea",
+        "statusMicrocopy": "Open calendar",
+        "description": "Month reserved for the next launch; scope is set after the previous cycle closes.",
+        "keyLearning": "To be defined."
+      },
+      {
+        "month": "August 2026",
+        "productName": "TBD",
+        "status": "Idea",
+        "statusMicrocopy": "Open calendar",
+        "description": "Month reserved for the next launch; scope is set after the previous cycle closes.",
+        "keyLearning": "To be defined."
+      },
+      {
+        "month": "September 2026",
+        "productName": "TBD",
+        "status": "Idea",
+        "statusMicrocopy": "Open calendar",
+        "description": "Month reserved for the next launch; scope is set after the previous cycle closes.",
+        "keyLearning": "To be defined."
+      },
+      {
+        "month": "October 2026",
+        "productName": "TBD",
+        "status": "Idea",
+        "statusMicrocopy": "Open calendar",
+        "description": "Month reserved for the next launch; scope is set after the previous cycle closes.",
+        "keyLearning": "To be defined."
+      },
+      {
+        "month": "November 2026",
+        "productName": "TBD",
+        "status": "Idea",
+        "statusMicrocopy": "Open calendar",
+        "description": "Month reserved for the next launch; scope is set after the previous cycle closes.",
+        "keyLearning": "To be defined."
+      },
+      {
+        "month": "December 2026",
+        "productName": "TBD",
+        "status": "Idea",
+        "statusMicrocopy": "Open calendar · year-end",
+        "description": "Year-end close; the deliverable depends on learnings from prior months.",
+        "keyLearning": "To be defined."
+      }
+    ]
+  },
+  "Learnings": {
+    "eyebrow": "Learnings",
+    "title": "Process log",
+    "subtitle": "Short notes, no posture. What matters is what changed the judgment.",
+    "notes": [
+      {
+        "tag": "What worked",
+        "tagMicrocopy": "Open log",
+        "title": "Publish the reasoning, not just the outcome",
+        "body": "When I documented why I killed a feature, conversations had more signal than when I only showed the demo."
+      },
+      {
+        "tag": "What failed",
+        "tagMicrocopy": "No sugarcoating",
+        "title": "Too much scope in sprint two",
+        "body": "I tried to cover two segments at once. Learning diluted. I went back to one segment and one job-to-be-done."
+      },
+      {
+        "tag": "What I'd change",
+        "tagMicrocopy": "Next iteration",
+        "title": "Measure before polishing",
+        "body": "I'd block time for metric definition on kickoff day—before UI design."
+      },
+      {
+        "tag": "Speed",
+        "tagMicrocopy": "See what I learned",
+        "title": "Shipping faster exposes the real bottleneck",
+        "body": "Friction wasn't in the code—it was in the offer and channel. Early launch made that obvious."
+      },
+      {
+        "tag": "Operations",
+        "tagMicrocopy": "In progress",
+        "title": "Ad-hoc playbooks don't scale",
+        "body": "I moved from loose notes to a repeatable checklist for pilot onboarding. Less chaos, more signal."
+      }
+    ]
+  },
+  "Thesis": {
+    "eyebrow": "My thesis",
+    "title": "Beliefs I bet on",
+    "lines": [
+      "Execution beats theory.",
+      "Building in public accelerates learning.",
+      "AI changes how products are designed and shipped.",
+      "Latin America needs more operators who turn ideas into systems.",
+      "What you don't measure gets mistaken for progress.",
+      "Clarity is a competitive asset—you train it with explicit decisions."
+    ]
+  },
+  "FinalCta": {
+    "eyebrow": "Follow along",
+    "title": "If you care how decisions get made under pressure, this is the place.",
+    "body": "I'll post launches, metrics when they add context, and lessons without executive varnish. Choose where to follow the challenge.",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "newsletterLabel": "Newsletter",
+    "newsletterMicrocopy": "List in preparation",
+    "newsletterPlaceholder": "you@email.com",
+    "newsletterHint": "Leave your email when I turn on sends; for now it's a visual placeholder."
+  },
+  "Footer": {
+    "rights": "All rights reserved."
+  },
+  "Site": {
+    "headline": "12 months. 12 products.",
+    "heroSub": "Until year-end I launch one new product idea each month and document the process in public: decisions, learnings, metrics, and outcomes.",
+    "role": "Regional Director of Operations"
+  }
+}
