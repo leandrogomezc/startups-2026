@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, LineChart } from "lucide-react";
+import { ArrowRight, GraduationCap, LineChart } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { ButtonLink } from "@/components/ui/link-button";
 import { Container } from "@/components/ui/Container";
@@ -70,10 +70,19 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
+            className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"
           >
-            <ButtonLink href="#roadmap" variant="primary" className="min-h-[48px] px-6 text-base">
+            <ButtonLink href="#roadmap" variant="primary" className="min-h-[48px] px-6 text-base font-medium">
               {t("ctaPrimary")}
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </ButtonLink>
+            <ButtonLink
+              href="#clases"
+              variant="primary"
+              className="min-h-[52px] border-2 border-primary/90 px-7 text-base font-semibold shadow-md ring-2 ring-primary/25 ring-offset-2 ring-offset-background dark:ring-offset-background"
+            >
+              <GraduationCap className="h-5 w-5 shrink-0" aria-hidden />
+              {t("ctaClasses")}
               <ArrowRight className="h-4 w-4" aria-hidden />
             </ButtonLink>
             <ButtonLink href="#cta-final" variant="secondary" className="min-h-[48px] px-6 text-base">

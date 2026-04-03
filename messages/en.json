@@ -30,6 +30,7 @@
     "badge": "Build in public · 2026",
     "footnote": "Living doc · decisions and metrics when they add context",
     "ctaPrimary": "View projects",
+    "ctaClasses": "View classes",
     "ctaSecondary": "Follow the challenge"
   },
   "About": {
