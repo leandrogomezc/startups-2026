@@ -8,6 +8,7 @@ export type RoadmapStatusKey =
 export type RoadmapItemMsg = {
   month: string;
   productName: string;
+  upcoming?: boolean;
   status: RoadmapStatusKey;
   statusMicrocopy: string;
   description: string;

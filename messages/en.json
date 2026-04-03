@@ -1,6 +1,6 @@
 {
   "Meta": {
-    "title": "Leandro Gómez Cano — 12 products in 12 months",
+    "title": "Leandro Gómez Cano — one startup per month",
     "description": "Regional Director of Operations at tizo. I ship one product idea per month until year-end and document the process in public: startups, operations, growth, AI, and execution.",
     "ogDescription": "One new product each month until December. Public documentation of process, decisions, and metrics. Operations, growth, and applied AI.",
     "twitterDescription": "Build in public: monthly launches, learnings, and outcomes. Startup operator and product builder."
@@ -68,6 +68,9 @@
     "eyebrow": "Classes",
     "title": "Hands-on training, beyond the monthly challenge",
     "subtitle": "Sessions focused on tools and operational judgment. They complement build in public; they do not replace it.",
+    "ctaPrimary": "Get priority for the first cohort",
+    "ctaSecondary": "Follow updates on LinkedIn",
+    "ctaHint": "Takes you to the footer block to leave your email when the list goes live.",
     "items": [
       {
         "title": "AI chatbot for entrepreneurs",
@@ -83,6 +86,7 @@
     "subtitle": "Remaining months of the year. Status and learnings update each cycle.",
     "keyLearningLabel": "Key learning",
     "detailCta": "View detail",
+    "upcomingLabel": "Coming soon",
     "statusLabels": {
       "Idea": "Idea",
       "Validando": "Validating",
@@ -102,6 +106,7 @@
       {
         "month": "May 2026",
         "productName": "TBD",
+        "upcoming": true,
         "status": "Idea",
         "statusMicrocopy": "Open calendar",
         "description": "Month reserved for the next launch; scope is set after the previous cycle closes.",
@@ -110,6 +115,7 @@
       {
         "month": "June 2026",
         "productName": "TBD",
+        "upcoming": true,
         "status": "Idea",
         "statusMicrocopy": "Open calendar",
         "description": "Month reserved for the next launch; scope is set after the previous cycle closes.",
@@ -118,6 +124,7 @@
       {
         "month": "July 2026",
         "productName": "TBD",
+        "upcoming": true,
         "status": "Idea",
         "statusMicrocopy": "Open calendar",
         "description": "Month reserved for the next launch; scope is set after the previous cycle closes.",
@@ -126,6 +133,7 @@
       {
         "month": "August 2026",
         "productName": "TBD",
+        "upcoming": true,
         "status": "Idea",
         "statusMicrocopy": "Open calendar",
         "description": "Month reserved for the next launch; scope is set after the previous cycle closes.",
@@ -134,6 +142,7 @@
       {
         "month": "September 2026",
         "productName": "TBD",
+        "upcoming": true,
         "status": "Idea",
         "statusMicrocopy": "Open calendar",
         "description": "Month reserved for the next launch; scope is set after the previous cycle closes.",
@@ -142,6 +151,7 @@
       {
         "month": "October 2026",
         "productName": "TBD",
+        "upcoming": true,
         "status": "Idea",
         "statusMicrocopy": "Open calendar",
         "description": "Month reserved for the next launch; scope is set after the previous cycle closes.",
@@ -150,6 +160,7 @@
       {
         "month": "November 2026",
         "productName": "TBD",
+        "upcoming": true,
         "status": "Idea",
         "statusMicrocopy": "Open calendar",
         "description": "Month reserved for the next launch; scope is set after the previous cycle closes.",
@@ -158,6 +169,7 @@
       {
         "month": "December 2026",
         "productName": "TBD",
+        "upcoming": true,
         "status": "Idea",
         "statusMicrocopy": "Open calendar · year-end",
         "description": "Year-end close; the deliverable depends on learnings from prior months.",
@@ -229,8 +241,9 @@
     "rights": "All rights reserved."
   },
   "Site": {
-    "headline": "12 months. 12 products.",
+    "headline": "One Startup per Month",
     "heroSub": "Until year-end I launch one new product idea each month and document the process in public: decisions, learnings, metrics, and outcomes.",
+    "purpose": "My purpose is to strengthen Nicaragua's startup ecosystem and help founders ship their ideas.",
     "role": "Regional Director of Operations"
   }
 }

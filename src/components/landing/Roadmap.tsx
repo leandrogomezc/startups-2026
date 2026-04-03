@@ -39,41 +39,52 @@ export async function Roadmap() {
         </FadeIn>
 
         <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
-          {items.map((item, i) => (
-            <FadeIn key={item.month} delay={i * 0.04}>
-              <article className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:border-border hover:shadow-md">
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-                      {item.month}
-                    </p>
-                    <h3 className="font-display mt-2 text-xl text-foreground">{item.productName}</h3>
-                  </div>
-                  <span
-                    className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-medium ${statusStyles(item.status)}`}
-                    title={item.statusMicrocopy}
-                  >
-                    {t(`statusLabels.${item.status}`)}
-                  </span>
-                </div>
-                <p className="mt-1 text-xs text-muted-foreground">{item.statusMicrocopy}</p>
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
-                <div className="mt-6 rounded-lg bg-muted/50 p-3 dark:bg-muted/30">
-                  <p className="text-[0.65rem] font-semibold uppercase tracking-wider text-muted-foreground">
-                    {t("keyLearningLabel")}
-                  </p>
-                  <p className="mt-1 text-sm text-foreground">{item.keyLearning}</p>
-                </div>
-                <Link
-                  href="#aprendizajes"
-                  className="text-primary mt-5 inline-flex items-center gap-1 text-sm font-medium transition-colors group-hover:gap-2"
+          {items.map((item, i) => {
+            const upcoming = Boolean(item.upcoming);
+            return (
+              <FadeIn key={item.month} delay={i * 0.04}>
+                <article
+                  className={`group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:border-border hover:shadow-md ${upcoming ? "opacity-60 grayscale-[0.35]" : ""}`}
                 >
-                  {t("detailCta")}
-                  <ArrowUpRight className="h-4 w-4" aria-hidden />
-                </Link>
-              </article>
-            </FadeIn>
-          ))}
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                        {item.month}
+                      </p>
+                      <h3 className="font-display mt-2 text-xl text-foreground">{item.productName}</h3>
+                    </div>
+                    <span
+                      className={
+                        upcoming
+                          ? "shrink-0 rounded-full bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground ring-1 ring-border"
+                          : `shrink-0 rounded-full px-2.5 py-1 text-xs font-medium ${statusStyles(item.status)}`
+                      }
+                      title={upcoming ? t("upcomingLabel") : item.statusMicrocopy}
+                    >
+                      {upcoming ? t("upcomingLabel") : t(`statusLabels.${item.status}`)}
+                    </span>
+                  </div>
+                  <p className="mt-1 text-xs text-muted-foreground">{item.statusMicrocopy}</p>
+                  <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+                  <div className="mt-6 rounded-lg bg-muted/50 p-3 dark:bg-muted/30">
+                    <p className="text-[0.65rem] font-semibold uppercase tracking-wider text-muted-foreground">
+                      {t("keyLearningLabel")}
+                    </p>
+                    <p className="mt-1 text-sm text-foreground">{item.keyLearning}</p>
+                  </div>
+                  {!upcoming && (
+                    <Link
+                      href="#aprendizajes"
+                      className="text-primary mt-5 inline-flex items-center gap-1 text-sm font-medium transition-colors group-hover:gap-2"
+                    >
+                      {t("detailCta")}
+                      <ArrowUpRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                  )}
+                </article>
+              </FadeIn>
+            );
+          })}
         </div>
       </Container>
     </Section>

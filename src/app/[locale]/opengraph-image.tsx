@@ -17,7 +17,7 @@ export default async function Image({ params }: Props) {
   const { locale } = await params;
   const isEn = locale === "en";
 
-  const headline = isEn ? "12 months. 12 products." : "12 meses. 12 productos.";
+  const headline = isEn ? "One Startup per Month" : "1 Startup por Mes";
   const sub = isEn
     ? "Operations, product & AI — documented month by month."
     : "Operación, producto e IA — documentado mes a mes.";

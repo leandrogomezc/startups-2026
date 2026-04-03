@@ -1,6 +1,6 @@
 {
   "Meta": {
-    "title": "Leandro Gómez Cano — 12 productos en 12 meses",
+    "title": "Leandro Gómez Cano — 1 startup al mes",
     "description": "Director Regional de Operaciones en tizo. Lanzo una idea de producto por mes hasta fin de año y documento el proceso en público: startups, operaciones, growth, IA y ejecución.",
     "ogDescription": "Un producto nuevo cada mes hasta diciembre. Documentación pública del proceso, decisiones y métricas. Operaciones, growth e IA aplicada.",
     "twitterDescription": "Build in public: lanzamientos mensuales, aprendizajes y resultados. Operador de startups y producto."
@@ -68,6 +68,9 @@
     "eyebrow": "Clases",
     "title": "Formación práctica, aparte del reto mensual",
     "subtitle": "Sesiones enfocadas en herramientas y criterio operativo. Complementan el build in public sin reemplazarlo.",
+    "ctaPrimary": "Quiero prioridad en la primera edición",
+    "ctaSecondary": "Seguir novedades en LinkedIn",
+    "ctaHint": "Te llevo al bloque final para dejar tu mail cuando active la lista.",
     "items": [
       {
         "title": "Chatbot con IA para Emprendedores",
@@ -83,6 +86,7 @@
     "subtitle": "Meses restantes del año en curso. Estados y aprendizajes se actualizan con cada ciclo.",
     "keyLearningLabel": "Aprendizaje clave",
     "detailCta": "Ver detalle",
+    "upcomingLabel": "Próximamente",
     "statusLabels": {
       "Idea": "Idea",
       "Validando": "Validando",
@@ -102,6 +106,7 @@
       {
         "month": "Mayo 2026",
         "productName": "TBD",
+        "upcoming": true,
         "status": "Idea",
         "statusMicrocopy": "Calendario abierto",
         "description": "Mes reservado para el siguiente lanzamiento; el alcance se define al cerrar el ciclo anterior.",
@@ -110,6 +115,7 @@
       {
         "month": "Junio 2026",
         "productName": "TBD",
+        "upcoming": true,
         "status": "Idea",
         "statusMicrocopy": "Calendario abierto",
         "description": "Mes reservado para el siguiente lanzamiento; el alcance se define al cerrar el ciclo anterior.",
@@ -118,6 +124,7 @@
       {
         "month": "Julio 2026",
         "productName": "TBD",
+        "upcoming": true,
         "status": "Idea",
         "statusMicrocopy": "Calendario abierto",
         "description": "Mes reservado para el siguiente lanzamiento; el alcance se define al cerrar el ciclo anterior.",
@@ -126,6 +133,7 @@
       {
         "month": "Agosto 2026",
         "productName": "TBD",
+        "upcoming": true,
         "status": "Idea",
         "statusMicrocopy": "Calendario abierto",
         "description": "Mes reservado para el siguiente lanzamiento; el alcance se define al cerrar el ciclo anterior.",
@@ -134,6 +142,7 @@
       {
         "month": "Septiembre 2026",
         "productName": "TBD",
+        "upcoming": true,
         "status": "Idea",
         "statusMicrocopy": "Calendario abierto",
         "description": "Mes reservado para el siguiente lanzamiento; el alcance se define al cerrar el ciclo anterior.",
@@ -142,6 +151,7 @@
       {
         "month": "Octubre 2026",
         "productName": "TBD",
+        "upcoming": true,
         "status": "Idea",
         "statusMicrocopy": "Calendario abierto",
         "description": "Mes reservado para el siguiente lanzamiento; el alcance se define al cerrar el ciclo anterior.",
@@ -150,6 +160,7 @@
       {
         "month": "Noviembre 2026",
         "productName": "TBD",
+        "upcoming": true,
         "status": "Idea",
         "statusMicrocopy": "Calendario abierto",
         "description": "Mes reservado para el siguiente lanzamiento; el alcance se define al cerrar el ciclo anterior.",
@@ -158,6 +169,7 @@
       {
         "month": "Diciembre 2026",
         "productName": "TBD",
+        "upcoming": true,
         "status": "Idea",
         "statusMicrocopy": "Calendario abierto · cierre de año",
         "description": "Cierre de ciclo anual; el entregable se define según aprendizajes de los meses previos.",
@@ -229,8 +241,9 @@
     "rights": "Todos los derechos reservados."
   },
   "Site": {
-    "headline": "12 meses. 12 productos.",
+    "headline": "1 Startup por Mes",
     "heroSub": "Hasta fin de año lanzo una nueva idea de producto cada mes y documento en público el proceso: decisiones, aprendizajes, métricas y resultados.",
+    "purpose": "Mi propósito es impulsar el ecosistema startup en Nicaragua, ayudando a founders a lanzar sus ideas.",
     "role": "Director Regional de Operaciones"
   }
 }

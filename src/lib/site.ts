@@ -8,5 +8,5 @@ export const site = {
     "https://www.linkedin.com/in/leandro-gomez-cano",
   instagramUrl:
     (typeof process !== "undefined" && process.env.NEXT_PUBLIC_INSTAGRAM_URL) ||
-    "https://www.instagram.com/leandrogomezcano",
+    "https://www.instagram.com/leandrogomezc_/",
 } as const;
