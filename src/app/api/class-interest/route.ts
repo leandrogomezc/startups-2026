@@ -1,3 +1,8 @@
+/**
+ * POST /api/class-interest — envío vía Resend.
+ * Producción: definir RESEND_API_KEY (y preferible RESEND_FROM) en Vercel; redeploy tras cambiar env.
+ * Si el envío falla, revisar Resend Dashboard → Logs y reglas from/to (dominio de prueba vs verificado).
+ */
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 

@@ -78,7 +78,15 @@ export function ClassPriorityModal({ schedule, syllabus }: ClassPriorityModalPro
         body: JSON.stringify({ name, phone, email, locale }),
       });
       if (!res.ok) {
-        setError(t("formError"));
+        const msg =
+          res.status === 503
+            ? t("formErrorServiceUnavailable")
+            : res.status === 502
+              ? t("formErrorSendFailed")
+              : res.status === 400
+                ? t("formErrorValidation")
+                : t("formError");
+        setError(msg);
         setSubmitting(false);
         return;
       }
