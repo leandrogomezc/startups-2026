@@ -58,18 +58,10 @@ export function Hero() {
           >
             {ts("heroSub")}
           </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg"
-          >
-            {ts("purpose")}
-          </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.5, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
             className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"
           >
             <ButtonLink href="#roadmap" variant="primary" className="min-h-[48px] px-6 text-base font-medium">

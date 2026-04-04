@@ -6,7 +6,6 @@ import { FinalCta } from "@/components/landing/FinalCta";
 import { Footer } from "@/components/landing/Footer";
 import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
-import { Learnings } from "@/components/landing/Learnings";
 import { Roadmap } from "@/components/landing/Roadmap";
 import { Thesis } from "@/components/landing/Thesis";
 
@@ -27,7 +26,6 @@ export default async function HomePage({ params }: Props) {
         <Challenge />
         <Classes />
         <Roadmap />
-        <Learnings />
         <Thesis />
         <FinalCta />
       </main>

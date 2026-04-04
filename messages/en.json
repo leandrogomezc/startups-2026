@@ -21,7 +21,6 @@
     "about": "About",
     "challenge": "Challenge",
     "roadmap": "Roadmap",
-    "learnings": "Learnings",
     "thesis": "Thesis",
     "classes": "Classes",
     "follow": "Follow"
@@ -36,8 +35,9 @@
   "About": {
     "eyebrow": "About",
     "title": "Operations and product on the same plane",
-    "lead": "I connect strategy with execution: I design systems that turn priorities into measurable delivery.",
-    "body": "I'm Leandro Gómez Cano, Regional Director of Operations at tizo. I work with startups and high-tempo teams on operations, growth, artificial intelligence, and product. My focus isn't talk—it's the system that sustains growth."
+    "name": "Leandro Gómez Cano",
+    "body": "I'm Leandro Gómez Cano. I have six years of experience in startups. I'm Regional Director of Operations at tizo and former Country Manager at hugo app. I work with startups and high-tempo teams on operations, growth, artificial intelligence, and product building.",
+    "purpose": "My purpose is to strengthen Nicaragua's startup ecosystem and help founders ship their ideas."
   },
   "Challenge": {
     "eyebrow": "The challenge",
@@ -69,15 +69,44 @@
     "eyebrow": "Classes",
     "title": "Hands-on training, beyond the monthly challenge",
     "subtitle": "Sessions focused on tools and operational judgment. They complement build in public; they do not replace it.",
+    "courseSummary": "$150 USD · 6 weeks · Cash or bank transfer",
+    "scheduleHeading": "Schedule",
+    "syllabusHeading": "Syllabus",
     "ctaPrimary": "Get priority for the first cohort",
     "ctaSecondary": "Follow updates on LinkedIn",
-    "ctaHint": "Takes you to the footer block to leave your email when the list goes live.",
+    "ctaHint": "Opens a form with your contact details and course information.",
+    "formTitle": "Priority list — first cohort",
+    "formLead": "Share your details to hold a priority spot in the first cohort. We'll follow up with next steps.",
+    "courseDetailsTitle": "Pricing and format",
+    "coursePrice": "Price: $150 USD",
+    "courseDuration": "Duration: 6 weeks",
+    "coursePayment": "Payment: cash or bank transfer",
+    "formFieldName": "Full name",
+    "formFieldPhone": "Phone number",
+    "formFieldEmail": "Email",
+    "formSubmit": "Submit request",
+    "formClose": "Close",
+    "formSuccessTitle": "Thank you",
+    "formSuccessBody": "Copy the summary below and send it through whatever channel you use to reach us (e.g. WhatsApp or email).",
+    "formMailSubject": "First cohort priority — AI chatbot class",
+    "formMailBody": "Name: {name}\nPhone: {phone}\nEmail: {email}",
+    "formCopyButton": "Copy details",
     "items": [
       {
         "title": "AI chatbot for entrepreneurs",
         "description": "How to design and ship an AI chatbot aligned with your offer, data, and operations—not a generic demo. For founders and teams who need conversion and clarity, not just technology.",
         "statusMicrocopy": "Schedule to be confirmed",
-        "footnote": "Details and enrollment: coming soon."
+        "schedule": "Classes on Tuesdays and Thursdays at 6:30 pm · online",
+        "syllabus": [
+          { "label": "Week 1", "title": "MVP definition, ICP, and smoke tests" },
+          { "label": "Week 2", "title": "Full-stack products with Lovable" },
+          { "label": "Week 3", "title": "Introduction to GitHub, Vercel, and Supabase" },
+          { "label": "Week 4", "title": "Build your first chatbot with n8n on Telegram and WhatsApp" },
+          { "label": "Week 5", "title": "Build your first chatbot with Cursor" },
+          { "label": "Week 6", "title": "HITL and admin platforms" },
+          { "label": "Final day", "title": "Pitch Day" }
+        ],
+        "footnote": "Enrollment: submit the priority form; we'll confirm payment options."
       }
     ]
   },
@@ -178,43 +207,6 @@
       }
     ]
   },
-  "Learnings": {
-    "eyebrow": "Learnings",
-    "title": "Process log",
-    "subtitle": "Short notes, no posture. What matters is what changed the judgment.",
-    "notes": [
-      {
-        "tag": "What worked",
-        "tagMicrocopy": "Open log",
-        "title": "Publish the reasoning, not just the outcome",
-        "body": "When I documented why I killed a feature, conversations had more signal than when I only showed the demo."
-      },
-      {
-        "tag": "What failed",
-        "tagMicrocopy": "No sugarcoating",
-        "title": "Too much scope in sprint two",
-        "body": "I tried to cover two segments at once. Learning diluted. I went back to one segment and one job-to-be-done."
-      },
-      {
-        "tag": "What I'd change",
-        "tagMicrocopy": "Next iteration",
-        "title": "Measure before polishing",
-        "body": "I'd block time for metric definition on kickoff day—before UI design."
-      },
-      {
-        "tag": "Speed",
-        "tagMicrocopy": "See what I learned",
-        "title": "Shipping faster exposes the real bottleneck",
-        "body": "Friction wasn't in the code—it was in the offer and channel. Early launch made that obvious."
-      },
-      {
-        "tag": "Operations",
-        "tagMicrocopy": "In progress",
-        "title": "Ad-hoc playbooks don't scale",
-        "body": "I moved from loose notes to a repeatable checklist for pilot onboarding. Less chaos, more signal."
-      }
-    ]
-  },
   "Thesis": {
     "eyebrow": "My thesis",
     "title": "Beliefs I bet on",
@@ -244,7 +236,6 @@
   "Site": {
     "headline": "One Startup per Month",
     "heroSub": "Until year-end I launch one new product idea each month and document the process in public: decisions, learnings, metrics, and outcomes.",
-    "purpose": "My purpose is to strengthen Nicaragua's startup ecosystem and help founders ship their ideas.",
     "role": "Regional Director of Operations"
   }
 }

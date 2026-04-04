@@ -15,7 +15,6 @@ const NAV_KEYS = [
   { id: "reto", labelKey: "challenge" as const, href: "#reto" },
   { id: "clases", labelKey: "classes" as const, href: "#clases" },
   { id: "roadmap", labelKey: "roadmap" as const, href: "#roadmap" },
-  { id: "aprendizajes", labelKey: "learnings" as const, href: "#aprendizajes" },
   { id: "tesis", labelKey: "thesis" as const, href: "#tesis" },
   { id: "cta-final", labelKey: "follow" as const, href: "#cta-final" },
 ];

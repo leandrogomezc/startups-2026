@@ -21,7 +21,6 @@
     "about": "Sobre mí",
     "challenge": "Reto",
     "roadmap": "Roadmap",
-    "learnings": "Aprendizajes",
     "thesis": "Tesis",
     "classes": "Clases",
     "follow": "Seguir"
@@ -36,8 +35,9 @@
   "About": {
     "eyebrow": "Sobre mí",
     "title": "Operación y producto, en el mismo plano",
-    "lead": "Conecto estrategia con ejecución: diseño sistemas que convierten prioridades en entregas medibles.",
-    "body": "Soy Leandro Gómez Cano, Director Regional de Operaciones en tizo. Trabajo con startups y equipos de alto ritmo en operaciones, growth, inteligencia artificial y construcción de productos. Mi foco no es el discurso: es el sistema que sostiene el crecimiento."
+    "name": "Leandro Gómez Cano",
+    "body": "Soy Leandro Gómez Cano, poseo 6 años de experiencia en startups, actualmente Director Regional de Operaciones en tizo, ex Country Manager de hugo app. Trabajo con startups y equipos de alto ritmo en operaciones, growth, inteligencia artificial y construcción de productos.",
+    "purpose": "Mi propósito es impulsar el ecosistema startup en Nicaragua, ayudando a founders a lanzar sus ideas."
   },
   "Challenge": {
     "eyebrow": "El reto",
@@ -69,15 +69,44 @@
     "eyebrow": "Clases",
     "title": "Formación práctica, aparte del reto mensual",
     "subtitle": "Sesiones enfocadas en herramientas y criterio operativo. Complementan el build in public sin reemplazarlo.",
+    "courseSummary": "$150 USD · 6 semanas · Efectivo o transferencia",
+    "scheduleHeading": "Horario",
+    "syllabusHeading": "Programa",
     "ctaPrimary": "Quiero prioridad en la primera edición",
     "ctaSecondary": "Seguir novedades en LinkedIn",
-    "ctaHint": "Te llevo al bloque final para dejar tu mail cuando active la lista.",
+    "ctaHint": "Abrimos un formulario con los datos de contacto y el detalle del curso.",
+    "formTitle": "Lista de prioridad — primera edición",
+    "formLead": "Dejá tus datos para reservar prioridad en la primera edición. Te respondemos con próximos pasos.",
+    "courseDetailsTitle": "Inversión y formato",
+    "coursePrice": "Precio: $150 USD",
+    "courseDuration": "Duración: 6 semanas",
+    "coursePayment": "Pago: en efectivo o por transferencia bancaria",
+    "formFieldName": "Nombre",
+    "formFieldPhone": "Número de teléfono",
+    "formFieldEmail": "Correo electrónico",
+    "formSubmit": "Enviar solicitud",
+    "formClose": "Cerrar",
+    "formSuccessTitle": "Gracias",
+    "formSuccessBody": "Copiá el resumen de abajo y envialo por el canal que uses para contactarnos (por ejemplo WhatsApp o correo).",
+    "formMailSubject": "Prioridad primera edición — Chatbot con IA",
+    "formMailBody": "Nombre: {name}\nTeléfono: {phone}\nCorreo: {email}",
+    "formCopyButton": "Copiar datos",
     "items": [
       {
         "title": "Chatbot con IA para Emprendedores",
         "description": "Cómo diseñar y desplegar un chatbot con IA alineado a tu oferta, tus datos y tu operación: no un demo genérico. Pensado para founders y equipos que necesitan conversión y claridad, no solo tecnología.",
         "statusMicrocopy": "Calendario por confirmar",
-        "footnote": "Detalles e inscripción: próximamente."
+        "schedule": "Clases martes y jueves a las 6:30 pm · en línea",
+        "syllabus": [
+          { "label": "Semana 1", "title": "Definición del MVP, ICP y smoke tests" },
+          { "label": "Semana 2", "title": "Productos full stack con Lovable" },
+          { "label": "Semana 3", "title": "Introducción a GitHub, Vercel y Supabase" },
+          { "label": "Semana 4", "title": "Creá tu primer chatbot con n8n en Telegram y WhatsApp" },
+          { "label": "Semana 5", "title": "Creá tu primer chatbot con Cursor" },
+          { "label": "Semana 6", "title": "HITL y plataformas administrativas" },
+          { "label": "Último día", "title": "Pitch Day" }
+        ],
+        "footnote": "Inscripción: completá el formulario de prioridad; te confirmamos medios de pago."
       }
     ]
   },
@@ -178,43 +207,6 @@
       }
     ]
   },
-  "Learnings": {
-    "eyebrow": "Aprendizajes",
-    "title": "Bitácora del proceso",
-    "subtitle": "Notas breves, sin postureo. Lo que importa es qué cambió el criterio.",
-    "notes": [
-      {
-        "tag": "Lo que funcionó",
-        "tagMicrocopy": "Bitácora abierta",
-        "title": "Publicar el criterio, no solo el resultado",
-        "body": "Cuando documenté por qué maté un feature, aparecieron conversaciones con más señal que cuando solo mostré el demo."
-      },
-      {
-        "tag": "Lo que falló",
-        "tagMicrocopy": "Sin anestesia",
-        "title": "Demasiado alcance en el segundo sprint",
-        "body": "Intenté cubrir dos segmentos a la vez. El aprendizaje se diluyó. Volví a un segmento y un job-to-be-done."
-      },
-      {
-        "tag": "Lo que cambiaría",
-        "tagMicrocopy": "Próxima iteración",
-        "title": "Medir antes de embellecer",
-        "body": "Reservaría un bloque fijo para definición de métricas el mismo día del kickoff, antes del diseño de UI."
-      },
-      {
-        "tag": "Velocidad",
-        "tagMicrocopy": "Ver lo aprendido",
-        "title": "Lanzar más rápido expone el cuello de botella real",
-        "body": "La fricción no estaba en el código: estaba en la oferta y en el canal. El lanzamiento temprano lo dejó en evidencia."
-      },
-      {
-        "tag": "Operación",
-        "tagMicrocopy": "En progreso",
-        "title": "Playbooks improvisados no escalan",
-        "body": "Pasé de notas sueltas a checklist repetible para onboarding de usuarios piloto. Menos caos, más señal."
-      }
-    ]
-  },
   "Thesis": {
     "eyebrow": "Mi tesis",
     "title": "Ideas en las que apuesto",
@@ -244,7 +236,6 @@
   "Site": {
     "headline": "1 Startup por Mes",
     "heroSub": "Hasta fin de año lanzo una nueva idea de producto cada mes y documento en público el proceso: decisiones, aprendizajes, métricas y resultados.",
-    "purpose": "Mi propósito es impulsar el ecosistema startup en Nicaragua, ayudando a founders a lanzar sus ideas.",
     "role": "Director Regional de Operaciones"
   }
 }

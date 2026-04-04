@@ -74,7 +74,7 @@ export async function Roadmap() {
                   </div>
                   {!upcoming && (
                     <Link
-                      href="#aprendizajes"
+                      href="#tesis"
                       className="text-primary mt-5 inline-flex items-center gap-1 text-sm font-medium transition-colors group-hover:gap-2"
                     >
                       {t("detailCta")}

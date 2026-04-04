@@ -1,5 +1,6 @@
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import { ClassPriorityModal, type ClassSyllabusRow } from "@/components/landing/ClassPriorityModal";
 import { FadeIn } from "@/components/landing/FadeIn";
 import { ButtonLink } from "@/components/ui/link-button";
 import { Container } from "@/components/ui/Container";
@@ -10,6 +11,8 @@ type ClassItem = {
   title: string;
   description: string;
   statusMicrocopy: string;
+  schedule: string;
+  syllabus: ClassSyllabusRow[];
   footnote: string;
 };
 
@@ -44,16 +47,28 @@ export async function Classes() {
                     </span>
                   </div>
                   <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">{item.description}</p>
+                  <p className="mt-3 text-sm font-medium text-foreground">{t("courseSummary")}</p>
+
+                  <div className="mt-5 space-y-2">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t("scheduleHeading")}</p>
+                    <p className="text-sm font-medium text-foreground">{item.schedule}</p>
+                  </div>
+
+                  <div className="mt-5">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t("syllabusHeading")}</p>
+                    <ul className="mt-3 space-y-2 rounded-xl border border-border bg-muted/30 p-4 dark:bg-muted/15">
+                      {item.syllabus.map((row) => (
+                        <li key={`${row.label}-${row.title}`} className="text-sm leading-snug text-muted-foreground">
+                          <span className="font-medium text-foreground">{row.label}</span>
+                          <span className="text-muted-foreground"> · </span>
+                          {row.title}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-                    <ButtonLink
-                      href="#cta-final"
-                      variant="primary"
-                      className="min-h-[52px] px-8 text-base font-semibold shadow-md"
-                    >
-                      {t("ctaPrimary")}
-                      <ArrowRight className="h-5 w-5" aria-hidden />
-                    </ButtonLink>
+                    <ClassPriorityModal schedule={item.schedule} syllabus={item.syllabus} />
                     <ButtonLink
                       href={site.linkedinUrl}
                       variant="secondary"
