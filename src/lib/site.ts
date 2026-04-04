@@ -9,7 +9,4 @@ export const site = {
   instagramUrl:
     (typeof process !== "undefined" && process.env.NEXT_PUBLIC_INSTAGRAM_URL) ||
     "https://www.instagram.com/leandrogomezc_/",
-  /** Correo para `mailto:` al enviar el formulario de prioridad (clases). Opcional. */
-  classInterestEmail:
-    (typeof process !== "undefined" && process.env.NEXT_PUBLIC_CLASS_INTEREST_EMAIL) || "",
 } as const;

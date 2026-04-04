@@ -16,7 +16,6 @@
     "languageSwitch": "Idioma"
   },
   "Nav": {
-    "brandSubtitle": "— ops & product",
     "home": "Inicio",
     "about": "Sobre mí",
     "challenge": "Reto",
@@ -85,12 +84,13 @@
     "formFieldPhone": "Número de teléfono",
     "formFieldEmail": "Correo electrónico",
     "formSubmit": "Enviar solicitud",
+    "formSubmitting": "Enviando…",
+    "formError": "No pudimos enviar la solicitud. Intentá de nuevo en unos minutos.",
     "formClose": "Cerrar",
     "formSuccessTitle": "Gracias",
-    "formSuccessBody": "Copiá el resumen de abajo y envialo por el canal que uses para contactarnos (por ejemplo WhatsApp o correo).",
+    "formSuccessBody": "Recibimos tu solicitud. Te contactaremos pronto. Esta ventana se cerrará en unos segundos.",
     "formMailSubject": "Prioridad primera edición — Chatbot con IA",
     "formMailBody": "Nombre: {name}\nTeléfono: {phone}\nCorreo: {email}",
-    "formCopyButton": "Copiar datos",
     "items": [
       {
         "title": "Chatbot con IA para Emprendedores",
@@ -235,7 +235,6 @@
   },
   "Site": {
     "headline": "1 Startup por Mes",
-    "heroSub": "Hasta fin de año lanzo una nueva idea de producto cada mes y documento en público el proceso: decisiones, aprendizajes, métricas y resultados.",
-    "role": "Director Regional de Operaciones"
+    "heroSub": "Hasta fin de año lanzo una nueva idea de producto cada mes y documento en público el proceso: decisiones, aprendizajes, métricas y resultados."
   }
 }

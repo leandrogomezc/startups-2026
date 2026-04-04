@@ -43,8 +43,7 @@ export function Header() {
           className="font-display min-w-0 shrink text-lg tracking-tight text-foreground transition-colors hover:text-primary"
           onClick={close}
         >
-          {site.name.split(" ")[0]}{" "}
-          <span className="text-muted-foreground font-sans text-sm font-normal">{t("brandSubtitle")}</span>
+          {site.name.split(" ")[0]}
         </a>
 
         <div className="hidden items-center gap-2 lg:flex">

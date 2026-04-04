@@ -16,7 +16,6 @@
     "languageSwitch": "Language"
   },
   "Nav": {
-    "brandSubtitle": "— ops & product",
     "home": "Home",
     "about": "About",
     "challenge": "Challenge",
@@ -85,12 +84,13 @@
     "formFieldPhone": "Phone number",
     "formFieldEmail": "Email",
     "formSubmit": "Submit request",
+    "formSubmitting": "Sending…",
+    "formError": "We couldn't send your request. Please try again in a few minutes.",
     "formClose": "Close",
     "formSuccessTitle": "Thank you",
-    "formSuccessBody": "Copy the summary below and send it through whatever channel you use to reach us (e.g. WhatsApp or email).",
+    "formSuccessBody": "We received your request. We'll be in touch soon. This window will close in a few seconds.",
     "formMailSubject": "First cohort priority — AI chatbot class",
     "formMailBody": "Name: {name}\nPhone: {phone}\nEmail: {email}",
-    "formCopyButton": "Copy details",
     "items": [
       {
         "title": "AI chatbot for entrepreneurs",
@@ -235,7 +235,6 @@
   },
   "Site": {
     "headline": "One Startup per Month",
-    "heroSub": "Until year-end I launch one new product idea each month and document the process in public: decisions, learnings, metrics, and outcomes.",
-    "role": "Regional Director of Operations"
+    "heroSub": "Until year-end I launch one new product idea each month and document the process in public: decisions, learnings, metrics, and outcomes."
   }
 }

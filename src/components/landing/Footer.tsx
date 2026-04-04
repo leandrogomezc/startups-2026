@@ -7,7 +7,6 @@ import { site } from "@/lib/site";
 export async function Footer() {
   const year = new Date().getFullYear();
   const tf = await getTranslations("Footer");
-  const ts = await getTranslations("Site");
 
   return (
     <footer className="border-t border-border py-12">
@@ -15,9 +14,6 @@ export async function Footer() {
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <p className="font-display text-lg text-foreground">{site.name}</p>
-            <p className="text-muted-foreground mt-1 text-sm">
-              {ts("role")} · {site.company}
-            </p>
           </div>
           <div className="flex gap-4">
             <Link
