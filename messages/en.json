@@ -89,6 +89,10 @@
     "formErrorServiceUnavailable": "The email service isn't configured yet. Please try again later or reach out another way.",
     "formErrorSendFailed": "We couldn't deliver the email. Check your sender settings in Resend or try again in a few minutes.",
     "formErrorValidation": "Please check your form fields and try again.",
+    "formErrorNotFound": "The form endpoint isn't available on this deployment. If you're the site owner, check that API routes are enabled (e.g. host on Vercel, not static export).",
+    "formErrorRateLimited": "Too many attempts. Please wait a few minutes and try again.",
+    "formErrorServer": "Our server had a problem processing the request. Please try again in a few minutes.",
+    "formErrorNetwork": "We couldn't reach the server. Check your connection and try again.",
     "formClose": "Close",
     "formSuccessTitle": "Thank you",
     "formSuccessBody": "We received your request. We'll be in touch soon. This window will close in a few seconds.",
@@ -98,8 +102,8 @@
       {
         "title": "AI chatbot for entrepreneurs",
         "description": "How to design and ship an AI chatbot aligned with your offer, data, and operations—not a generic demo. For founders and teams who need conversion and clarity, not just technology.",
-        "statusMicrocopy": "Schedule to be confirmed",
-        "schedule": "Classes on Tuesdays and Thursdays at 6:30 pm · online",
+        "statusMicrocopy": "May 19, 2026",
+        "schedule": "Starts May 19, 2026 · Tuesdays and Thursdays at 6:30 pm · online",
         "syllabus": [
           { "label": "Week 1", "title": "MVP definition, ICP, and smoke tests" },
           { "label": "Week 2", "title": "Full-stack products with Lovable" },
@@ -229,9 +233,7 @@
     "linkedin": "LinkedIn",
     "instagram": "Instagram",
     "newsletterLabel": "Newsletter",
-    "newsletterMicrocopy": "List in preparation",
-    "newsletterPlaceholder": "you@email.com",
-    "newsletterHint": "Leave your email when I turn on sends; for now it's a visual placeholder."
+    "newsletterPlaceholder": "you@email.com"
   },
   "Footer": {
     "rights": "All rights reserved."

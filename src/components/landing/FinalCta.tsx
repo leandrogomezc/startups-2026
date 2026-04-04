@@ -46,11 +46,7 @@ export function FinalCta() {
             <div className="flex items-center gap-2 text-sm font-medium text-foreground">
               <Mail className="text-primary h-4 w-4" aria-hidden />
               {t("newsletterLabel")}
-              <span className="bg-muted text-muted-foreground rounded-md px-2 py-0.5 text-xs font-normal">
-                {t("newsletterMicrocopy")}
-              </span>
             </div>
-            <p className="mt-2 max-w-md text-sm text-muted-foreground">{t("newsletterHint")}</p>
             <div className="mt-4 max-w-sm">
               <label htmlFor="newsletter-email" className="sr-only">
                 {t("newsletterLabel")}

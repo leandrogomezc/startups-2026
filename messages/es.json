@@ -89,6 +89,10 @@
     "formErrorServiceUnavailable": "El servicio de envío no está configurado todavía. Volvé a intentar más tarde o contactanos por otro canal.",
     "formErrorSendFailed": "No se pudo entregar el correo. Revisá la configuración del remitente en Resend o probá de nuevo en unos minutos.",
     "formErrorValidation": "Revisá los datos del formulario e intentá de nuevo.",
+    "formErrorNotFound": "El endpoint del formulario no está disponible en este despliegue. Si sos el dueño del sitio, verificá que las rutas API estén activas (por ejemplo Vercel, no export estático).",
+    "formErrorRateLimited": "Demasiados intentos. Esperá unos minutos y probá de nuevo.",
+    "formErrorServer": "Hubo un problema en el servidor al procesar la solicitud. Intentá de nuevo en unos minutos.",
+    "formErrorNetwork": "No pudimos conectar con el servidor. Revisá tu conexión e intentá de nuevo.",
     "formClose": "Cerrar",
     "formSuccessTitle": "Gracias",
     "formSuccessBody": "Recibimos tu solicitud. Te contactaremos pronto. Esta ventana se cerrará en unos segundos.",
@@ -98,8 +102,8 @@
       {
         "title": "Chatbot con IA para Emprendedores",
         "description": "Cómo diseñar y desplegar un chatbot con IA alineado a tu oferta, tus datos y tu operación: no un demo genérico. Pensado para founders y equipos que necesitan conversión y claridad, no solo tecnología.",
-        "statusMicrocopy": "Calendario por confirmar",
-        "schedule": "Clases martes y jueves a las 6:30 pm · en línea",
+        "statusMicrocopy": "19 de mayo 2026",
+        "schedule": "Inicio 19 de mayo de 2026 · martes y jueves a las 6:30 pm · en línea",
         "syllabus": [
           { "label": "Semana 1", "title": "Definición del MVP, ICP y smoke tests" },
           { "label": "Semana 2", "title": "Productos full stack con Lovable" },
@@ -229,9 +233,7 @@
     "linkedin": "LinkedIn",
     "instagram": "Instagram",
     "newsletterLabel": "Newsletter",
-    "newsletterMicrocopy": "Lista en preparación",
-    "newsletterPlaceholder": "tu@email.com",
-    "newsletterHint": "Dejá tu mail cuando active el envío; por ahora es solo registro visual."
+    "newsletterPlaceholder": "tu@email.com"
   },
   "Footer": {
     "rights": "Todos los derechos reservados."

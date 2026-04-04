@@ -77,15 +77,40 @@ export function ClassPriorityModal({ schedule, syllabus }: ClassPriorityModalPro
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, phone, email, locale }),
       });
+
+      const raw = await res.text();
+      let payload: { error?: string } = {};
+      try {
+        payload = raw ? (JSON.parse(raw) as { error?: string }) : {};
+      } catch {
+        payload = {};
+      }
+
       if (!res.ok) {
-        const msg =
-          res.status === 503
-            ? t("formErrorServiceUnavailable")
-            : res.status === 502
-              ? t("formErrorSendFailed")
-              : res.status === 400
-                ? t("formErrorValidation")
-                : t("formError");
+        const code = payload.error;
+        let msg: string;
+        if (code === "service_unavailable" || res.status === 503) {
+          msg = t("formErrorServiceUnavailable");
+        } else if (code === "send_failed" || res.status === 502) {
+          msg = t("formErrorSendFailed");
+        } else if (
+          code === "missing_fields" ||
+          code === "invalid_email" ||
+          code === "field_too_long" ||
+          code === "invalid_body" ||
+          code === "invalid_json" ||
+          res.status === 400
+        ) {
+          msg = t("formErrorValidation");
+        } else if (res.status === 404) {
+          msg = t("formErrorNotFound");
+        } else if (res.status === 429) {
+          msg = t("formErrorRateLimited");
+        } else if (res.status >= 500) {
+          msg = t("formErrorServer");
+        } else {
+          msg = t("formError");
+        }
         setError(msg);
         setSubmitting(false);
         return;
@@ -93,7 +118,7 @@ export function ClassPriorityModal({ schedule, syllabus }: ClassPriorityModalPro
       form.reset();
       setSubmitted(true);
     } catch {
-      setError(t("formError"));
+      setError(t("formErrorNetwork"));
     } finally {
       setSubmitting(false);
     }
