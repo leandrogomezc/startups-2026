@@ -8,11 +8,11 @@ export async function Thesis() {
   const lines = t.raw("lines") as string[];
 
   return (
-    <Section id="tesis">
+    <Section id="tesis" className="border-t border-border/60 bg-muted/15 dark:bg-muted/10">
       <Container>
         <FadeIn>
-          <p className="text-primary text-xs font-semibold uppercase tracking-[0.2em]">{t("eyebrow")}</p>
-          <h2 className="font-display mt-3 text-3xl tracking-tight text-foreground sm:text-4xl">{t("title")}</h2>
+          <p className="section-eyebrow">{t("eyebrow")}</p>
+          <h2 className="section-heading mt-3 text-3xl sm:text-4xl">{t("title")}</h2>
         </FadeIn>
 
         <ol className="mt-14 max-w-3xl space-y-0 border-l border-border pl-6 sm:pl-10">

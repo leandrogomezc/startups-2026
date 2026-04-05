@@ -25,8 +25,8 @@
     "follow": "Seguir"
   },
   "Hero": {
-    "badge": "Build in public · 2026",
-    "footnote": "Documento vivo · decisiones y métricas cuando aporten contexto",
+    "badge": "Formación práctica · IA · 2026",
+    "footnote": "Cursos · roadmap · build in público",
     "ctaPrimary": "Ver proyectos",
     "ctaClasses": "Ver clases",
     "ctaSecondary": "Seguir el reto"
@@ -135,10 +135,25 @@
       {
         "month": "Abril 2026",
         "productName": "Peluditos",
+        "slug": "peluditos",
         "status": "Construyendo",
         "statusMicrocopy": "En progreso",
         "description": "Producto para adopción de mascotas: conectar refugios y adoptantes con criterio claro, filtros útiles y proceso de solicitud sin fricción innecesaria.",
-        "keyLearning": "Primer ciclo en curso: validar oferta de mascotas y criterios de adopción antes de escalar funcionalidades."
+        "keyLearning": "Primer ciclo en curso: validar oferta de mascotas y criterios de adopción antes de escalar funcionalidades.",
+        "detailSections": [
+          {
+            "title": "Problema y alcance",
+            "body": "Conversaciones con refugios y personas que adoptan para acotar el flujo: qué datos importan primero, dónde se pierde la confianza y qué se puede validar con un MVP sin fricción."
+          },
+          {
+            "title": "Lo que se está construyendo",
+            "body": "Estructura de pantallas, flujo de solicitud inicial y criterios de filtrado para priorizar coincidencias entre oferta y solicitud."
+          },
+          {
+            "title": "Decisiones",
+            "body": "Priorizar criterios de adopción antes de sumar funcionalidades colaterales; medir la primera solicitud completa antes de escalar."
+          }
+        ]
       },
       {
         "month": "Mayo 2026",
@@ -214,6 +229,10 @@
       }
     ]
   },
+  "ProjectDetail": {
+    "backToRoadmap": "Volver al roadmap",
+    "workHeading": "Progreso y trabajo"
+  },
   "Thesis": {
     "eyebrow": "Mi tesis",
     "title": "Ideas en las que apuesto",
@@ -239,7 +258,7 @@
     "rights": "Todos los derechos reservados."
   },
   "Site": {
-    "headline": "1 Startup por Mes",
-    "heroSub": "Hasta fin de año lanzo una nueva idea de producto cada mes y documento en público el proceso: decisiones, aprendizajes, métricas y resultados."
+    "headline": "Clases con IA. Proyectos reales.",
+    "heroSub": "Formación práctica en cohortes y, además, un reto mensual: lanzar una idea nueva y documentar el proceso en público."
   }
 }

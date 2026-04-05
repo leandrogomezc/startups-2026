@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, GraduationCap, LineChart } from "lucide-react";
+import { ArrowRight, GraduationCap } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { ButtonLink } from "@/components/ui/link-button";
 import { Container } from "@/components/ui/Container";
@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <div
       id="inicio"
-      className="relative scroll-mt-20 overflow-hidden border-b border-border"
+      className="hero-surface relative scroll-mt-20 overflow-hidden border-b border-border"
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.35] dark:opacity-25"
@@ -39,14 +39,14 @@ export function Hero() {
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="text-muted-foreground mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-3 py-1 text-xs font-medium uppercase tracking-widest backdrop-blur-sm dark:bg-background/60"
           >
-            <LineChart className="text-primary h-3.5 w-3.5" aria-hidden />
+            <GraduationCap className="text-primary h-4 w-4 shrink-0" aria-hidden />
             {t("badge")}
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-[clamp(2.25rem,6vw,3.75rem)] font-normal leading-[1.08] tracking-tight text-foreground"
+            className="font-display text-[clamp(2.25rem,6vw,3.85rem)] font-semibold leading-[1.06] tracking-[-0.02em] text-foreground"
           >
             {ts("headline")}
           </motion.h1>
@@ -62,22 +62,22 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"
+            className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-stretch"
           >
-            <ButtonLink href="#roadmap" variant="primary" className="min-h-[48px] px-6 text-base font-medium">
-              {t("ctaPrimary")}
-              <ArrowRight className="h-4 w-4" aria-hidden />
-            </ButtonLink>
             <ButtonLink
-              href="#clases"
+              href="/#clases"
               variant="primary"
-              className="min-h-[52px] border-2 border-primary/90 px-7 text-base font-semibold shadow-md ring-2 ring-primary/25 ring-offset-2 ring-offset-background dark:ring-offset-background"
+              className="min-h-[52px] w-full min-w-[min(100%,14rem)] border-2 border-primary/90 px-7 text-base font-semibold shadow-md ring-2 ring-primary/25 ring-offset-2 ring-offset-background sm:w-auto dark:ring-offset-background"
             >
               <GraduationCap className="h-5 w-5 shrink-0" aria-hidden />
               {t("ctaClasses")}
               <ArrowRight className="h-4 w-4" aria-hidden />
             </ButtonLink>
-            <ButtonLink href="#cta-final" variant="secondary" className="min-h-[48px] px-6 text-base">
+            <ButtonLink href="/#roadmap" variant="secondary" className="min-h-[48px] w-full px-6 text-base font-medium sm:w-auto">
+              {t("ctaPrimary")}
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </ButtonLink>
+            <ButtonLink href="/#cta-final" variant="ghost" className="min-h-[48px] w-full px-6 text-base font-medium sm:w-auto">
               {t("ctaSecondary")}
             </ButtonLink>
           </motion.div>

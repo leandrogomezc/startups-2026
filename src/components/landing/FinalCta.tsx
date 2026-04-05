@@ -25,8 +25,8 @@ export function FinalCta() {
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
           className="rounded-3xl border border-border bg-card p-8 shadow-sm sm:p-12"
         >
-          <p className="text-primary text-xs font-semibold uppercase tracking-[0.2em]">{t("eyebrow")}</p>
-          <h2 className="font-display mt-4 max-w-xl text-3xl tracking-tight text-foreground sm:text-4xl">
+          <p className="section-eyebrow">{t("eyebrow")}</p>
+          <h2 className="section-heading mt-4 max-w-xl text-3xl sm:text-4xl">
             {t("title")}
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">{t("body")}</p>

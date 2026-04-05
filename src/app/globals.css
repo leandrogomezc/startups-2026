@@ -105,6 +105,22 @@ body {
   .font-display {
     font-family: var(--font-instrument), ui-serif, Georgia, serif;
   }
+
+  /** LAB10-like hero: subtle cool gradient, stronger separation from next section */
+  .hero-surface {
+    background: linear-gradient(180deg, var(--background) 0%, oklch(0.97 0.012 260) 100%);
+  }
+  .dark .hero-surface {
+    background: linear-gradient(180deg, var(--background) 0%, oklch(0.16 0.02 260) 100%);
+  }
+
+  .section-eyebrow {
+    @apply text-primary text-xs font-semibold uppercase tracking-[0.22em];
+  }
+
+  .section-heading {
+    @apply font-display font-semibold tracking-tight text-foreground;
+  }
 }
 
 ::selection {

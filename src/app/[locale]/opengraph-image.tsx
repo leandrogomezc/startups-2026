@@ -17,11 +17,11 @@ export default async function Image({ params }: Props) {
   const { locale } = await params;
   const isEn = locale === "en";
 
-  const headline = isEn ? "One Startup per Month" : "1 Startup por Mes";
+  const headline = isEn ? "Learn with AI. Ship real projects." : "Clases con IA. Proyectos reales.";
   const sub = isEn
-    ? "Operations, product & AI — documented month by month."
-    : "Operación, producto e IA — documentado mes a mes.";
-  const badge = "Build in public · 2026";
+    ? "Hands-on cohort courses + monthly build in public."
+    : "Formación en cohortes + reto mensual build in público.";
+  const badge = isEn ? "Hands-on training · AI · 2026" : "Formación práctica · IA · 2026";
   const role = isEn
     ? "Regional Director of Operations · tizo"
     : "Director Regional de Operaciones · tizo";

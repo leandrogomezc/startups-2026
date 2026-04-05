@@ -21,13 +21,11 @@ export async function Classes() {
   const items = t.raw("items") as ClassItem[];
 
   return (
-    <Section id="clases" className="bg-muted/20">
+    <Section id="clases" className="border-t border-border/60 bg-muted/30 dark:bg-muted/20">
       <Container>
         <FadeIn>
-          <p className="text-primary text-xs font-semibold uppercase tracking-[0.2em]">{t("eyebrow")}</p>
-          <h2 className="font-display mt-3 max-w-2xl text-3xl tracking-tight text-foreground sm:text-4xl">
-            {t("title")}
-          </h2>
+          <p className="section-eyebrow">{t("eyebrow")}</p>
+          <h2 className="section-heading mt-3 max-w-2xl text-3xl sm:text-4xl">{t("title")}</h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">{t("subtitle")}</p>
         </FadeIn>
 

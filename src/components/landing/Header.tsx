@@ -7,17 +7,18 @@ import { useCallback, useMemo, useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Container } from "@/components/ui/Container";
+import { Link } from "@/i18n/navigation";
 import { site } from "@/lib/site";
 
 const NAV_KEYS = [
-  { id: "inicio", labelKey: "home" as const, href: "#inicio" },
-  { id: "sobre-mi", labelKey: "about" as const, href: "#sobre-mi" },
-  { id: "reto", labelKey: "challenge" as const, href: "#reto" },
-  { id: "clases", labelKey: "classes" as const, href: "#clases" },
-  { id: "roadmap", labelKey: "roadmap" as const, href: "#roadmap" },
-  { id: "tesis", labelKey: "thesis" as const, href: "#tesis" },
-  { id: "cta-final", labelKey: "follow" as const, href: "#cta-final" },
-];
+  { id: "inicio", labelKey: "home" as const, href: "/#inicio" },
+  { id: "sobre-mi", labelKey: "about" as const, href: "/#sobre-mi" },
+  { id: "clases", labelKey: "classes" as const, href: "/#clases" },
+  { id: "reto", labelKey: "challenge" as const, href: "/#reto" },
+  { id: "roadmap", labelKey: "roadmap" as const, href: "/#roadmap" },
+  { id: "tesis", labelKey: "thesis" as const, href: "/#tesis" },
+  { id: "cta-final", labelKey: "follow" as const, href: "/#cta-final" },
+] as const;
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -38,24 +39,24 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
       <Container className="flex h-14 items-center justify-between gap-3 sm:h-16">
-        <a
-          href="#inicio"
+        <Link
+          href="/#inicio"
           className="font-display min-w-0 shrink text-lg tracking-tight text-foreground transition-colors hover:text-primary"
           onClick={close}
         >
           {site.name.split(" ")[0]}
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-2 lg:flex">
           <nav className="flex items-center gap-0.5" aria-label={tc("navLabel")}>
             {links.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="rounded-md px-2.5 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
           <div className="ml-2 flex items-center gap-2 border-l border-border pl-3">
@@ -92,14 +93,14 @@ export function Header() {
           >
             <Container className="flex flex-col gap-1 py-4">
               {links.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   className="rounded-lg px-3 py-3 text-base text-foreground transition-colors hover:bg-muted"
                   onClick={close}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </Container>
           </motion.div>

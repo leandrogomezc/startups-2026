@@ -2,11 +2,12 @@
 
 import { useLocale } from "next-intl";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 export function LanguageSwitcher() {
   const locale = useLocale();
+  const pathname = usePathname();
   const t = useTranslations("Common");
 
   return (
@@ -16,7 +17,7 @@ export function LanguageSwitcher() {
       aria-label={t("languageSwitch")}
     >
       <Link
-        href="/"
+        href={pathname}
         locale="es"
         className={cn(
           "rounded-md px-2.5 py-1.5 text-xs font-medium transition-colors",
@@ -28,7 +29,7 @@ export function LanguageSwitcher() {
         {t("languageEs")}
       </Link>
       <Link
-        href="/"
+        href={pathname}
         locale="en"
         className={cn(
           "rounded-md px-2.5 py-1.5 text-xs font-medium transition-colors",

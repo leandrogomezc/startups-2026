@@ -23,8 +23,8 @@ export default async function HomePage({ params }: Props) {
       <main className="flex-1">
         <Hero />
         <About />
-        <Challenge />
         <Classes />
+        <Challenge />
         <Roadmap />
         <Thesis />
         <FinalCta />
