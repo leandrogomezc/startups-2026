@@ -40,7 +40,7 @@
   },
   "Challenge": {
     "eyebrow": "El reto",
-    "title": "Construir en público, con cadencia mensual",
+    "title": "Building in public, todos los meses del año",
     "blocks": [
       {
         "label": "Qué es",
@@ -66,8 +66,8 @@
   },
   "Classes": {
     "eyebrow": "Clases",
-    "title": "Formación práctica, aparte del reto mensual",
-    "subtitle": "Sesiones enfocadas en herramientas y criterio operativo. Complementan el build in public sin reemplazarlo.",
+    "title": "Formación práctica, pasando de la idea a un producto palpable.",
+    "subtitle": "Sesiones enfocadas en herramientas y criterio operativo. Talleres, mentorías 1:1 e invitados especiales.",
     "courseSummary": "$150 USD · 6 semanas · Efectivo o transferencia",
     "scheduleHeading": "Horario",
     "syllabusHeading": "Programa",
@@ -120,7 +120,7 @@
   "Roadmap": {
     "eyebrow": "Roadmap de productos",
     "title": "Un lanzamiento por mes · 2026",
-    "subtitle": "Meses restantes del año en curso. Estados y aprendizajes se actualizan con cada ciclo.",
+    "subtitle": "Meses restantes del año en curso. Estados y aprendizajes se actualizan con cada ciclo.\nEstaremos building in public, pasando de la idea al producto en un mes, todos los meses del año.",
     "keyLearningLabel": "Aprendizaje clave",
     "detailCta": "Ver detalle",
     "upcomingLabel": "Próximamente",
@@ -233,6 +233,79 @@
     "backToRoadmap": "Volver al roadmap",
     "workHeading": "Progreso y trabajo"
   },
+  "Stats": {
+    "items": [
+      { "value": "+6", "label": "años en startups" },
+      { "value": "Dir. Ops", "label": "en tizo" },
+      { "value": "Ex CM", "label": "hugo app" },
+      { "value": "1/mes", "label": "startup nueva" }
+    ]
+  },
+  "ForWho": {
+    "eyebrow": "¿Para quién es?",
+    "title": "No necesitás saber programar",
+    "items": [
+      {
+        "title": "Founders y emprendedores",
+        "body": "Que quieren lanzar productos con IA sin depender de un equipo técnico completo desde el día uno."
+      },
+      {
+        "title": "Equipos de operaciones",
+        "body": "Que buscan automatizar procesos, mejorar atención al cliente y tomar decisiones con datos reales."
+      },
+      {
+        "title": "Operadores en LATAM",
+        "body": "Que trabajan en mercados donde la ejecución y la velocidad importan."
+      }
+    ]
+  },
+  "Testimonials": {
+    "eyebrow": "Testimonios",
+    "title": "Lo que dicen quienes ya participaron",
+    "items": [
+      {
+        "quote": "El curso me dio claridad sobre cómo integrar IA en mi negocio sin complicar la operación.",
+        "name": "María L.",
+        "role": "Founder, startup de e-commerce"
+      },
+      {
+        "quote": "Pensaba que necesitaba un equipo técnico grande. En 6 semanas lancé mi primer chatbot.",
+        "name": "Carlos R.",
+        "role": "Director de operaciones"
+      },
+      {
+        "quote": "La metodología es práctica y directa. Sin relleno, puro criterio y ejecución.",
+        "name": "Ana S.",
+        "role": "Product Manager"
+      }
+    ]
+  },
+  "FAQ": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Lo que más nos preguntan",
+    "items": [
+      {
+        "q": "¿Necesito saber programar para tomar las clases?",
+        "a": "No. Las clases están diseñadas para founders y equipos sin background técnico. Usamos herramientas no-code y low-code."
+      },
+      {
+        "q": "¿Cuál es la diferencia entre las clases y el reto mensual?",
+        "a": "Las clases son formación estructurada en cohortes de 6 semanas. El reto es un ejercicio de build in public donde lanzo un producto nuevo cada mes."
+      },
+      {
+        "q": "¿Cuánto cuestan las clases?",
+        "a": "$150 USD por la cohorte completa de 6 semanas. Se puede pagar en efectivo o por transferencia bancaria."
+      },
+      {
+        "q": "¿Cómo me inscribo?",
+        "a": "Completá el formulario de prioridad en la sección de clases. Te contactamos con los próximos pasos y medios de pago."
+      },
+      {
+        "q": "¿Las clases son en línea o presenciales?",
+        "a": "Son en línea, en vivo por videollamada. Martes y jueves a las 6:30 pm."
+      }
+    ]
+  },
   "Thesis": {
     "eyebrow": "Mi tesis",
     "title": "Ideas en las que apuesto",
@@ -246,9 +319,9 @@
     ]
   },
   "FinalCta": {
-    "eyebrow": "Seguir el recorrido",
-    "title": "Si te interesa cómo se decide bajo presión, este es el lugar.",
-    "body": "Voy a publicar lanzamientos, métricas cuando aporten contexto y lecciones sin filtro ejecutivo. Elegí dónde seguir el reto.",
+    "eyebrow": "¿Listo para empezar?",
+    "title": "Dejá de planear. Empezá a construir.",
+    "body": "Sumáte a las clases, seguí el reto mensual o simplemente mirá cómo se ejecuta en público. Elegí tu camino.",
     "linkedin": "LinkedIn",
     "instagram": "Instagram",
     "newsletterLabel": "Newsletter",
@@ -259,6 +332,6 @@
   },
   "Site": {
     "headline": "Clases con IA. Proyectos reales.",
-    "heroSub": "Formación práctica en cohortes y, además, un reto mensual: lanzar una idea nueva y documentar el proceso en público."
+    "heroSub": "Formación práctica, pasando de la idea a un producto palpable."
   }
 }

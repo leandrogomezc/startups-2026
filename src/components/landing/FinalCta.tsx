@@ -1,69 +1,57 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { InstagramGlyph, LinkedInGlyph } from "@/components/icons/SocialIcons";
-import { ButtonLink } from "@/components/ui/link-button";
 import { Container } from "@/components/ui/Container";
-import { Section } from "@/components/ui/Section";
 import { site } from "@/lib/site";
 
 export function FinalCta() {
   const t = useTranslations("FinalCta");
 
   return (
-    <Section
-      id="cta-final"
-      className="from-muted/50 border-t border-border bg-gradient-to-b to-background pb-8 dark:from-muted/20"
-    >
+    <section id="cta-final" className="scroll-mt-20 bg-foreground py-20 text-background dark:bg-card sm:py-28">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className="rounded-3xl border border-border bg-card p-8 shadow-sm sm:p-12"
+          className="mx-auto max-w-3xl text-center"
         >
-          <p className="section-eyebrow">{t("eyebrow")}</p>
-          <h2 className="section-heading mt-4 max-w-xl text-3xl sm:text-4xl">
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-background/60 dark:text-muted-foreground">
+            {t("eyebrow")}
+          </p>
+          <h2 className="font-display mt-4 text-3xl font-bold leading-[1.08] tracking-[-0.025em] text-background dark:text-foreground sm:text-4xl lg:text-5xl">
             {t("title")}
           </h2>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">{t("body")}</p>
-
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <ButtonLink href={site.linkedinUrl} variant="primary" external className="min-h-[48px] px-6">
+          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-background/70 dark:text-muted-foreground">
+            {t("body")}
+          </p>
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a
+              href={site.linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-lg bg-background px-8 text-base font-semibold text-foreground shadow-lg transition-colors hover:bg-background/90 dark:bg-primary dark:text-primary-foreground dark:hover:bg-primary/90 sm:w-auto"
+            >
               <LinkedInGlyph className="h-5 w-5" />
               {t("linkedin")}
-            </ButtonLink>
-            <ButtonLink href={site.instagramUrl} variant="secondary" external className="min-h-[48px] px-6">
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </a>
+            <a
+              href={site.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-lg border border-background/20 px-8 text-base font-medium text-background/90 transition-colors hover:bg-background/10 dark:border-border dark:text-foreground dark:hover:bg-muted sm:w-auto"
+            >
               <InstagramGlyph className="h-5 w-5" />
               {t("instagram")}
-            </ButtonLink>
-          </div>
-
-          <div className="mt-12 border-t border-border pt-10">
-            <div className="flex items-center gap-2 text-sm font-medium text-foreground">
-              <Mail className="text-primary h-4 w-4" aria-hidden />
-              {t("newsletterLabel")}
-            </div>
-            <div className="mt-4 max-w-sm">
-              <label htmlFor="newsletter-email" className="sr-only">
-                {t("newsletterLabel")}
-              </label>
-              <input
-                id="newsletter-email"
-                type="email"
-                name="email"
-                autoComplete="email"
-                placeholder={t("newsletterPlaceholder")}
-                disabled
-                className="border-border bg-muted text-muted-foreground placeholder:text-muted-foreground w-full cursor-not-allowed rounded-lg border px-4 py-3 text-sm"
-              />
-            </div>
+            </a>
           </div>
         </motion.div>
       </Container>
-    </Section>
+    </section>
   );
 }

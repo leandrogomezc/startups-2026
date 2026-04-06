@@ -20,26 +20,26 @@ export async function Roadmap() {
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">{t("subtitle")}</p>
         </FadeIn>
 
-        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {items.map((item, i) => {
             const upcoming = Boolean(item.upcoming);
             const hasPage = Boolean(item.slug) && !upcoming;
-            const cardClass = `group flex h-full flex-col rounded-2xl border-2 border-border bg-card p-6 shadow-sm transition-all hover:border-primary/20 hover:shadow-md ${upcoming ? "opacity-60 grayscale-[0.35]" : ""}`;
+            const cardClass = `group flex h-full flex-col rounded-2xl border-2 border-border bg-card p-6 shadow-sm transition-all hover:border-primary/30 hover:shadow-lg sm:p-8 ${upcoming ? "opacity-55 grayscale-[0.35]" : ""}`;
 
             const inner = (
               <>
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                    <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                       {item.month}
                     </p>
-                    <h3 className="font-display mt-2 text-xl text-foreground">{item.productName}</h3>
+                    <h3 className="font-display mt-2 text-xl font-bold text-foreground sm:text-2xl">{item.productName}</h3>
                   </div>
                   <span
                     className={
                       upcoming
                         ? "shrink-0 rounded-full bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground ring-1 ring-border"
-                        : `shrink-0 rounded-full px-2.5 py-1 text-xs font-medium ${roadmapStatusStyles(item.status)}`
+                        : `shrink-0 rounded-full px-2.5 py-1 text-xs font-semibold ${roadmapStatusStyles(item.status)}`
                     }
                     title={upcoming ? t("upcomingLabel") : item.statusMicrocopy}
                   >
@@ -48,14 +48,14 @@ export async function Roadmap() {
                 </div>
                 <p className="mt-1 text-xs text-muted-foreground">{item.statusMicrocopy}</p>
                 <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
-                <div className="mt-6 rounded-lg bg-muted/50 p-3 dark:bg-muted/30">
-                  <p className="text-[0.65rem] font-semibold uppercase tracking-wider text-muted-foreground">
+                <div className="mt-6 rounded-xl bg-muted/50 p-4 dark:bg-muted/30">
+                  <p className="text-[0.7rem] font-bold uppercase tracking-wider text-muted-foreground">
                     {t("keyLearningLabel")}
                   </p>
                   <p className="mt-1 text-sm text-foreground">{item.keyLearning}</p>
                 </div>
                 {hasPage && (
-                  <span className="text-primary mt-5 inline-flex items-center gap-1 text-sm font-medium transition-colors group-hover:gap-2">
+                  <span className="text-primary mt-5 inline-flex items-center gap-1.5 text-sm font-semibold transition-all group-hover:gap-2.5">
                     {t("detailCta")}
                     <ArrowUpRight className="h-4 w-4" aria-hidden />
                   </span>

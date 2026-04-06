@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useCallback, useMemo, useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
@@ -17,7 +17,6 @@ const NAV_KEYS = [
   { id: "reto", labelKey: "challenge" as const, href: "/#reto" },
   { id: "roadmap", labelKey: "roadmap" as const, href: "/#roadmap" },
   { id: "tesis", labelKey: "thesis" as const, href: "/#tesis" },
-  { id: "cta-final", labelKey: "follow" as const, href: "/#cta-final" },
 ] as const;
 
 export function Header() {
@@ -41,7 +40,7 @@ export function Header() {
       <Container className="flex h-14 items-center justify-between gap-3 sm:h-16">
         <Link
           href="/#inicio"
-          className="font-display min-w-0 shrink text-lg tracking-tight text-foreground transition-colors hover:text-primary"
+          className="font-display min-w-0 shrink text-lg font-bold tracking-tight text-foreground transition-colors hover:text-primary"
           onClick={close}
         >
           {site.name.split(" ")[0]}
@@ -53,7 +52,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-md px-2.5 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                className="rounded-md px-2.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
               >
                 {link.label}
               </Link>
@@ -62,6 +61,13 @@ export function Header() {
           <div className="ml-2 flex items-center gap-2 border-l border-border pl-3">
             <LanguageSwitcher />
             <ThemeToggle />
+            <Link
+              href="/#clases"
+              className="ml-1 inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
+            >
+              {t("classes")}
+              <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+            </Link>
           </div>
         </div>
 
@@ -102,6 +108,14 @@ export function Header() {
                   {link.label}
                 </Link>
               ))}
+              <Link
+                href="/#clases"
+                className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-3 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                onClick={close}
+              >
+                {t("classes")}
+                <ArrowRight className="h-4 w-4" aria-hidden />
+              </Link>
             </Container>
           </motion.div>
         )}

@@ -2,11 +2,15 @@ import { setRequestLocale } from "next-intl/server";
 import { About } from "@/components/landing/About";
 import { Challenge } from "@/components/landing/Challenge";
 import { Classes } from "@/components/landing/Classes";
+import { FAQ } from "@/components/landing/FAQ";
 import { FinalCta } from "@/components/landing/FinalCta";
 import { Footer } from "@/components/landing/Footer";
+import { ForWho } from "@/components/landing/ForWho";
 import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
 import { Roadmap } from "@/components/landing/Roadmap";
+import { Stats } from "@/components/landing/Stats";
+import { Testimonials } from "@/components/landing/Testimonials";
 import { Thesis } from "@/components/landing/Thesis";
 
 type Props = {
@@ -22,11 +26,15 @@ export default async function HomePage({ params }: Props) {
       <Header />
       <main className="flex-1">
         <Hero />
+        <Stats />
         <About />
         <Classes />
+        <ForWho />
         <Challenge />
         <Roadmap />
+        <Testimonials />
         <Thesis />
+        <FAQ />
         <FinalCta />
       </main>
       <Footer />

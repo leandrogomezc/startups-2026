@@ -8,24 +8,23 @@ export async function Thesis() {
   const lines = t.raw("lines") as string[];
 
   return (
-    <Section id="tesis" className="border-t border-border/60 bg-muted/15 dark:bg-muted/10">
+    <Section id="tesis" className="border-t border-border/60">
       <Container>
         <FadeIn>
-          <p className="section-eyebrow">{t("eyebrow")}</p>
-          <h2 className="section-heading mt-3 text-3xl sm:text-4xl">{t("title")}</h2>
+          <p className="section-eyebrow text-center">{t("eyebrow")}</p>
+          <h2 className="section-heading mx-auto mt-3 max-w-2xl text-center text-3xl sm:text-4xl">{t("title")}</h2>
         </FadeIn>
 
-        <ol className="mt-14 max-w-3xl space-y-0 border-l border-border pl-6 sm:pl-10">
+        <ol className="mx-auto mt-14 max-w-3xl space-y-0">
           {lines.map((line, i) => (
             <FadeIn key={line} delay={i * 0.06}>
-              <li className="relative pb-10 pl-2 last:pb-0 sm:pb-12">
-                <span
-                  className="border-border bg-background text-muted-foreground absolute -left-[calc(0.25rem+1px)] top-1.5 flex h-6 w-6 -translate-x-1/2 items-center justify-center rounded-full border text-xs font-semibold"
-                  aria-hidden
-                >
-                  {i + 1}
-                </span>
-                <p className="font-display text-xl leading-snug text-foreground sm:text-2xl">{line}</p>
+              <li className="relative border-b border-border/60 py-6 sm:py-8">
+                <div className="flex items-start gap-5">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+                    {i + 1}
+                  </span>
+                  <p className="font-display text-lg font-semibold leading-snug text-foreground sm:text-xl">{line}</p>
+                </div>
               </li>
             </FadeIn>
           ))}

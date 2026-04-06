@@ -40,7 +40,7 @@
   },
   "Challenge": {
     "eyebrow": "The challenge",
-    "title": "Building in public, monthly cadence",
+    "title": "Building in public, every month of the year",
     "blocks": [
       {
         "label": "What it is",
@@ -66,8 +66,8 @@
   },
   "Classes": {
     "eyebrow": "Classes",
-    "title": "Hands-on training, beyond the monthly challenge",
-    "subtitle": "Sessions focused on tools and operational judgment. They complement build in public; they do not replace it.",
+    "title": "Hands-on training, going from idea to a tangible product.",
+    "subtitle": "Sessions focused on tools and operational judgment. Workshops, 1:1 mentoring and special guests.",
     "courseSummary": "$150 USD · 6 weeks · Cash or bank transfer",
     "scheduleHeading": "Schedule",
     "syllabusHeading": "Syllabus",
@@ -120,7 +120,7 @@
   "Roadmap": {
     "eyebrow": "Product roadmap",
     "title": "One launch per month · 2026",
-    "subtitle": "Remaining months of the year. Status and learnings update each cycle.",
+    "subtitle": "Remaining months of the year. Status and learnings update each cycle.\nWe will be building in public, going from idea to product in one month, every month of the year.",
     "keyLearningLabel": "Key learning",
     "detailCta": "View detail",
     "upcomingLabel": "Coming soon",
@@ -233,6 +233,79 @@
     "backToRoadmap": "Back to roadmap",
     "workHeading": "Progress and work"
   },
+  "Stats": {
+    "items": [
+      { "value": "6+", "label": "years in startups" },
+      { "value": "Dir. Ops", "label": "at tizo" },
+      { "value": "Ex CM", "label": "hugo app" },
+      { "value": "1/mo", "label": "new startup" }
+    ]
+  },
+  "ForWho": {
+    "eyebrow": "Who is this for?",
+    "title": "You don't need to know how to code",
+    "items": [
+      {
+        "title": "Founders & entrepreneurs",
+        "body": "Who want to ship AI-powered products without relying on a full technical team from day one."
+      },
+      {
+        "title": "Operations teams",
+        "body": "Looking to automate processes, improve customer service, and make decisions with real data."
+      },
+      {
+        "title": "Operators in LATAM",
+        "body": "Working in markets where execution and speed matter."
+      }
+    ]
+  },
+  "Testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "What past participants say",
+    "items": [
+      {
+        "quote": "The course gave me clarity on how to integrate AI into my business without complicating operations.",
+        "name": "María L.",
+        "role": "Founder, e-commerce startup"
+      },
+      {
+        "quote": "I thought I needed a big technical team. In 6 weeks I launched my first chatbot.",
+        "name": "Carlos R.",
+        "role": "Director of Operations"
+      },
+      {
+        "quote": "The methodology is practical and direct. No filler—pure judgment and execution.",
+        "name": "Ana S.",
+        "role": "Product Manager"
+      }
+    ]
+  },
+  "FAQ": {
+    "eyebrow": "FAQ",
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "Do I need to know how to code to take the classes?",
+        "a": "No. Classes are designed for founders and teams without a technical background. We use no-code and low-code tools."
+      },
+      {
+        "q": "What's the difference between the classes and the monthly challenge?",
+        "a": "Classes are structured training in 6-week cohorts. The challenge is a build-in-public exercise where I ship a new product every month."
+      },
+      {
+        "q": "How much do classes cost?",
+        "a": "$150 USD for the full 6-week cohort. You can pay in cash or by bank transfer."
+      },
+      {
+        "q": "How do I sign up?",
+        "a": "Fill out the priority form in the Classes section. We'll follow up with next steps and payment options."
+      },
+      {
+        "q": "Are classes online or in person?",
+        "a": "Online, live via video call. Tuesdays and Thursdays at 6:30 PM."
+      }
+    ]
+  },
   "Thesis": {
     "eyebrow": "My thesis",
     "title": "Beliefs I bet on",
@@ -246,9 +319,9 @@
     ]
   },
   "FinalCta": {
-    "eyebrow": "Follow along",
-    "title": "If you care how decisions get made under pressure, this is the place.",
-    "body": "I'll post launches, metrics when they add context, and lessons without executive varnish. Choose where to follow the challenge.",
+    "eyebrow": "Ready to start?",
+    "title": "Stop planning. Start building.",
+    "body": "Join the classes, follow the monthly challenge, or just watch how it's done in public. Pick your path.",
     "linkedin": "LinkedIn",
     "instagram": "Instagram",
     "newsletterLabel": "Newsletter",
@@ -259,6 +332,6 @@
   },
   "Site": {
     "headline": "Learn with AI. Ship real projects.",
-    "heroSub": "Hands-on cohort courses — plus a monthly build-in-public challenge: one new idea shipped and documented each month."
+    "heroSub": "Hands-on training, going from idea to a tangible product."
   }
 }

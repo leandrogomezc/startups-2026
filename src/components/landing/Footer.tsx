@@ -9,13 +9,11 @@ export async function Footer() {
   const tf = await getTranslations("Footer");
 
   return (
-    <footer className="border-t border-border py-12">
+    <footer className="border-t border-border bg-muted/30 py-14 dark:bg-muted/10">
       <Container>
-        <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
-          <div>
-            <p className="font-display text-lg text-foreground">{site.name}</p>
-          </div>
-          <div className="flex gap-4">
+        <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
+          <p className="font-display text-lg font-bold text-foreground">{site.name}</p>
+          <div className="flex items-center gap-3">
             <Link
               href={site.linkedinUrl}
               target="_blank"
@@ -36,7 +34,7 @@ export async function Footer() {
             </Link>
           </div>
         </div>
-        <p className="mt-10 text-xs text-muted-foreground">
+        <p className="mt-8 text-center text-xs text-muted-foreground sm:text-left">
           © {year} {site.name}. {tf("rights")}
         </p>
       </Container>
