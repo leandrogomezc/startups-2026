@@ -10,9 +10,7 @@ import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
 import { Roadmap } from "@/components/landing/Roadmap";
 import { Stats } from "@/components/landing/Stats";
-import { Testimonials } from "@/components/landing/Testimonials";
 import { Thesis } from "@/components/landing/Thesis";
-
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -32,7 +30,6 @@ export default async function HomePage({ params }: Props) {
         <ForWho />
         <Challenge />
         <Roadmap />
-        <Testimonials />
         <Thesis />
         <FAQ />
         <FinalCta />
