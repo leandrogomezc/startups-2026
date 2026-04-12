@@ -14,7 +14,7 @@ export async function Footer() {
           <p className="font-display text-lg font-bold text-foreground">Founders Club</p>
           <div className="flex items-center gap-3">
             <Link
-              href="https://foundersclub.lat"
+              href="https://www.instagram.com/foundersclub.lat"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:bg-muted hover:text-foreground rounded-lg p-2 transition-colors"
