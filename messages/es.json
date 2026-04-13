@@ -59,7 +59,7 @@
     "eyebrow": "Clases",
     "title": "Formación práctica, pasando de la idea a un producto palpable.",
     "subtitle": "Sesiones enfocadas en herramientas y criterio operativo. Talleres, mentorías 1:1 e invitados especiales.",
-    "courseSummary": "$150 USD · 6 semanas · Efectivo o transferencia",
+    "courseSummary": "$180 USD · 8 semanas · $90 USD mensuales",
     "scheduleHeading": "Horario",
     "syllabusHeading": "Programa",
     "ctaPrimary": "Quiero prioridad en la primera edición",
@@ -68,8 +68,8 @@
     "formTitle": "Lista de prioridad — primera edición",
     "formLead": "Dejá tus datos para reservar prioridad en la primera edición. Te respondemos con próximos pasos.",
     "courseDetailsTitle": "Inversión y formato",
-    "coursePrice": "Precio: $150 USD",
-    "courseDuration": "Duración: 6 semanas",
+    "coursePrice": "Precio: $180 USD ($90 USD mensuales)",
+    "courseDuration": "Duración: 8 semanas",
     "coursePayment": "Pago: en efectivo o por transferencia bancaria",
     "formFieldName": "Nombre",
     "formFieldPhone": "Número de teléfono",
@@ -87,13 +87,13 @@
     "formClose": "Cerrar",
     "formSuccessTitle": "Gracias",
     "formSuccessBody": "Recibimos tu solicitud. Te contactaremos pronto. Esta ventana se cerrará en unos segundos.",
-    "formMailSubject": "Prioridad primera edición — Chatbot con IA",
+    "formMailSubject": "Prioridad primera edición — De 0 a Aplicación",
     "formMailBody": "Nombre: {name}\nTeléfono: {phone}\nCorreo: {email}",
     "items": [
       {
-        "title": "Chatbot con IA para Emprendedores",
-        "description": "Cómo diseñar y desplegar un chatbot con IA alineado a tu oferta, tus datos y tu operación: no un demo genérico. Pensado para founders y equipos que necesitan conversión y claridad, no solo tecnología.",
-        "statusMicrocopy": "19 de mayo 2026",
+        "title": "De 0 a Aplicación",
+        "description": "Es un programa 100% práctico diseñado para founders con o sin experiencia previa en tecnología. A través de un enfoque guiado y paso a paso, llevándote desde los conceptos más básicos de la lógica de programación hasta la creación y publicación de tu propia aplicación funcional.",
+        "statusMicrocopy": "26 de mayo 2026",
         "schedule": "Inicio 19 de mayo de 2026 · martes y jueves a las 6:30 pm · en línea",
         "syllabus": [
           {
@@ -102,23 +102,31 @@
           },
           {
             "label": "Semana 2",
-            "title": "Productos full stack con Lovable"
+            "title": "Indicadores claves para tu startup"
           },
           {
             "label": "Semana 3",
-            "title": "Introducción a GitHub, Vercel y Supabase"
+            "title": "Productos full stack con Lovable"
           },
           {
             "label": "Semana 4",
-            "title": "Creá tu primer chatbot con n8n en Telegram y WhatsApp"
+            "title": "Introducción a GitHub, Vercel y Supabase"
           },
           {
             "label": "Semana 5",
-            "title": "Creá tu primer chatbot con Cursor"
+            "title": "Automatizaciones con n8n"
           },
           {
             "label": "Semana 6",
+            "title": "Creá tu primer chatbot con Cursor"
+          },
+          {
+            "label": "Semana 7",
             "title": "HITL y plataformas administrativas"
+          },
+          {
+            "label": "Semana 8",
+            "title": "Ciberseguridad en tus proyectos con IA"
           },
           {
             "label": "Último día",

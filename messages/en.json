@@ -59,7 +59,7 @@
     "eyebrow": "Classes",
     "title": "Hands-on training, going from idea to a tangible product.",
     "subtitle": "Sessions focused on tools and operational judgment. Workshops, 1:1 mentoring and special guests.",
-    "courseSummary": "$150 USD · 6 weeks · Cash or bank transfer",
+    "courseSummary": "$180 USD · 8 weeks · $90 USD per month",
     "scheduleHeading": "Schedule",
     "syllabusHeading": "Syllabus",
     "ctaPrimary": "Get priority for the first cohort",
@@ -68,8 +68,8 @@
     "formTitle": "Priority list — first cohort",
     "formLead": "Share your details to hold a priority spot in the first cohort. We'll follow up with next steps.",
     "courseDetailsTitle": "Pricing and format",
-    "coursePrice": "Price: $150 USD",
-    "courseDuration": "Duration: 6 weeks",
+    "coursePrice": "Price: $180 USD ($90 USD per month)",
+    "courseDuration": "Duration: 8 weeks",
     "coursePayment": "Payment: cash or bank transfer",
     "formFieldName": "Full name",
     "formFieldPhone": "Phone number",
@@ -87,13 +87,13 @@
     "formClose": "Close",
     "formSuccessTitle": "Thank you",
     "formSuccessBody": "We received your request. We'll be in touch soon. This window will close in a few seconds.",
-    "formMailSubject": "First cohort priority — AI chatbot class",
+    "formMailSubject": "First cohort priority — From Zero to App",
     "formMailBody": "Name: {name}\nPhone: {phone}\nEmail: {email}",
     "items": [
       {
-        "title": "AI chatbot for entrepreneurs",
-        "description": "How to design and ship an AI chatbot aligned with your offer, data, and operations—not a generic demo. For founders and teams who need conversion and clarity, not just technology.",
-        "statusMicrocopy": "May 19, 2026",
+        "title": "From Zero to App",
+        "description": "A fully hands-on program for founders with or without prior tech experience. Through a guided, step-by-step approach, you go from the basics of programming logic to building and publishing your own working application.",
+        "statusMicrocopy": "May 26, 2026",
         "schedule": "Starts May 19, 2026 · Tuesdays and Thursdays at 6:30 pm · online",
         "syllabus": [
           {
@@ -102,23 +102,31 @@
           },
           {
             "label": "Week 2",
-            "title": "Full-stack products with Lovable"
+            "title": "Key indicators for your startup"
           },
           {
             "label": "Week 3",
-            "title": "Introduction to GitHub, Vercel, and Supabase"
+            "title": "Full-stack products with Lovable"
           },
           {
             "label": "Week 4",
-            "title": "Build your first chatbot with n8n on Telegram and WhatsApp"
+            "title": "Introduction to GitHub, Vercel, and Supabase"
           },
           {
             "label": "Week 5",
-            "title": "Build your first chatbot with Cursor"
+            "title": "Automations with n8n"
           },
           {
             "label": "Week 6",
+            "title": "Build your first chatbot with Cursor"
+          },
+          {
+            "label": "Week 7",
             "title": "HITL and admin platforms"
+          },
+          {
+            "label": "Week 8",
+            "title": "Cybersecurity in your AI projects"
           },
           {
             "label": "Final day",
