@@ -5,9 +5,16 @@ export type RoadmapStatusKey =
   | "Lanzado"
   | "Iterando";
 
+export type RoadmapDetailDownload = {
+  href: string;
+  label: string;
+};
+
 export type RoadmapDetailSection = {
   title: string;
   body: string;
+  /** Optional static file under /public (e.g. PDF deliverable) */
+  download?: RoadmapDetailDownload;
 };
 
 export type RoadmapItemMsg = {
@@ -22,4 +29,6 @@ export type RoadmapItemMsg = {
   keyLearning: string;
   /** Extra narrative for the project detail page */
   detailSections?: RoadmapDetailSection[];
+  /** Overrides default ProjectDetail work heading (e.g. Entregables) */
+  workSectionTitle?: string;
 };

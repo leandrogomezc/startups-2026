@@ -1,4 +1,4 @@
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, FileDown } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/Container";
@@ -48,13 +48,25 @@ export async function ProjectDetail({ project }: Props) {
       {project.detailSections && project.detailSections.length > 0 && (
         <section className="mt-14 max-w-3xl" aria-labelledby="project-work-heading">
           <h2 id="project-work-heading" className="font-display text-xl text-foreground sm:text-2xl">
-            {td("workHeading")}
+            {project.workSectionTitle ?? td("workHeading")}
           </h2>
           <ul className="mt-8 space-y-10">
             {project.detailSections.map((section) => (
               <li key={section.title}>
                 <h3 className="text-base font-semibold text-foreground">{section.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">{section.body}</p>
+                <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  {section.body}
+                </p>
+                {section.download && (
+                  <a
+                    href={section.download.href}
+                    download
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary underline-offset-4 hover:underline"
+                  >
+                    <FileDown className="h-4 w-4 shrink-0" aria-hidden />
+                    {section.download.label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>

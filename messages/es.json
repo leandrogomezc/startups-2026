@@ -150,20 +150,25 @@
         "slug": "peluditos",
         "status": "Construyendo",
         "statusMicrocopy": "En progreso",
-        "description": "Producto para adopción de mascotas: conectar refugios y adoptantes con criterio claro, filtros útiles y proceso de solicitud sin fricción innecesaria.",
-        "keyLearning": "Primer ciclo en curso: validar oferta de mascotas y criterios de adopción antes de escalar funcionalidades.",
+        "description": "Estamos construyendo un producto de matchmaking para adopción de mascotas: acercar animales en adopción a personas y familias con criterios claros, filtros útiles y un flujo de solicitud con menos fricción.",
+        "keyLearning": "Ciclo en curso: validar hipótesis de matchmaking y criterios de adopción antes de escalar funcionalidades.",
+        "workSectionTitle": "Entregables",
         "detailSections": [
           {
-            "title": "Problema y alcance",
-            "body": "Conversaciones con refugios y personas que adoptan para acotar el flujo: qué datos importan primero, dónde se pierde la confianza y qué se puede validar con un MVP sin fricción."
+            "title": "Bloque 0: Validación de la idea",
+            "body": "Supuestos iniciales sobre el problema, usuarios y encaje del producto antes de profundizar en el diseño del matchmaking y el flujo de adopción.",
+            "download": {
+              "href": "/proyectos/peluditos/b0-validacion-idea.pdf",
+              "label": "Descargar B0 — Validación de la idea (PDF)"
+            }
           },
           {
-            "title": "Lo que se está construyendo",
-            "body": "Estructura de pantallas, flujo de solicitud inicial y criterios de filtrado para priorizar coincidencias entre oferta y solicitud."
+            "title": "Bloque 1: Dirección de producto",
+            "body": "El foco es un matchmaking entre mascotas en adopción y adoptantes: compatibilidad, transparencia en perfiles y un proceso de solicitud que cuide a animales y personas."
           },
           {
-            "title": "Decisiones",
-            "body": "Priorizar criterios de adopción antes de sumar funcionalidades colaterales; medir la primera solicitud completa antes de escalar."
+            "title": "Bloque 2: Decisiones",
+            "body": "Priorizamos criterios de adopción y una primera coincidencia completa antes de sumar funcionalidades colaterales."
           }
         ]
       },

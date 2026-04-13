@@ -150,20 +150,25 @@
         "slug": "peluditos",
         "status": "Construyendo",
         "statusMicrocopy": "In progress",
-        "description": "A product for pet adoption: connect shelters and adopters with clear criteria, useful filters, and an application flow without unnecessary friction.",
-        "keyLearning": "First cycle in progress: validate pet supply and adoption criteria before scaling features.",
+        "description": "We're building a pet adoption matchmaking product: connect pets in need of a home with people and families through clear criteria, useful filters, and a lower-friction application flow.",
+        "keyLearning": "Cycle in progress: validate matchmaking hypotheses and adoption criteria before scaling features.",
+        "workSectionTitle": "Deliverables",
         "detailSections": [
           {
-            "title": "Problem and scope",
-            "body": "Conversations with shelters and adopters to narrow the flow: which data matters first, where trust breaks down, and what we can validate with a low-friction MVP."
+            "title": "Block 0: Idea validation",
+            "body": "Initial assumptions about the problem, users, and product fit before going deeper into matchmaking design and the adoption flow.",
+            "download": {
+              "href": "/proyectos/peluditos/b0-validacion-idea.pdf",
+              "label": "Download B0 — Idea validation (PDF)"
+            }
           },
           {
-            "title": "What we're building",
-            "body": "Screen structure, first application flow, and filtering criteria to prioritize matches between supply and demand."
+            "title": "Block 1: Product direction",
+            "body": "The focus is matchmaking between pets in adoption and adopters: compatibility, transparent profiles, and an application process that protects both animals and people."
           },
           {
-            "title": "Decisions",
-            "body": "Prioritize adoption criteria before adding secondary features; measure a full first application before scaling."
+            "title": "Block 2: Decisions",
+            "body": "We prioritize adoption criteria and a full first match before adding secondary features."
           }
         ]
       },
