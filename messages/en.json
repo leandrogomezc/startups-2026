@@ -1,9 +1,9 @@
 {
   "Meta": {
-    "title": "Leandro Gómez Cano — one startup per month",
-    "description": "Regional Director of Operations at tizo. I ship one product idea per month until year-end and document the process in public: startups, operations, growth, AI, and execution.",
-    "ogDescription": "One new product each month until December. Public documentation of process, decisions, and metrics. Operations, growth, and applied AI.",
-    "twitterDescription": "Build in public: monthly launches, learnings, and outcomes. Startup operator and product builder."
+    "title": "Leandro Gómez Cano — Central American startup ecosystem",
+    "description": "Building the startup ecosystem in Central America with a Nicaragua focus: business skills for founders, hands-on training, and build in public.",
+    "ogDescription": "Startup ecosystem in Central America, Nicaragua-first. Founders with the skills to build real businesses—classes, roadmap, and build in public.",
+    "twitterDescription": "Central America & Nicaragua: founders with the skills to win in business. Training, monthly challenge, and execution in the open."
   },
   "Common": {
     "openMenu": "Open menu",
@@ -17,7 +17,6 @@
   },
   "Nav": {
     "home": "Home",
-    "about": "About",
     "challenge": "Challenge",
     "roadmap": "Roadmap",
     "thesis": "Thesis",
@@ -25,18 +24,10 @@
     "follow": "Follow"
   },
   "Hero": {
-    "badge": "Hands-on training · AI · 2026",
-    "footnote": "Courses · roadmap · build in public",
-    "ctaPrimary": "View projects",
-    "ctaClasses": "View classes",
-    "ctaSecondary": "Follow the challenge"
-  },
-  "About": {
-    "eyebrow": "About",
-    "title": "Operations and product on the same plane",
-    "name": "Leandro Gómez Cano",
-    "body": "I'm Leandro Gómez Cano. I have six years of experience in startups. I'm Regional Director of Operations at tizo and former Country Manager at hugo app. I work with startups and high-tempo teams on operations, growth, artificial intelligence, and product building.",
-    "purpose": "My purpose is to strengthen Nicaragua's startup ecosystem and help founders ship their ideas."
+    "badge": "Central America · Founders · Startups",
+    "footnote": "Hands-on classes, roadmap, and build in public—one way to plug into the ecosystem.",
+    "ctaPrimary": "Read the thesis",
+    "ctaClasses": "View classes"
   },
   "Challenge": {
     "eyebrow": "The challenge",
@@ -51,15 +42,15 @@
         "text": "Speed forces decisions. Documenting in the open enforces clarity, cuts self-deception, and accelerates learning against real markets."
       },
       {
-        "label": "What I'll build",
+        "label": "What we're building",
         "text": "Actionable prototypes and MVPs: tools, flows, and experiments that can be validated with users without empty narrative."
       },
       {
-        "label": "What I share",
+        "label": "What we share",
         "text": "Scope decisions, trade-offs, metrics that matter, mistakes, and adjustments. No glamour: judgment and numbers when relevant."
       },
       {
-        "label": "What I want to learn",
+        "label": "What we'll learn",
         "text": "How to compress validation time, what to repeat in operations, and how to fold AI into the product cycle without losing business focus."
       }
     ]
@@ -72,7 +63,7 @@
     "scheduleHeading": "Schedule",
     "syllabusHeading": "Syllabus",
     "ctaPrimary": "Get priority for the first cohort",
-    "ctaSecondary": "Follow updates on LinkedIn",
+    "ctaSecondary": "Follow on Instagram",
     "ctaHint": "Opens a form with your contact details and course information.",
     "formTitle": "Priority list — first cohort",
     "formLead": "Share your details to hold a priority spot in the first cohort. We'll follow up with next steps.",
@@ -105,13 +96,34 @@
         "statusMicrocopy": "May 19, 2026",
         "schedule": "Starts May 19, 2026 · Tuesdays and Thursdays at 6:30 pm · online",
         "syllabus": [
-          { "label": "Week 1", "title": "MVP definition, ICP, and smoke tests" },
-          { "label": "Week 2", "title": "Full-stack products with Lovable" },
-          { "label": "Week 3", "title": "Introduction to GitHub, Vercel, and Supabase" },
-          { "label": "Week 4", "title": "Build your first chatbot with n8n on Telegram and WhatsApp" },
-          { "label": "Week 5", "title": "Build your first chatbot with Cursor" },
-          { "label": "Week 6", "title": "HITL and admin platforms" },
-          { "label": "Final day", "title": "Pitch Day" }
+          {
+            "label": "Week 1",
+            "title": "MVP definition, ICP, and smoke tests"
+          },
+          {
+            "label": "Week 2",
+            "title": "Full-stack products with Lovable"
+          },
+          {
+            "label": "Week 3",
+            "title": "Introduction to GitHub, Vercel, and Supabase"
+          },
+          {
+            "label": "Week 4",
+            "title": "Build your first chatbot with n8n on Telegram and WhatsApp"
+          },
+          {
+            "label": "Week 5",
+            "title": "Build your first chatbot with Cursor"
+          },
+          {
+            "label": "Week 6",
+            "title": "HITL and admin platforms"
+          },
+          {
+            "label": "Final day",
+            "title": "Pitch Day"
+          }
         ],
         "footnote": "Enrollment: submit the priority form; we'll confirm payment options."
       }
@@ -233,14 +245,6 @@
     "backToRoadmap": "Back to roadmap",
     "workHeading": "Progress and work"
   },
-  "Stats": {
-    "items": [
-      { "value": "6+", "label": "years in startups" },
-      { "value": "Dir. Ops", "label": "at tizo" },
-      { "value": "Ex CM", "label": "hugo app" },
-      { "value": "1/mo", "label": "new startup" }
-    ]
-  },
   "ForWho": {
     "eyebrow": "Who is this for?",
     "title": "You don't need to know how to code",
@@ -259,27 +263,6 @@
       }
     ]
   },
-  "Testimonials": {
-    "eyebrow": "Testimonials",
-    "title": "What past participants say",
-    "items": [
-      {
-        "quote": "The course gave me clarity on how to integrate AI into my business without complicating operations.",
-        "name": "María L.",
-        "role": "Founder, e-commerce startup"
-      },
-      {
-        "quote": "I thought I needed a big technical team. In 6 weeks I launched my first chatbot.",
-        "name": "Carlos R.",
-        "role": "Director of Operations"
-      },
-      {
-        "quote": "The methodology is practical and direct. No filler—pure judgment and execution.",
-        "name": "Ana S.",
-        "role": "Product Manager"
-      }
-    ]
-  },
   "FAQ": {
     "eyebrow": "FAQ",
     "title": "Frequently asked questions",
@@ -289,12 +272,12 @@
         "a": "No. Classes are designed for founders and teams without a technical background. We use no-code and low-code tools."
       },
       {
-        "q": "What's the difference between the classes and the monthly challenge?",
-        "a": "Classes are structured training in 6-week cohorts. The challenge is a build-in-public exercise where I ship a new product every month."
+        "q": "What's the difference between the classes, the monthly challenge, and the community?",
+        "a": "Classes are structured training in cohorts.\n\nThe challenge is a build-in-public exercise where we ship a new product every month and share what we learn—for free. We build the community to connect founders and push our projects forward."
       },
       {
         "q": "How much do classes cost?",
-        "a": "$150 USD for the full 6-week cohort. You can pay in cash or by bank transfer."
+        "a": "Each class has a different price and duration. Contact us at +50588216400 for more information."
       },
       {
         "q": "How do I sign up?",
@@ -307,9 +290,10 @@
     ]
   },
   "Thesis": {
-    "eyebrow": "My thesis",
-    "title": "Beliefs I bet on",
+    "eyebrow": "Our thesis",
+    "title": "Ideas we're betting on",
     "lines": [
+      "Central America—and Nicaragua as a starting point—needs a stronger startup ecosystem; it's built one founder at a time.",
       "Execution beats theory.",
       "Building in public accelerates learning.",
       "AI changes how products are designed and shipped.",
@@ -321,9 +305,8 @@
   "FinalCta": {
     "eyebrow": "Ready to start?",
     "title": "Stop planning. Start building.",
-    "body": "Join the classes, follow the monthly challenge, or just watch how it's done in public. Pick your path.",
-    "linkedin": "LinkedIn",
-    "instagram": "Instagram",
+    "body": "We grow the ecosystem through execution: follow the monthly challenge, join a class when it fits your stage, or watch how decisions happen in public.",
+    "instagram": "Follow on Instagram",
     "newsletterLabel": "Newsletter",
     "newsletterPlaceholder": "you@email.com"
   },
@@ -331,7 +314,7 @@
     "rights": "All rights reserved."
   },
   "Site": {
-    "headline": "Learn with AI. Ship real projects.",
-    "heroSub": "Hands-on training, going from idea to a tangible product."
+    "headline": "We foster the startup ecosystem in Central America",
+    "heroSub": "We support founders with the skills and judgment to succeed in business: applied training, visible execution, and community."
   }
 }

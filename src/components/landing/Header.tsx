@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Menu, X } from "lucide-react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useCallback, useMemo, useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
@@ -12,7 +13,6 @@ import { site } from "@/lib/site";
 
 const NAV_KEYS = [
   { id: "inicio", labelKey: "home" as const, href: "/#inicio" },
-  { id: "sobre-mi", labelKey: "about" as const, href: "/#sobre-mi" },
   { id: "clases", labelKey: "classes" as const, href: "/#clases" },
   { id: "reto", labelKey: "challenge" as const, href: "/#reto" },
   { id: "roadmap", labelKey: "roadmap" as const, href: "/#roadmap" },
@@ -40,10 +40,17 @@ export function Header() {
       <Container className="flex h-14 items-center justify-between gap-3 sm:h-16">
         <Link
           href="/#inicio"
-          className="font-display min-w-0 shrink text-lg font-bold tracking-tight text-foreground transition-colors hover:text-primary"
+          className="min-w-0 shrink transition-opacity hover:opacity-90"
           onClick={close}
         >
-          {site.name.split(" ")[0]}
+          <Image
+            src={site.logoSrc}
+            alt={site.brandName}
+            width={200}
+            height={32}
+            priority
+            className="h-8 w-auto max-w-[min(200px,55vw)] object-contain object-left dark:invert"
+          />
         </Link>
 
         <div className="hidden items-center gap-2 lg:flex">

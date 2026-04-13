@@ -1,5 +1,6 @@
-import { ArrowRight, Calendar, Clock, DollarSign, ExternalLink } from "lucide-react";
+import { ArrowRight, Calendar, Clock, DollarSign } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import { InstagramGlyph } from "@/components/icons/SocialIcons";
 import { ClassPriorityModal, type ClassSyllabusRow } from "@/components/landing/ClassPriorityModal";
 import { FadeIn } from "@/components/landing/FadeIn";
 import { ButtonLink } from "@/components/ui/link-button";
@@ -83,12 +84,12 @@ export async function Classes() {
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                     <ClassPriorityModal schedule={item.schedule} syllabus={item.syllabus} />
                     <ButtonLink
-                      href={site.linkedinUrl}
+                      href={site.instagramUrl}
                       variant="secondary"
                       external
                       className="min-h-[52px] px-6 text-base"
                     >
-                      <ExternalLink className="h-5 w-5 shrink-0" aria-hidden />
+                      <InstagramGlyph className="h-5 w-5 shrink-0" aria-hidden />
                       {t("ctaSecondary")}
                     </ButtonLink>
                   </div>

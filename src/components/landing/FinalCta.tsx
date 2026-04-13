@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { InstagramGlyph, LinkedInGlyph } from "@/components/icons/SocialIcons";
+import { InstagramGlyph } from "@/components/icons/SocialIcons";
 import { Container } from "@/components/ui/Container";
 import { site } from "@/lib/site";
 
@@ -31,23 +31,14 @@ export function FinalCta() {
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href={site.linkedinUrl}
+              href={site.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-lg bg-background px-8 text-base font-semibold text-foreground shadow-lg transition-colors hover:bg-background/90 dark:bg-primary dark:text-primary-foreground dark:hover:bg-primary/90 sm:w-auto"
             >
-              <LinkedInGlyph className="h-5 w-5" />
-              {t("linkedin")}
-              <ArrowRight className="h-4 w-4" aria-hidden />
-            </a>
-            <a
-              href={site.instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-lg border border-background/20 px-8 text-base font-medium text-background/90 transition-colors hover:bg-background/10 dark:border-border dark:text-foreground dark:hover:bg-muted sm:w-auto"
-            >
               <InstagramGlyph className="h-5 w-5" />
               {t("instagram")}
+              <ArrowRight className="h-4 w-4" aria-hidden />
             </a>
           </div>
         </motion.div>

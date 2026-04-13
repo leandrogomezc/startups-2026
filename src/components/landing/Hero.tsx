@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, GraduationCap } from "lucide-react";
+import { ArrowRight, BookOpen, Globe2, GraduationCap } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { ButtonLink } from "@/components/ui/link-button";
 import { Container } from "@/components/ui/Container";
@@ -20,7 +20,7 @@ export function Hero() {
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="text-primary mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-semibold uppercase tracking-widest"
           >
-            <GraduationCap className="h-4 w-4 shrink-0" aria-hidden />
+            <Globe2 className="h-4 w-4 shrink-0" aria-hidden />
             {t("badge")}
           </motion.p>
           <motion.h1
@@ -46,20 +46,21 @@ export function Hero() {
             className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
             <ButtonLink
-              href="/#clases"
+              href="/#tesis"
               variant="primary"
               className="min-h-[52px] w-full px-8 text-base font-semibold shadow-lg sm:w-auto"
             >
-              <GraduationCap className="h-5 w-5 shrink-0" aria-hidden />
-              {t("ctaClasses")}
+              <BookOpen className="h-5 w-5 shrink-0" aria-hidden />
+              {t("ctaPrimary")}
               <ArrowRight className="h-4 w-4" aria-hidden />
             </ButtonLink>
             <ButtonLink
-              href="/#roadmap"
+              href="/#clases"
               variant="secondary"
               className="min-h-[52px] w-full px-8 text-base font-medium sm:w-auto"
             >
-              {t("ctaPrimary")}
+              <GraduationCap className="h-5 w-5 shrink-0" aria-hidden />
+              {t("ctaClasses")}
               <ArrowRight className="h-4 w-4" aria-hidden />
             </ButtonLink>
           </motion.div>

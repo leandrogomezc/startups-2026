@@ -27,7 +27,9 @@ function AccordionItem({ item, open, toggle }: { item: Item; open: boolean; togg
         className={`grid transition-[grid-template-rows] duration-200 ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
       >
         <div className="overflow-hidden">
-          <p className="pb-5 text-sm leading-relaxed text-muted-foreground sm:text-base">{item.a}</p>
+          <p className="whitespace-pre-line pb-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
+            {item.a}
+          </p>
         </div>
       </div>
     </div>

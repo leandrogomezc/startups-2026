@@ -1,9 +1,9 @@
 {
   "Meta": {
-    "title": "Leandro Gómez Cano — 1 startup al mes",
-    "description": "Director Regional de Operaciones en tizo. Lanzo una idea de producto por mes hasta fin de año y documento el proceso en público: startups, operaciones, growth, IA y ejecución.",
-    "ogDescription": "Un producto nuevo cada mes hasta diciembre. Documentación pública del proceso, decisiones y métricas. Operaciones, growth e IA aplicada.",
-    "twitterDescription": "Build in public: lanzamientos mensuales, aprendizajes y resultados. Operador de startups y producto."
+    "title": "Leandro Gómez Cano — Ecosistema de startups en Centroamérica",
+    "description": "Impulso el ecosistema de startups en Centroamérica con foco en Nicaragua: habilidades de negocio para founders, formación aplicada y ejecución en público.",
+    "ogDescription": "Ecosistema de startups en Centroamérica, con foco Nicaragua. Founders con skills para construir negocios; clases, roadmap y build in público.",
+    "twitterDescription": "Centroamérica y Nicaragua: founders con habilidades para el éxito empresarial. Formación, reto mensual y operación en abierto."
   },
   "Common": {
     "openMenu": "Abrir menú",
@@ -17,7 +17,6 @@
   },
   "Nav": {
     "home": "Inicio",
-    "about": "Sobre mí",
     "challenge": "Reto",
     "roadmap": "Roadmap",
     "thesis": "Tesis",
@@ -25,18 +24,10 @@
     "follow": "Seguir"
   },
   "Hero": {
-    "badge": "Formación práctica · IA · 2026",
-    "footnote": "Cursos · roadmap · build in público",
-    "ctaPrimary": "Ver proyectos",
-    "ctaClasses": "Ver clases",
-    "ctaSecondary": "Seguir el reto"
-  },
-  "About": {
-    "eyebrow": "Sobre mí",
-    "title": "Operación y producto, en el mismo plano",
-    "name": "Leandro Gómez Cano",
-    "body": "Soy Leandro Gómez Cano, poseo 6 años de experiencia en startups, actualmente Director Regional de Operaciones en tizo, ex Country Manager de hugo app. Trabajo con startups y equipos de alto ritmo en operaciones, growth, inteligencia artificial y construcción de productos.",
-    "purpose": "Mi propósito es impulsar el ecosistema startup en Nicaragua, ayudando a founders a lanzar sus ideas."
+    "badge": "Centroamérica · Founders · Startups",
+    "footnote": "Clases prácticas, roadmap y build in público — una forma de sumarse al ecosistema.",
+    "ctaPrimary": "Ver la tesis",
+    "ctaClasses": "Ver clases"
   },
   "Challenge": {
     "eyebrow": "El reto",
@@ -51,15 +42,15 @@
         "text": "La velocidad obliga a decidir. Documentar en abierto fuerza claridad, reduce autoengaño y acelera el aprendizaje frente a mercados reales."
       },
       {
-        "label": "Qué voy a construir",
+        "label": "Qué vamos a construir",
         "text": "Prototipos y MVPs accionables: herramientas, flujos y experimentos que puedan validarse con usuarios sin depender de narrativa vacía."
       },
       {
-        "label": "Qué comparto",
+        "label": "Qué compartimos",
         "text": "Decisiones de alcance, trade-offs, métricas que importan, errores y ajustes. Sin glamour: criterio y números cuando aplique."
       },
       {
-        "label": "Qué quiero aprender",
+        "label": "Qué vamos a aprender",
         "text": "Cómo comprimir tiempo de validación, qué repetir en operación y cómo integrar IA en el ciclo de producto sin perder foco en el negocio."
       }
     ]
@@ -72,7 +63,7 @@
     "scheduleHeading": "Horario",
     "syllabusHeading": "Programa",
     "ctaPrimary": "Quiero prioridad en la primera edición",
-    "ctaSecondary": "Seguir novedades en LinkedIn",
+    "ctaSecondary": "Seguir en Instagram",
     "ctaHint": "Abrimos un formulario con los datos de contacto y el detalle del curso.",
     "formTitle": "Lista de prioridad — primera edición",
     "formLead": "Dejá tus datos para reservar prioridad en la primera edición. Te respondemos con próximos pasos.",
@@ -105,13 +96,34 @@
         "statusMicrocopy": "19 de mayo 2026",
         "schedule": "Inicio 19 de mayo de 2026 · martes y jueves a las 6:30 pm · en línea",
         "syllabus": [
-          { "label": "Semana 1", "title": "Definición del MVP, ICP y smoke tests" },
-          { "label": "Semana 2", "title": "Productos full stack con Lovable" },
-          { "label": "Semana 3", "title": "Introducción a GitHub, Vercel y Supabase" },
-          { "label": "Semana 4", "title": "Creá tu primer chatbot con n8n en Telegram y WhatsApp" },
-          { "label": "Semana 5", "title": "Creá tu primer chatbot con Cursor" },
-          { "label": "Semana 6", "title": "HITL y plataformas administrativas" },
-          { "label": "Último día", "title": "Pitch Day" }
+          {
+            "label": "Semana 1",
+            "title": "Definición del MVP, ICP y smoke tests"
+          },
+          {
+            "label": "Semana 2",
+            "title": "Productos full stack con Lovable"
+          },
+          {
+            "label": "Semana 3",
+            "title": "Introducción a GitHub, Vercel y Supabase"
+          },
+          {
+            "label": "Semana 4",
+            "title": "Creá tu primer chatbot con n8n en Telegram y WhatsApp"
+          },
+          {
+            "label": "Semana 5",
+            "title": "Creá tu primer chatbot con Cursor"
+          },
+          {
+            "label": "Semana 6",
+            "title": "HITL y plataformas administrativas"
+          },
+          {
+            "label": "Último día",
+            "title": "Pitch Day"
+          }
         ],
         "footnote": "Inscripción: completá el formulario de prioridad; te confirmamos medios de pago."
       }
@@ -233,14 +245,6 @@
     "backToRoadmap": "Volver al roadmap",
     "workHeading": "Progreso y trabajo"
   },
-  "Stats": {
-    "items": [
-      { "value": "+6", "label": "años en startups" },
-      { "value": "Dir. Ops", "label": "en tizo" },
-      { "value": "Ex CM", "label": "hugo app" },
-      { "value": "1/mes", "label": "startup nueva" }
-    ]
-  },
   "ForWho": {
     "eyebrow": "¿Para quién es?",
     "title": "No necesitás saber programar",
@@ -259,27 +263,6 @@
       }
     ]
   },
-  "Testimonials": {
-    "eyebrow": "Testimonios",
-    "title": "Lo que dicen quienes ya participaron",
-    "items": [
-      {
-        "quote": "El curso me dio claridad sobre cómo integrar IA en mi negocio sin complicar la operación.",
-        "name": "María L.",
-        "role": "Founder, startup de e-commerce"
-      },
-      {
-        "quote": "Pensaba que necesitaba un equipo técnico grande. En 6 semanas lancé mi primer chatbot.",
-        "name": "Carlos R.",
-        "role": "Director de operaciones"
-      },
-      {
-        "quote": "La metodología es práctica y directa. Sin relleno, puro criterio y ejecución.",
-        "name": "Ana S.",
-        "role": "Product Manager"
-      }
-    ]
-  },
   "FAQ": {
     "eyebrow": "Preguntas frecuentes",
     "title": "Lo que más nos preguntan",
@@ -289,12 +272,12 @@
         "a": "No. Las clases están diseñadas para founders y equipos sin background técnico. Usamos herramientas no-code y low-code."
       },
       {
-        "q": "¿Cuál es la diferencia entre las clases y el reto mensual?",
-        "a": "Las clases son formación estructurada en cohortes de 6 semanas. El reto es un ejercicio de build in public donde lanzo un producto nuevo cada mes."
+        "q": "¿Cuál es la diferencia entre las clases y el reto mensual y la comunidad?",
+        "a": "Las clases son formación estructurada en cohortes.\n\nEl reto es un ejercicio de build in public donde lanzamos un producto nuevo cada mes y vamos mostrando gratuitamente los aprendizajes. La comunidad la formamos para conectar con otros founders para impulsar nuestros proyectos."
       },
       {
         "q": "¿Cuánto cuestan las clases?",
-        "a": "$150 USD por la cohorte completa de 6 semanas. Se puede pagar en efectivo o por transferencia bancaria."
+        "a": "Cada clase tiene un costo y duración distinto. Contactanos al +50588216400 para más información."
       },
       {
         "q": "¿Cómo me inscribo?",
@@ -307,9 +290,10 @@
     ]
   },
   "Thesis": {
-    "eyebrow": "Mi tesis",
-    "title": "Ideas en las que apuesto",
+    "eyebrow": "Nuestra tesis",
+    "title": "Ideas en las que apostamos",
     "lines": [
+      "Centroamérica —y Nicaragua como foco— necesitan un ecosistema de startups más fuerte; eso se construye founder por founder.",
       "La ejecución vence a la teoría.",
       "Construir en público acelera el aprendizaje.",
       "La IA cambia cómo se diseñan y lanzan productos.",
@@ -321,9 +305,8 @@
   "FinalCta": {
     "eyebrow": "¿Listo para empezar?",
     "title": "Dejá de planear. Empezá a construir.",
-    "body": "Sumáte a las clases, seguí el reto mensual o simplemente mirá cómo se ejecuta en público. Elegí tu camino.",
-    "linkedin": "LinkedIn",
-    "instagram": "Instagram",
+    "body": "Construimos el ecosistema desde la ejecución: seguí el reto, sumáte a las clases cuando encaje tu etapa, o mirá cómo se decide en público.",
+    "instagram": "Seguir en Instagram",
     "newsletterLabel": "Newsletter",
     "newsletterPlaceholder": "tu@email.com"
   },
@@ -331,7 +314,7 @@
     "rights": "Todos los derechos reservados."
   },
   "Site": {
-    "headline": "Clases con IA. Proyectos reales.",
-    "heroSub": "Formación práctica, pasando de la idea a un producto palpable."
+    "headline": "Fomentamos el ecosistema de startups en Centroamérica",
+    "heroSub": "Acompañamos a founders con las habilidades y el criterio para el éxito empresarial: formación aplicada, ejecución visible y comunidad."
   }
 }

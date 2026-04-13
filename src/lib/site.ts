@@ -2,11 +2,10 @@
 
 export const site = {
   name: "Leandro Gómez Cano",
+  brandName: "Founders Club",
+  logoSrc: "/founders-club-logo.svg",
   company: "tizo",
-  linkedinUrl:
-    (typeof process !== "undefined" && process.env.NEXT_PUBLIC_LINKEDIN_URL) ||
-    "https://www.linkedin.com/in/leandro-gomez-cano",
   instagramUrl:
     (typeof process !== "undefined" && process.env.NEXT_PUBLIC_INSTAGRAM_URL) ||
-    "https://www.instagram.com/leandrogomezc_/",
+    "https://www.instagram.com/foundersclub.lat",
 } as const;
