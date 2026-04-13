@@ -21,6 +21,7 @@
     "roadmap": "Roadmap",
     "thesis": "Tesis",
     "classes": "Clases",
+    "community": "Comunidad",
     "follow": "Seguir"
   },
   "Hero": {
@@ -136,6 +137,41 @@
         "footnote": "Inscripción: completá el formulario de prioridad; te confirmamos medios de pago."
       }
     ]
+  },
+  "ClassesTeaser": {
+    "eyebrow": "Clases",
+    "title": "Una página exclusiva para ver el programa completo.",
+    "body": "Separamos las clases del home para que podás revisar el contenido, el precio, el calendario y el formulario de prioridad en un solo lugar.",
+    "highlight": "Programa actual",
+    "summary": "De 0 a Aplicación es una cohorte práctica para founders que quieren pasar de idea a producto publicado con guía paso a paso.",
+    "detailsTitle": "Resumen rápido",
+    "schedule": "Martes y jueves a las 6:30 pm · en línea",
+    "cta": "Ver página de clases"
+  },
+  "Community": {
+    "eyebrow": "Comunidad",
+    "title": "Founders Club existe para que no construyás solo.",
+    "intro": "La comunidad de Founders Club reúne a founders y operadores que quieren avanzar con más criterio, más velocidad y menos ruido. Es un espacio para compartir avances, destrabar decisiones y mantenernos cerca de personas que también están construyendo.",
+    "pillars": [
+      {
+        "title": "Conexión entre founders",
+        "body": "Queremos acercar a personas que están creando productos, operando negocios y buscando pares con quienes pensar mejor y ejecutar más rápido."
+      },
+      {
+        "title": "Accountability y aprendizaje",
+        "body": "La comunidad sirve para mostrar progreso real, pedir feedback y aprender de decisiones, errores y experimentos que otros ya están viviendo."
+      },
+      {
+        "title": "Impulso para ejecutar",
+        "body": "No buscamos una comunidad pasiva. La idea es que sea un punto de apoyo para convertir conversaciones en acción y proyectos en movimiento."
+      }
+    ],
+    "ctaEyebrow": "Sumate",
+    "ctaTitle": "Entrá al grupo de WhatsApp de Founders Club",
+    "ctaBody": "Si querés estar cerca del ecosistema, conocer a otros founders y recibir conversaciones más directas sobre producto, negocio e IA, este es el mejor punto de entrada.",
+    "ctaCardTitle": "Comunidad en WhatsApp",
+    "ctaCardBody": "Entrá al grupo para conectar con la comunidad, seguir el ritmo del ecosistema y participar en lo que estamos construyendo.",
+    "ctaButton": "Unirme a la comunidad"
   },
   "Roadmap": {
     "eyebrow": "Roadmap de productos",
@@ -294,7 +330,7 @@
       },
       {
         "q": "¿Cómo me inscribo?",
-        "a": "Completá el formulario de prioridad en la sección de clases. Te contactamos con los próximos pasos y medios de pago."
+        "a": "Completá el formulario de prioridad en la página de clases. Te contactamos con los próximos pasos y medios de pago."
       },
       {
         "q": "¿Las clases son en línea o presenciales?",

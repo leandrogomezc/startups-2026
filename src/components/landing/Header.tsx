@@ -3,17 +3,19 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Menu, X } from "lucide-react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useCallback, useMemo, useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Container } from "@/components/ui/Container";
 import { Link } from "@/i18n/navigation";
+import { getClassesPath, getCommunityPath } from "@/lib/localized-paths";
 import { site } from "@/lib/site";
 
 const NAV_KEYS = [
   { id: "inicio", labelKey: "home" as const, href: "/#inicio" },
-  { id: "clases", labelKey: "classes" as const, href: "/#clases" },
+  { id: "clases", labelKey: "classes" as const, href: "/clases" },
+  { id: "comunidad", labelKey: "community" as const, href: "/comunidad" },
   { id: "reto", labelKey: "challenge" as const, href: "/#reto" },
   { id: "roadmap", labelKey: "roadmap" as const, href: "/#roadmap" },
   { id: "tesis", labelKey: "thesis" as const, href: "/#tesis" },
@@ -21,8 +23,11 @@ const NAV_KEYS = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const locale = useLocale();
   const t = useTranslations("Nav");
   const tc = useTranslations("Common");
+  const classesHref = getClassesPath(locale);
+  const communityHref = getCommunityPath(locale);
 
   const close = useCallback(() => setOpen(false), []);
 
@@ -30,9 +35,15 @@ export function Header() {
     () =>
       NAV_KEYS.map((item) => ({
         ...item,
+        href:
+          item.id === "clases"
+            ? classesHref
+            : item.id === "comunidad"
+              ? communityHref
+              : item.href,
         label: t(item.labelKey),
       })),
-    [t]
+    [classesHref, communityHref, t]
   );
 
   return (
@@ -69,7 +80,7 @@ export function Header() {
             <LanguageSwitcher />
             <ThemeToggle />
             <Link
-              href="/#clases"
+              href={classesHref}
               className="ml-1 inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
             >
               {t("classes")}
@@ -116,7 +127,7 @@ export function Header() {
                 </Link>
               ))}
               <Link
-                href="/#clases"
+                href={classesHref}
                 className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-3 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
                 onClick={close}
               >

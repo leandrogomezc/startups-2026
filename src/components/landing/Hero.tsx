@@ -2,13 +2,16 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, BookOpen, Globe2, GraduationCap } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { ButtonLink } from "@/components/ui/link-button";
 import { Container } from "@/components/ui/Container";
+import { getClassesPath } from "@/lib/localized-paths";
 
 export function Hero() {
+  const locale = useLocale();
   const t = useTranslations("Hero");
   const ts = useTranslations("Site");
+  const classesHref = getClassesPath(locale);
 
   return (
     <div id="inicio" className="hero-surface relative scroll-mt-20 overflow-hidden">
@@ -55,7 +58,7 @@ export function Hero() {
               <ArrowRight className="h-4 w-4" aria-hidden />
             </ButtonLink>
             <ButtonLink
-              href="/#clases"
+              href={classesHref}
               variant="secondary"
               className="min-h-[52px] w-full px-8 text-base font-medium sm:w-auto"
             >

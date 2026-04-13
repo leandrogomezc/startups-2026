@@ -21,6 +21,7 @@
     "roadmap": "Roadmap",
     "thesis": "Thesis",
     "classes": "Classes",
+    "community": "Community",
     "follow": "Follow"
   },
   "Hero": {
@@ -136,6 +137,41 @@
         "footnote": "Enrollment: submit the priority form; we'll confirm payment options."
       }
     ]
+  },
+  "ClassesTeaser": {
+    "eyebrow": "Classes",
+    "title": "A dedicated page for the full class offer.",
+    "body": "We split classes out of the home page so you can review the program, pricing, schedule, and priority form in one place.",
+    "highlight": "Current cohort",
+    "summary": "From Zero to App is a hands-on cohort for founders who want to move from an idea to a published product with step-by-step guidance.",
+    "detailsTitle": "Quick overview",
+    "schedule": "Tuesdays and Thursdays at 6:30 pm · online",
+    "cta": "View classes page"
+  },
+  "Community": {
+    "eyebrow": "Community",
+    "title": "Founders Club exists so you don't have to build alone.",
+    "intro": "The Founders Club community brings together founders and operators who want to move with more clarity, more speed, and less noise. It's a space to share progress, unblock decisions, and stay close to people who are building too.",
+    "pillars": [
+      {
+        "title": "Founder-to-founder connection",
+        "body": "We want to bring together people building products, running businesses, and looking for peers who help them think better and execute faster."
+      },
+      {
+        "title": "Accountability and learning",
+        "body": "The community is meant for sharing real progress, asking for feedback, and learning from the decisions, mistakes, and experiments others are already living through."
+      },
+      {
+        "title": "Momentum to execute",
+        "body": "We don't want a passive community. The goal is to create a support point that turns conversations into action and projects into motion."
+      }
+    ],
+    "ctaEyebrow": "Join in",
+    "ctaTitle": "Join the Founders Club WhatsApp group",
+    "ctaBody": "If you want to stay close to the ecosystem, meet other founders, and join more direct conversations about product, business, and AI, this is the best place to start.",
+    "ctaCardTitle": "WhatsApp community",
+    "ctaCardBody": "Join the group to connect with the community, follow the ecosystem in real time, and participate in what we're building.",
+    "ctaButton": "Join the community"
   },
   "Roadmap": {
     "eyebrow": "Product roadmap",
@@ -294,7 +330,7 @@
       },
       {
         "q": "How do I sign up?",
-        "a": "Fill out the priority form in the Classes section. We'll follow up with next steps and payment options."
+        "a": "Fill out the priority form on the Classes page. We'll follow up with next steps and payment options."
       },
       {
         "q": "Are classes online or in person?",
