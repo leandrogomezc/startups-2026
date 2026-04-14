@@ -1,10 +1,11 @@
 /**
- * POST /api/class-interest — envío vía Resend.
- * Producción: definir RESEND_API_KEY (y preferible RESEND_FROM) en Vercel; redeploy tras cambiar env.
- * Si el envío falla, revisar Resend Dashboard → Logs y reglas from/to (dominio de prueba vs verificado).
+ * POST /api/class-interest — persiste lead en Supabase (tabla landing_class_interest) y envía vía Resend.
+ * Producción: RESEND_API_KEY; opcional SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY (mismo proyecto que Peluditos).
+ * Si Supabase no está configurado, solo se envía el email (comportamiento anterior).
  */
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { createServiceRoleClient } from "@/lib/supabase-service";
 
 const MAX_LEN = { name: 200, phone: 40, email: 320 };
 
@@ -22,6 +23,28 @@ function buildText(locale: string, name: string, phone: string, email: string): 
 
 function isValidEmail(value: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
+/** Resend only allows From addresses on domains you verify at resend.com/domains (not @gmail.com / @outlook.com). */
+const CONSUMER_EMAIL_DOMAINS =
+  /@(?:gmail|googlemail|outlook|hotmail|live|yahoo|icloud|me)\.[^@\s>]+$/i;
+
+const DEFAULT_RESEND_FROM = "Clases <onboarding@resend.dev>";
+
+function resolveResendFrom(raw: string | undefined): string {
+  const trimmed = raw?.trim();
+  if (!trimmed) return DEFAULT_RESEND_FROM;
+
+  const angle = trimmed.match(/<([^>]+)>/);
+  const addr = (angle ? angle[1] : trimmed).trim();
+  if (!addr.includes("@") || !CONSUMER_EMAIL_DOMAINS.test(addr)) {
+    return trimmed;
+  }
+
+  console.warn(
+    "[class-interest] RESEND_FROM uses a free email domain as sender; Resend rejects it. Using onboarding@resend.dev. Set RESEND_FROM to an address on a verified domain (see https://resend.com/domains).",
+  );
+  return DEFAULT_RESEND_FROM;
 }
 
 export async function POST(request: Request) {
@@ -57,13 +80,29 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "invalid_email" }, { status: 400 });
     }
 
+    const supabase = createServiceRoleClient();
+    if (supabase) {
+      const { error: dbError } = await supabase.from("landing_class_interest").insert({
+        name,
+        phone,
+        email,
+        locale,
+      });
+      if (dbError) {
+        console.error("[class-interest] Supabase insert:", dbError);
+        return NextResponse.json({ error: "storage_failed" }, { status: 502 });
+      }
+    } else {
+      console.warn("[class-interest] Supabase not configured; skipping DB insert");
+    }
+
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
       console.error("[class-interest] RESEND_API_KEY is not set");
       return NextResponse.json({ error: "service_unavailable" }, { status: 503 });
     }
 
-    const from = process.env.RESEND_FROM?.trim() || "Clases <onboarding@resend.dev>";
+    const from = resolveResendFrom(process.env.RESEND_FROM);
     const to = process.env.RESEND_NOTIFY_TO?.trim() || "leandrogomezc@outlook.com";
 
     const subject = SUBJECT[locale] ?? SUBJECT.es;
@@ -71,12 +110,15 @@ export async function POST(request: Request) {
 
     const resend = new Resend(apiKey);
 
+    // Resend rejects replyTo on the same free domains as From; body still includes the lead's email.
+    const replyTo = CONSUMER_EMAIL_DOMAINS.test(email) ? undefined : email;
+
     const result = await resend.emails.send({
       from,
       to: [to],
       subject,
       text,
-      replyTo: email,
+      ...(replyTo ? { replyTo } : {}),
     });
 
     if (result.error) {

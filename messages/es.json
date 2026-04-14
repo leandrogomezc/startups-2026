@@ -15,11 +15,13 @@
     "languageEn": "English",
     "languageSwitch": "Idioma"
   },
+  "RetoPage": {
+    "title": "Reto",
+    "description": "Reto mensual build in público y roadmap de productos."
+  },
   "Nav": {
     "home": "Inicio",
     "challenge": "Reto",
-    "roadmap": "Roadmap",
-    "thesis": "Tesis",
     "classes": "Clases",
     "community": "Comunidad",
     "follow": "Seguir"
@@ -80,6 +82,7 @@
     "formError": "No pudimos enviar la solicitud. Intentá de nuevo en unos minutos.",
     "formErrorServiceUnavailable": "El servicio de envío no está configurado todavía. Volvé a intentar más tarde o contactanos por otro canal.",
     "formErrorSendFailed": "No se pudo entregar el correo. Revisá la configuración del remitente en Resend o probá de nuevo en unos minutos.",
+    "formErrorStorageFailed": "No se pudo guardar la solicitud. Si el problema continúa, contactanos por otro canal.",
     "formErrorValidation": "Revisá los datos del formulario e intentá de nuevo.",
     "formErrorNotFound": "El endpoint del formulario no está disponible en este despliegue. Si sos el dueño del sitio, verificá que las rutas API estén activas (por ejemplo Vercel, no export estático).",
     "formErrorRateLimited": "Demasiados intentos. Esperá unos minutos y probá de nuevo.",

@@ -9,16 +9,14 @@ import { LanguageSwitcher } from "@/components/language-switcher";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Container } from "@/components/ui/Container";
 import { Link } from "@/i18n/navigation";
-import { getClassesPath, getCommunityPath } from "@/lib/localized-paths";
+import { getClassesPath, getCommunityPath, getRetoPath } from "@/lib/localized-paths";
 import { site } from "@/lib/site";
 
 const NAV_KEYS = [
   { id: "inicio", labelKey: "home" as const, href: "/#inicio" },
   { id: "clases", labelKey: "classes" as const, href: "/clases" },
   { id: "comunidad", labelKey: "community" as const, href: "/comunidad" },
-  { id: "reto", labelKey: "challenge" as const, href: "/#reto" },
-  { id: "roadmap", labelKey: "roadmap" as const, href: "/#roadmap" },
-  { id: "tesis", labelKey: "thesis" as const, href: "/#tesis" },
+  { id: "reto", labelKey: "challenge" as const, href: "/reto" },
 ] as const;
 
 export function Header() {
@@ -28,6 +26,7 @@ export function Header() {
   const tc = useTranslations("Common");
   const classesHref = getClassesPath(locale);
   const communityHref = getCommunityPath(locale);
+  const retoHref = getRetoPath(locale);
 
   const close = useCallback(() => setOpen(false), []);
 
@@ -40,10 +39,12 @@ export function Header() {
             ? classesHref
             : item.id === "comunidad"
               ? communityHref
-              : item.href,
+              : item.id === "reto"
+                ? retoHref
+                : item.href,
         label: t(item.labelKey),
       })),
-    [classesHref, communityHref, t]
+    [classesHref, communityHref, retoHref, t]
   );
 
   return (

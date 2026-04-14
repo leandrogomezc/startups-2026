@@ -91,8 +91,10 @@ export function ClassPriorityModal({ schedule, syllabus }: ClassPriorityModalPro
         let msg: string;
         if (code === "service_unavailable" || res.status === 503) {
           msg = t("formErrorServiceUnavailable");
-        } else if (code === "send_failed" || res.status === 502) {
+        } else if (code === "send_failed") {
           msg = t("formErrorSendFailed");
+        } else if (code === "storage_failed") {
+          msg = t("formErrorStorageFailed");
         } else if (
           code === "missing_fields" ||
           code === "invalid_email" ||

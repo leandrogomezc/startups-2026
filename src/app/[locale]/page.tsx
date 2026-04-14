@@ -1,5 +1,4 @@
 import { setRequestLocale } from "next-intl/server";
-import { Challenge } from "@/components/landing/Challenge";
 import { ClassesTeaser } from "@/components/landing/ClassesTeaser";
 import { FAQ } from "@/components/landing/FAQ";
 import { FinalCta } from "@/components/landing/FinalCta";
@@ -7,8 +6,6 @@ import { Footer } from "@/components/landing/Footer";
 import { ForWho } from "@/components/landing/ForWho";
 import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
-import { Roadmap } from "@/components/landing/Roadmap";
-import { Thesis } from "@/components/landing/Thesis";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -24,10 +21,7 @@ export default async function HomePage({ params }: Props) {
       <main className="flex-1">
         <Hero />
         <ForWho />
-        <Challenge />
-        <Roadmap />
         <ClassesTeaser locale={locale} />
-        <Thesis />
         <FAQ />
         <FinalCta />
       </main>

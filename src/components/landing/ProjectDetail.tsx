@@ -1,7 +1,8 @@
 import { ArrowLeft, FileDown } from "lucide-react";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/Container";
+import { getRetoPath } from "@/lib/localized-paths";
 import { roadmapStatusStyles } from "@/lib/roadmap-status-styles";
 import type { RoadmapItemMsg } from "@/lib/roadmap-types";
 
@@ -10,13 +11,15 @@ type Props = {
 };
 
 export async function ProjectDetail({ project }: Props) {
+  const locale = await getLocale();
   const t = await getTranslations("Roadmap");
   const td = await getTranslations("ProjectDetail");
+  const backHref = `${getRetoPath(locale)}#roadmap`;
 
   return (
     <Container className="py-10 sm:py-14">
       <Link
-        href="/#roadmap"
+        href={backHref}
         className="text-muted-foreground hover:text-foreground mb-10 inline-flex items-center gap-2 text-sm font-medium transition-colors"
       >
         <ArrowLeft className="h-4 w-4 shrink-0" aria-hidden />

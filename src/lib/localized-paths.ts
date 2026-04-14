@@ -5,3 +5,7 @@ export function getClassesPath(locale: string) {
 export function getCommunityPath(locale: string) {
   return locale === "en" ? "/community" : "/comunidad";
 }
+
+export function getRetoPath(locale: string) {
+  return locale === "en" ? "/challenge" : "/reto";
+}

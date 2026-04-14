@@ -15,11 +15,13 @@
     "languageEn": "English",
     "languageSwitch": "Language"
   },
+  "RetoPage": {
+    "title": "Challenge",
+    "description": "Monthly build-in-public challenge and product roadmap."
+  },
   "Nav": {
     "home": "Home",
     "challenge": "Challenge",
-    "roadmap": "Roadmap",
-    "thesis": "Thesis",
     "classes": "Classes",
     "community": "Community",
     "follow": "Follow"
@@ -80,6 +82,7 @@
     "formError": "We couldn't send your request. Please try again in a few minutes.",
     "formErrorServiceUnavailable": "The email service isn't configured yet. Please try again later or reach out another way.",
     "formErrorSendFailed": "We couldn't deliver the email. Check your sender settings in Resend or try again in a few minutes.",
+    "formErrorStorageFailed": "We couldn't save your request. If this keeps happening, reach out another way.",
     "formErrorValidation": "Please check your form fields and try again.",
     "formErrorNotFound": "The form endpoint isn't available on this deployment. If you're the site owner, check that API routes are enabled (e.g. host on Vercel, not static export).",
     "formErrorRateLimited": "Too many attempts. Please wait a few minutes and try again.",
