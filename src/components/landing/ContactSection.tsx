@@ -11,6 +11,11 @@ import { Section } from "@/components/ui/Section";
 const inputClassName =
   "w-full rounded-lg border border-border bg-background px-3 py-2.5 text-sm text-foreground outline-none ring-offset-background placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-60";
 
+/** Misma regla que `/api/contact` (dominio con TLD). */
+function isValidContactEmail(value: string): boolean {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
 export function ContactSection() {
   const t = useTranslations("Contact");
   const locale = useLocale();
@@ -27,6 +32,12 @@ export function ContactSection() {
     const message = String(fd.get("message") ?? "").trim();
 
     setError(null);
+
+    if (!isValidContactEmail(email)) {
+      setError(t("formErrorInvalidEmail"));
+      return;
+    }
+
     setSubmitting(true);
 
     try {
@@ -51,9 +62,10 @@ export function ContactSection() {
           msg = t("formErrorServiceUnavailable");
         } else if (code === "send_failed") {
           msg = t("formErrorSendFailed");
+        } else if (code === "invalid_email") {
+          msg = t("formErrorInvalidEmail");
         } else if (
           code === "missing_fields" ||
-          code === "invalid_email" ||
           code === "field_too_long" ||
           code === "invalid_body" ||
           code === "invalid_json" ||

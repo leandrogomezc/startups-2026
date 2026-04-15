@@ -9,3 +9,7 @@ export function getCommunityPath(locale: string) {
 export function getRetoPath(locale: string) {
   return locale === "en" ? "/challenge" : "/reto";
 }
+
+export function getEventsPath(locale: string) {
+  return "/events";
+}

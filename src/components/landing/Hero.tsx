@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, BookOpen, Globe2, GraduationCap } from "lucide-react";
+import { ArrowRight, Globe2, GraduationCap, Users } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { ButtonLink } from "@/components/ui/link-button";
 import { Container } from "@/components/ui/Container";
@@ -12,7 +12,7 @@ export function Hero() {
   const t = useTranslations("Hero");
   const ts = useTranslations("Site");
   const classesHref = getClassesPath(locale);
-  const thesisHref = `${getCommunityPath(locale)}#tesis`;
+  const communityHref = getCommunityPath(locale);
 
   return (
     <div id="inicio" className="hero-surface relative scroll-mt-20 overflow-hidden">
@@ -50,11 +50,11 @@ export function Hero() {
             className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
             <ButtonLink
-              href={thesisHref}
+              href={communityHref}
               variant="primary"
               className="min-h-[52px] w-full px-8 text-base font-semibold shadow-lg sm:w-auto"
             >
-              <BookOpen className="h-5 w-5 shrink-0" aria-hidden />
+              <Users className="h-5 w-5 shrink-0" aria-hidden />
               {t("ctaPrimary")}
               <ArrowRight className="h-4 w-4" aria-hidden />
             </ButtonLink>
