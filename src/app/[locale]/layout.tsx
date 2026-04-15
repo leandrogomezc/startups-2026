@@ -32,10 +32,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     title: {
       default: t("title"),
-      template: "%s · Leandro Gómez Cano",
+      template: "%s · Founders Club",
     },
     description: t("description"),
     keywords: [
+      "Founders Club",
       "Leandro Gómez Cano",
       "operations",
       "startups",
@@ -45,12 +46,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "Latam",
       "tizo",
     ],
-    authors: [{ name: "Leandro Gómez Cano" }],
+    authors: [{ name: "Founders Club" }],
     openGraph: {
       type: "website",
       locale: locale === "es" ? "es_NI" : "en_US",
       url: siteUrl,
-      siteName: "Leandro Gómez Cano",
+      siteName: "Founders Club",
       title: t("title"),
       description: t("ogDescription"),
     },

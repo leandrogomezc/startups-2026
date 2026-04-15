@@ -17,6 +17,7 @@ const NAV_KEYS = [
   { id: "clases", labelKey: "classes" as const, href: "/clases" },
   { id: "comunidad", labelKey: "community" as const, href: "/comunidad" },
   { id: "reto", labelKey: "challenge" as const, href: "/reto" },
+  { id: "contacto", labelKey: "contact" as const, href: "/#contacto" },
 ] as const;
 
 export function Header() {

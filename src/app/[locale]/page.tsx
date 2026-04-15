@@ -1,5 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { ClassesTeaser } from "@/components/landing/ClassesTeaser";
+import { ContactSection } from "@/components/landing/ContactSection";
 import { FAQ } from "@/components/landing/FAQ";
 import { FinalCta } from "@/components/landing/FinalCta";
 import { Footer } from "@/components/landing/Footer";
@@ -23,6 +24,7 @@ export default async function HomePage({ params }: Props) {
         <ForWho />
         <ClassesTeaser locale={locale} />
         <FAQ />
+        <ContactSection />
         <FinalCta />
       </main>
       <Footer />

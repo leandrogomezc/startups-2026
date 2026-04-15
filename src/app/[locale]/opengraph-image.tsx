@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Leandro Gómez Cano — build in public";
+export const alt = "Founders Club — startup ecosystem in Central America";
 
 export const size = {
   width: 1200,
@@ -17,14 +17,14 @@ export default async function Image({ params }: Props) {
   const { locale } = await params;
   const isEn = locale === "en";
 
-  const headline = isEn ? "Learn with AI. Ship real projects." : "Clases con IA. Proyectos reales.";
+  const headline = isEn
+    ? "Founders Club — Central American startup ecosystem"
+    : "Founders Club — Ecosistema de startups en Centroamérica";
   const sub = isEn
-    ? "Hands-on cohort courses + monthly build in public."
-    : "Formación en cohortes + reto mensual build in público.";
-  const badge = isEn ? "Hands-on training · AI · 2026" : "Formación práctica · IA · 2026";
-  const role = isEn
-    ? "Regional Director of Operations · tizo"
-    : "Director Regional de Operaciones · tizo";
+    ? "Empowering founders with the skills to build and scale their startups."
+    : "Potenciando a founders con skills para construir y escalar sus startups.";
+  const badge = isEn ? "Founders Club · Central America" : "Founders Club · Centroamérica";
+  const footer = "Founders Club";
 
   return new ImageResponse(
     (
@@ -64,9 +64,9 @@ export default async function Image({ params }: Props) {
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           <div
             style={{
-              fontSize: 64,
-              lineHeight: 1.05,
-              fontWeight: 400,
+              fontSize: 52,
+              lineHeight: 1.08,
+              fontWeight: 600,
               color: "#0a0a0a",
               letterSpacing: "-0.03em",
             }}
@@ -75,8 +75,8 @@ export default async function Image({ params }: Props) {
           </div>
           <div
             style={{
-              maxWidth: 720,
-              fontSize: 24,
+              maxWidth: 900,
+              fontSize: 26,
               lineHeight: 1.45,
               color: "#525252",
             }}
@@ -93,8 +93,8 @@ export default async function Image({ params }: Props) {
             color: "#171717",
           }}
         >
-          <span style={{ fontWeight: 600 }}>Leandro Gómez Cano</span>
-          <span style={{ fontSize: 18, color: "#737373" }}>{role}</span>
+          <span style={{ fontWeight: 600 }}>{footer}</span>
+          <span style={{ fontSize: 18, color: "#737373" }}>leandro@foundersclub.lat</span>
         </div>
       </div>
     ),

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Founders Club">
+  <rect width="32" height="32" fill="#ffffff"/>
+  <defs>
+    <linearGradient id="fcTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c4b5fd"/>
+      <stop offset="100%" stop-color="#a5b4fc"/>
+    </linearGradient>
+    <linearGradient id="fcBL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="fcBR" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <g stroke="#ffffff" stroke-width="0.3" stroke-linejoin="round">
+    <!-- Bottom-left cube -->
+    <path fill="url(#fcBL)" d="M7 15.5 12 18.5 7 21.5 2 18.5Z"/>
+    <path fill="#172554" d="M2 18.5 7 21.5 7 26.5 2 23.5Z"/>
+    <path fill="#1e3a8a" d="M12 18.5 7 21.5 7 26.5 12 23.5Z"/>
+    <!-- Bottom-right cube -->
+    <path fill="url(#fcBR)" d="M21 15.5 26 18.5 21 21.5 16 18.5Z"/>
+    <path fill="#1d4ed8" d="M16 18.5 21 21.5 21 26.5 16 23.5Z"/>
+    <path fill="#4f46e5" d="M26 18.5 21 21.5 21 26.5 26 23.5Z"/>
+    <!-- Top cube -->
+    <path fill="url(#fcTop)" d="M14 8 19 11 14 14 9 11Z"/>
+    <path fill="#4338ca" d="M9 11 14 14 14 19 9 16Z"/>
+    <path fill="#6366f1" d="M19 11 14 14 14 19 19 16Z"/>
+  </g>
+</svg>

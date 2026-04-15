@@ -1,9 +1,9 @@
 {
   "Meta": {
-    "title": "Leandro Gómez Cano — Ecosistema de startups en Centroamérica",
-    "description": "Impulso el ecosistema de startups en Centroamérica con foco en Nicaragua: habilidades de negocio para founders, formación aplicada y ejecución en público.",
-    "ogDescription": "Ecosistema de startups en Centroamérica, con foco Nicaragua. Founders con skills para construir negocios; clases, roadmap y build in público.",
-    "twitterDescription": "Centroamérica y Nicaragua: founders con habilidades para el éxito empresarial. Formación, reto mensual y operación en abierto."
+    "title": "Founders Club - Ecosistema de startups en Centroamérica",
+    "description": "Potenciando a founders con skills para construir y escalar sus startups.",
+    "ogDescription": "Potenciando a founders con skills para construir y escalar sus startups.",
+    "twitterDescription": "Potenciando a founders con skills para construir y escalar sus startups."
   },
   "Common": {
     "openMenu": "Abrir menú",
@@ -24,6 +24,7 @@
     "challenge": "Reto",
     "classes": "Clases",
     "community": "Comunidad",
+    "contact": "Contacto",
     "follow": "Seguir"
   },
   "Hero": {
@@ -353,6 +354,25 @@
       "Lo que no se mide se confunde con progreso.",
       "La claridad es un activo competitivo: se entrena con decisiones explícitas."
     ]
+  },
+  "Contact": {
+    "eyebrow": "Contacto",
+    "title": "Escribinos",
+    "lead": "Dejanos tu mensaje y te respondemos por correo.",
+    "fieldName": "Nombre",
+    "fieldEmail": "Correo electrónico",
+    "fieldMessage": "Mensaje",
+    "submit": "Enviar mensaje",
+    "submitting": "Enviando…",
+    "successTitle": "Mensaje enviado",
+    "successBody": "Gracias. Te vamos a responder pronto.",
+    "successAction": "Enviar otro mensaje",
+    "formError": "No pudimos enviar el mensaje. Intentá de nuevo en unos minutos.",
+    "formErrorValidation": "Revisá los datos del formulario e intentá de nuevo.",
+    "formErrorServiceUnavailable": "El envío no está configurado todavía. Volvé a intentar más tarde.",
+    "formErrorSendFailed": "No se pudo entregar el correo. Probá de nuevo en unos minutos.",
+    "formErrorServer": "Hubo un problema en el servidor. Intentá de nuevo en unos minutos.",
+    "formErrorNetwork": "No pudimos conectar con el servidor. Revisá tu conexión e intentá de nuevo."
   },
   "FinalCta": {
     "eyebrow": "¿Listo para empezar?",

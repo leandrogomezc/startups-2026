@@ -1,9 +1,9 @@
 {
   "Meta": {
-    "title": "Leandro Gómez Cano — Central American startup ecosystem",
-    "description": "Building the startup ecosystem in Central America with a Nicaragua focus: business skills for founders, hands-on training, and build in public.",
-    "ogDescription": "Startup ecosystem in Central America, Nicaragua-first. Founders with the skills to build real businesses—classes, roadmap, and build in public.",
-    "twitterDescription": "Central America & Nicaragua: founders with the skills to win in business. Training, monthly challenge, and execution in the open."
+    "title": "Founders Club — Central American startup ecosystem",
+    "description": "Empowering founders with the skills to build and scale their startups.",
+    "ogDescription": "Empowering founders with the skills to build and scale their startups.",
+    "twitterDescription": "Empowering founders with the skills to build and scale their startups."
   },
   "Common": {
     "openMenu": "Open menu",
@@ -24,6 +24,7 @@
     "challenge": "Challenge",
     "classes": "Classes",
     "community": "Community",
+    "contact": "Contact",
     "follow": "Follow"
   },
   "Hero": {
@@ -353,6 +354,25 @@
       "What you don't measure gets mistaken for progress.",
       "Clarity is a competitive asset—you train it with explicit decisions."
     ]
+  },
+  "Contact": {
+    "eyebrow": "Contact",
+    "title": "Get in touch",
+    "lead": "Send a message and we’ll reply by email.",
+    "fieldName": "Name",
+    "fieldEmail": "Email",
+    "fieldMessage": "Message",
+    "submit": "Send message",
+    "submitting": "Sending…",
+    "successTitle": "Message sent",
+    "successBody": "Thanks—we’ll get back to you soon.",
+    "successAction": "Send another message",
+    "formError": "We couldn’t send your message. Please try again in a few minutes.",
+    "formErrorValidation": "Check the form fields and try again.",
+    "formErrorServiceUnavailable": "Sending isn’t configured yet. Please try again later.",
+    "formErrorSendFailed": "The email could not be delivered. Please try again in a few minutes.",
+    "formErrorServer": "Something went wrong on the server. Please try again in a few minutes.",
+    "formErrorNetwork": "We couldn’t reach the server. Check your connection and try again."
   },
   "FinalCta": {
     "eyebrow": "Ready to start?",
