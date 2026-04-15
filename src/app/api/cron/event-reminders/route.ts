@@ -4,8 +4,9 @@ import { createServiceRoleClient } from "@/lib/supabase-service";
 
 /**
  * GET /api/cron/event-reminders
- * Called by Vercel Cron every hour. Sends reminder emails for events starting
- * within the next 24 hours to confirmed registrations that haven't been reminded.
+ * Called by Vercel Cron (daily on Hobby; schedule in vercel.json). Sends reminder
+ * emails for events starting within the next 24 hours to confirmed registrations
+ * that haven't been reminded yet.
  */
 export async function GET(request: Request) {
   const cronSecret = process.env.CRON_SECRET;
