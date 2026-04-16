@@ -3,8 +3,12 @@ import { cookies } from "next/headers";
 const COOKIE_NAME = "fc_admin_session";
 const MAX_AGE = 60 * 60 * 24 * 7; // 7 days
 
+/** Valor sin espacios al inicio/final (Vercel a veces guarda saltos al pegar). */
 export function getAdminPassword(): string | null {
-  return process.env.EVENTS_ADMIN_PASSWORD || null;
+  const raw = process.env.EVENTS_ADMIN_PASSWORD;
+  if (raw == null || raw === "") return null;
+  const trimmed = raw.trim();
+  return trimmed === "" ? null : trimmed;
 }
 
 export async function isAdminAuthenticated(): Promise<boolean> {

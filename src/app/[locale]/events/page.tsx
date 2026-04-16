@@ -24,10 +24,14 @@ export default async function EventsPage({ params }: Props) {
   setRequestLocale(locale);
 
   let events: Awaited<ReturnType<typeof getPublishedEvents>> = [];
+  let loadError = false;
   try {
     events = await getPublishedEvents();
-  } catch {
-    // Supabase not configured — render empty state
+  } catch (err) {
+    loadError = true;
+    if (process.env.NODE_ENV === "development") {
+      console.error("[events] getPublishedEvents failed:", err);
+    }
   }
 
   const t = await getTranslations({ locale, namespace: "Events" });
@@ -44,7 +48,7 @@ export default async function EventsPage({ params }: Props) {
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               {t("pageDescription")}
             </p>
-            <EventsList events={events} locale={locale} />
+            <EventsList events={events} locale={locale} loadError={loadError} />
           </Container>
         </Section>
       </main>

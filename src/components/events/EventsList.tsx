@@ -11,15 +11,41 @@ import { formatPrice, formatShortDate, isPast, spotsRemaining } from "@/lib/even
 type Props = {
   events: EventWithCounts[];
   locale: string;
+  /** True si falló la consulta a Supabase (no confundir con “sin eventos”). */
+  loadError?: boolean;
 };
 
-export function EventsList({ events, locale }: Props) {
+export function EventsList({ events, locale, loadError = false }: Props) {
   const t = useTranslations("Events");
   const [tab, setTab] = useState<"upcoming" | "past">("upcoming");
 
   const upcoming = events.filter((e) => !isPast(e));
   const past = events.filter((e) => isPast(e));
   const displayed = tab === "upcoming" ? upcoming : past;
+
+  if (loadError) {
+    return (
+      <div className="mt-10">
+        <p
+          className="mt-12 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-3 text-center text-sm text-destructive"
+          role="alert"
+        >
+          {t("eventsLoadError")}
+        </p>
+      </div>
+    );
+  }
+
+  const emptyMessage = (() => {
+    if (displayed.length > 0) return null;
+    if (tab === "upcoming" && upcoming.length === 0 && past.length > 0) {
+      return t("eventsNoUpcomingTryPast", { count: past.length });
+    }
+    if (tab === "past" && past.length === 0 && upcoming.length > 0) {
+      return t("eventsNoPastTryUpcoming", { count: upcoming.length });
+    }
+    return t("noEventsYet");
+  })();
 
   return (
     <div className="mt-10">
@@ -33,7 +59,7 @@ export function EventsList({ events, locale }: Props) {
       </div>
 
       {displayed.length === 0 ? (
-        <p className="mt-12 text-center text-muted-foreground">{t("noEventsYet")}</p>
+        <p className="mt-12 text-center text-muted-foreground">{emptyMessage}</p>
       ) : (
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {displayed.map((event, i) => (

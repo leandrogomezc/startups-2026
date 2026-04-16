@@ -1,5 +1,4 @@
 import { setRequestLocale } from "next-intl/server";
-import { redirect } from "next/navigation";
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
 import { Container } from "@/components/ui/Container";

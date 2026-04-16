@@ -21,21 +21,27 @@ export function AdminLoginForm() {
     setSubmitting(true);
 
     const fd = new FormData(e.currentTarget);
-    const password = String(fd.get("password") ?? "");
+    const password = String(fd.get("password") ?? "").trim();
 
     try {
       const res = await fetch("/api/admin/session", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "same-origin",
         body: JSON.stringify({ password }),
       });
 
       if (!res.ok) {
-        setError(t("adminLoginError"));
+        setError(
+          res.status === 503
+            ? t("adminLoginErrorNotConfigured")
+            : t("adminLoginError"),
+        );
         setSubmitting(false);
         return;
       }
 
+      setSubmitting(false);
       router.refresh();
     } catch {
       setError(t("adminLoginError"));

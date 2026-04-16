@@ -14,7 +14,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "invalid_json" }, { status: 400 });
   }
 
-  if (body.password !== password) {
+  const submitted = String(body.password ?? "").trim();
+  if (submitted !== password) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 

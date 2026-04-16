@@ -178,15 +178,23 @@ export function EventForm({ event, locale }: Props) {
         <input name="stripe_price_id" defaultValue={event?.stripe_price_id ?? ""} className={inputClassName} />
       </Field>
 
-      <div className="flex gap-6">
+      <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
         <label className="flex items-center gap-2 text-sm text-foreground">
           <input name="waitlist_enabled" type="checkbox" defaultChecked={event?.waitlist_enabled} className="h-4 w-4 rounded border-border" />
           {t("adminFieldWaitlist")}
         </label>
-        <label className="flex items-center gap-2 text-sm text-foreground">
-          <input name="is_published" type="checkbox" defaultChecked={event?.is_published} className="h-4 w-4 rounded border-border" />
-          {t("adminFieldPublished")}
-        </label>
+        <div className="max-w-md space-y-1.5">
+          <label className="flex items-center gap-2 text-sm text-foreground">
+            <input
+              name="is_published"
+              type="checkbox"
+              defaultChecked={event == null ? true : !!event.is_published}
+              className="h-4 w-4 rounded border-border"
+            />
+            {t("adminFieldPublished")}
+          </label>
+          <p className="text-xs leading-relaxed text-muted-foreground pl-6">{t("adminFieldPublishedHint")}</p>
+        </div>
       </div>
 
       <div className="flex items-center gap-3 pt-2">

@@ -1,6 +1,6 @@
 "use client";
 
-import { Plus, Pencil, Users } from "lucide-react";
+import { Plus, Pencil } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -60,7 +60,12 @@ export function AdminDashboard({ locale }: Props) {
                     {formatShortDate(ev.starts_at, ev.timezone, locale)}
                   </td>
                   <td className="px-4 py-3">
-                    <span className={`inline-block h-2 w-2 rounded-full ${ev.is_published ? "bg-emerald-500" : "bg-amber-400"}`} />
+                    <span className="inline-flex items-center gap-2">
+                      <span className={`inline-block h-2 w-2 shrink-0 rounded-full ${ev.is_published ? "bg-emerald-500" : "bg-amber-400"}`} />
+                      <span className="text-muted-foreground">
+                        {ev.is_published ? t("adminPublishedStatusLive") : t("adminPublishedStatusDraft")}
+                      </span>
+                    </span>
                   </td>
                   <td className="px-4 py-3 text-right">
                     <Link href={`/events/admin/${ev.id}`} className="inline-flex items-center gap-1 text-primary hover:underline">
