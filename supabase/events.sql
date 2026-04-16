@@ -1,6 +1,7 @@
 -- Run once in the Supabase SQL Editor.
 -- Creates the events module tables for the Founders Club landing.
 -- Si falta este esquema o las env SUPABASE_* en Vercel, las rutas de eventos responden service_unavailable (503).
+-- Subida de portadas desde el admin: ejecutá también storage_event_covers.sql (bucket Storage).
 --
 -- Diagnóstico si falla con ERROR 42703: column "starts_at" does not exist:
 --   Suele haber una tabla public.events antigua sin esa columna. CREATE TABLE IF NOT EXISTS no la altera.

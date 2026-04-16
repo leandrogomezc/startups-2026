@@ -18,12 +18,6 @@ export async function ClassesTeaser({ locale }: ClassesTeaserProps) {
     <Section className="border-t border-border/60 bg-muted/30 dark:bg-muted/15">
       <Container>
         <div className="mx-auto max-w-4xl overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-          <div className="border-b border-border bg-primary/5 px-6 py-4 sm:px-8">
-            <p className="section-eyebrow">{t("eyebrow")}</p>
-            <h2 className="mt-3 text-3xl font-bold text-foreground sm:text-4xl">{t("title")}</h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">{t("body")}</p>
-          </div>
-
           <div className="grid gap-8 px-6 py-6 sm:px-8 lg:grid-cols-[1.25fr_0.95fr]">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">

@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { buildCalendarLinkForEvent, getResendFrom, getSiteUrl } from "@/lib/events/event-emails";
+import type { EventRow } from "@/lib/events/types";
 import { createServiceRoleClient } from "@/lib/supabase-service";
 
 /**
@@ -29,7 +31,7 @@ export async function GET(request: Request) {
   // Events starting within the next 24 hours
   const { data: events } = await sb
     .from("events")
-    .select("id, title, slug, starts_at, timezone, location_type, venue_address, meet_url")
+    .select("*")
     .eq("is_published", true)
     .gte("starts_at", now.toISOString())
     .lte("starts_at", in24h.toISOString());
@@ -39,11 +41,11 @@ export async function GET(request: Request) {
   }
 
   const resend = new Resend(apiKey);
-  const from = process.env.RESEND_FROM?.trim() || "Founders Club <onboarding@resend.dev>";
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const from = getResendFrom();
+  const siteUrl = getSiteUrl();
   let totalSent = 0;
 
-  for (const event of events) {
+  for (const event of events as EventRow[]) {
     // Confirmed registrations without a reminder
     const { data: regs } = await sb
       .from("event_registrations")
@@ -63,27 +65,30 @@ export async function GET(request: Request) {
       timeZone: event.timezone,
     }).format(new Date(event.starts_at));
 
-    const eventUrl = `${siteUrl}/events/${event.slug}`;
+    const eventUrl = `${siteUrl.replace(/\/$/, "")}/events/${event.slug}`;
+    const calUrl = buildCalendarLinkForEvent(event, siteUrl);
+    const subject = `Recordatorio: ${event.title} — ${eventDate}`;
 
     for (const reg of regs) {
       try {
         await resend.emails.send({
           from,
           to: [reg.email],
-          subject: `Recordatorio: ${event.title} es mañana`,
+          subject,
           text: [
             `Hola ${reg.name},`,
             "",
-            `Te recordamos que "${event.title}" empieza mañana.`,
+            `Recordatorio: "${event.title}" empieza pronto.`,
             "",
             `Fecha: ${eventDate}`,
             event.location_type === "online" && event.meet_url
-              ? `Link: ${event.meet_url}`
+              ? `Enlace: ${event.meet_url}`
               : event.venue_address
                 ? `Lugar: ${event.venue_address}`
                 : "",
             "",
-            `Detalles: ${eventUrl}`,
+            `Ficha del evento: ${eventUrl}`,
+            `Agregar a Google Calendar: ${calUrl}`,
             "",
             "¡Nos vemos!",
             "— Founders Club",

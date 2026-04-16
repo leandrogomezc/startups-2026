@@ -2,9 +2,12 @@
 
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import type { EventRow } from "@/lib/events/types";
+
+const COVER_MAX_BYTES = 5 * 1024 * 1024;
+const COVER_ACCEPT_TYPES = ["image/jpeg", "image/png", "image/webp", "image/gif"] as const;
 
 const inputClassName =
   "w-full rounded-lg border border-border bg-background px-3 py-2.5 text-sm text-foreground outline-none ring-offset-background placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-60";
@@ -28,7 +31,71 @@ export function EventForm({ event, locale }: Props) {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
 
+  /** Saved or uploaded public URL; also used when user pastes a URL manually. */
+  const [coverImageUrl, setCoverImageUrl] = useState(event?.cover_image_url ?? "");
+  const [coverUploading, setCoverUploading] = useState(false);
+  const [coverError, setCoverError] = useState<string | null>(null);
+  /** Temporary preview while uploading (revoked on success/unmount). */
+  const [localPreviewUrl, setLocalPreviewUrl] = useState<string | null>(null);
   const isEdit = !!event;
+
+  useEffect(() => {
+    return () => {
+      if (localPreviewUrl) URL.revokeObjectURL(localPreviewUrl);
+    };
+  }, [localPreviewUrl]);
+
+  async function handleCoverFileChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    e.target.value = "";
+    setCoverError(null);
+    if (!file) return;
+
+    if (!COVER_ACCEPT_TYPES.includes(file.type as (typeof COVER_ACCEPT_TYPES)[number])) {
+      setCoverError(t("adminCoverInvalidType"));
+      return;
+    }
+    if (file.size > COVER_MAX_BYTES) {
+      setCoverError(t("adminCoverTooLarge"));
+      return;
+    }
+
+    const prevBlob = localPreviewUrl;
+    const objectUrl = URL.createObjectURL(file);
+    setLocalPreviewUrl(objectUrl);
+    if (prevBlob) URL.revokeObjectURL(prevBlob);
+
+    setCoverUploading(true);
+    try {
+      const fd = new FormData();
+      fd.append("file", file);
+      const res = await fetch("/api/admin/event-cover", { method: "POST", body: fd });
+      const data = (await res.json().catch(() => ({}))) as { url?: string; error?: string };
+
+      if (!res.ok || !data.url) {
+        setCoverError(
+          data.error === "invalid_file_type"
+            ? t("adminCoverInvalidType")
+            : data.error === "file_too_large"
+              ? t("adminCoverTooLarge")
+              : t("adminCoverUploadError"),
+        );
+        setLocalPreviewUrl(null);
+        URL.revokeObjectURL(objectUrl);
+        return;
+      }
+
+      setCoverImageUrl(data.url);
+      setLocalPreviewUrl(null);
+      URL.revokeObjectURL(objectUrl);
+    } catch {
+      setCoverError(t("adminCoverUploadError"));
+      setLocalPreviewUrl(null);
+      URL.revokeObjectURL(objectUrl);
+    } finally {
+      setCoverUploading(false);
+    }
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -47,7 +114,7 @@ export function EventForm({ event, locale }: Props) {
       location_type: fd.get("location_type"),
       venue_address: fd.get("venue_address") || null,
       meet_url: fd.get("meet_url") || null,
-      cover_image_url: fd.get("cover_image_url") || null,
+      cover_image_url: coverImageUrl.trim() || null,
       host_display_name: fd.get("host_display_name") || "Founders Club",
       host_bio: fd.get("host_bio") || null,
       host_image_url: fd.get("host_image_url") || null,
@@ -149,9 +216,49 @@ export function EventForm({ event, locale }: Props) {
         <input name="meet_url" defaultValue={event?.meet_url ?? ""} className={inputClassName} />
       </Field>
 
-      <Field label={t("adminFieldCoverImage")}>
-        <input name="cover_image_url" defaultValue={event?.cover_image_url ?? ""} className={inputClassName} />
-      </Field>
+      <div>
+        <label className="mb-1 block text-sm font-medium text-foreground">{t("adminFieldCoverImage")}</label>
+        <p className="mb-2 text-xs text-muted-foreground">{t("adminCoverChooseFile")}</p>
+        <div className="flex flex-wrap items-center gap-2">
+          <input
+            type="file"
+            accept={COVER_ACCEPT_TYPES.join(",")}
+            className="text-sm text-foreground file:mr-2 file:rounded-md file:border file:border-border file:bg-background file:px-3 file:py-1.5 file:text-sm file:font-medium"
+            disabled={coverUploading || saving}
+            onChange={handleCoverFileChange}
+            aria-label={t("adminCoverChooseFile")}
+          />
+          {coverUploading ? <span className="text-sm text-muted-foreground">{t("adminCoverUploading")}</span> : null}
+        </div>
+        {(localPreviewUrl || coverImageUrl) && (
+          <div className="mt-3 overflow-hidden rounded-lg border border-border bg-muted/30">
+            {/* eslint-disable-next-line @next/next/no-img-element -- admin preview; arbitrary user/storage URLs */}
+            <img
+              src={localPreviewUrl ?? coverImageUrl}
+              alt=""
+              className="max-h-48 w-full object-cover"
+            />
+          </div>
+        )}
+        {coverError ? (
+          <p className="mt-2 text-sm text-destructive" role="alert">
+            {coverError}
+          </p>
+        ) : null}
+        <p className="mb-1 mt-4 text-xs font-medium text-muted-foreground">{t("adminCoverUrlOptional")}</p>
+        <input
+          type="url"
+          name="cover_image_url_manual"
+          value={coverImageUrl}
+          onChange={(e) => {
+            setCoverError(null);
+            setCoverImageUrl(e.target.value);
+          }}
+          className={inputClassName}
+          placeholder="https://"
+          disabled={saving}
+        />
+      </div>
 
       <Field label={t("adminFieldHostName")}>
         <input name="host_display_name" defaultValue={event?.host_display_name ?? "Founders Club"} className={inputClassName} />

@@ -1,4 +1,13 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
+import {
+  getResendFrom,
+  getTeamNotifyTo,
+  normalizeEmailLocale,
+  sendAttendeeRegistrationConfirmation,
+  sendTeamRegistrationNotify,
+} from "@/lib/events/event-emails";
+import type { EventRow } from "@/lib/events/types";
 import { createServiceRoleClient } from "@/lib/supabase-service";
 
 export async function POST(request: Request) {
@@ -27,11 +36,83 @@ export async function POST(request: Request) {
   if (event.type === "checkout.session.completed") {
     const session = event.data.object as import("stripe").Stripe.Checkout.Session;
     const sb = createServiceRoleClient();
-    if (sb) {
-      await sb
-        .from("event_registrations")
-        .update({ status: "confirmed", payment_status: "paid" })
-        .eq("stripe_checkout_session_id", session.id);
+    if (!sb) {
+      return NextResponse.json({ received: true });
+    }
+
+    const { error: updateErr } = await sb
+      .from("event_registrations")
+      .update({ status: "confirmed", payment_status: "paid" })
+      .eq("stripe_checkout_session_id", session.id);
+
+    if (updateErr) {
+      console.error("[stripe webhook] update registration failed:", updateErr);
+    }
+
+    const { data: reg, error: regErr } = await sb
+      .from("event_registrations")
+      .select("id, email, name, event_id")
+      .eq("stripe_checkout_session_id", session.id)
+      .maybeSingle();
+
+    if (regErr || !reg) {
+      return NextResponse.json({ received: true });
+    }
+
+    const { data: eventRow, error: evErr } = await sb
+      .from("events")
+      .select("*")
+      .eq("id", reg.event_id)
+      .single<EventRow>();
+
+    if (evErr || !eventRow) {
+      console.error("[stripe webhook] event not found for registration:", reg.event_id);
+      return NextResponse.json({ received: true });
+    }
+
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.warn("[stripe webhook] RESEND_API_KEY missing; skipping confirmation email");
+      return NextResponse.json({ received: true });
+    }
+
+    const metaLocale = session.metadata?.locale;
+    const emailLocale = normalizeEmailLocale(typeof metaLocale === "string" ? metaLocale : undefined);
+
+    try {
+      const resend = new Resend(apiKey);
+      const from = getResendFrom();
+      const ok = await sendAttendeeRegistrationConfirmation({
+        resend,
+        from,
+        to: reg.email,
+        event: eventRow,
+        attendeeName: reg.name,
+        kind: "confirmed",
+        waitlistPosition: null,
+        locale: emailLocale,
+      });
+      if (!ok) {
+        console.error("[stripe webhook] attendee confirmation email failed for", reg.email);
+      }
+
+      const notifyTo = getTeamNotifyTo();
+      if (notifyTo) {
+        const teamOk = await sendTeamRegistrationNotify({
+          resend,
+          from,
+          notifyTo,
+          event: eventRow,
+          participantEmail: reg.email,
+          participantName: reg.name,
+          status: "payment_received",
+        });
+        if (!teamOk) {
+          console.error("[stripe webhook] team notify failed");
+        }
+      }
+    } catch (err) {
+      console.error("[stripe webhook] email send error:", err);
     }
   }
 

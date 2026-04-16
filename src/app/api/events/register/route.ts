@@ -1,6 +1,14 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
 import { createServiceRoleClient } from "@/lib/supabase-service";
 import type { EventRow } from "@/lib/events/types";
+import {
+  getResendFrom,
+  getTeamNotifyTo,
+  normalizeEmailLocale,
+  sendAttendeeRegistrationConfirmation,
+  sendTeamRegistrationNotify,
+} from "@/lib/events/event-emails";
 
 export async function POST(request: Request) {
   const sb = createServiceRoleClient();
@@ -91,7 +99,12 @@ export async function POST(request: Request) {
             },
       ],
       customer_email: email.trim().toLowerCase(),
-      metadata: { event_id, name: name.trim(), email: email.trim().toLowerCase() },
+      metadata: {
+        event_id,
+        name: name.trim(),
+        email: email.trim().toLowerCase(),
+        locale: typeof locale === "string" && locale === "en" ? "en" : "es",
+      },
       success_url: `${eventUrl}?payment=success`,
       cancel_url: `${eventUrl}?payment=cancelled`,
     });
@@ -111,6 +124,26 @@ export async function POST(request: Request) {
 
     if (regErr) {
       return NextResponse.json({ error: "registration_failed" }, { status: 500 });
+    }
+
+    const apiKey = process.env.RESEND_API_KEY;
+    const notifyTo = getTeamNotifyTo();
+    if (apiKey && notifyTo) {
+      try {
+        const resend = new Resend(apiKey);
+        const from = getResendFrom();
+        await sendTeamRegistrationNotify({
+          resend,
+          from,
+          notifyTo,
+          event,
+          participantEmail: email.trim().toLowerCase(),
+          participantName: name.trim(),
+          status: "pending_payment",
+        });
+      } catch (err) {
+        console.error("[register] team notify (pending_payment) failed:", err);
+      }
     }
 
     return NextResponse.json({ id: reg.id, status: "pending_payment", checkout_url: session.url });
@@ -151,9 +184,48 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "registration_failed" }, { status: 500 });
   }
 
+  const emailLocale = normalizeEmailLocale(typeof locale === "string" ? locale : undefined);
+  const apiKey = process.env.RESEND_API_KEY;
+  let confirmationEmailSent = false;
+
+  if (apiKey) {
+    try {
+      const resend = new Resend(apiKey);
+      const from = getResendFrom();
+      confirmationEmailSent = await sendAttendeeRegistrationConfirmation({
+        resend,
+        from,
+        to: email.trim().toLowerCase(),
+        event,
+        attendeeName: name.trim(),
+        kind: status === "waitlist" ? "waitlist" : "confirmed",
+        waitlistPosition,
+        locale: emailLocale,
+      });
+
+      const notifyTo = getTeamNotifyTo();
+      if (notifyTo) {
+        await sendTeamRegistrationNotify({
+          resend,
+          from,
+          notifyTo,
+          event,
+          participantEmail: email.trim().toLowerCase(),
+          participantName: name.trim(),
+          status: status === "waitlist" ? "waitlist" : "confirmed",
+        });
+      }
+    } catch (err) {
+      console.error("[register] confirmation / team emails failed:", err);
+    }
+  } else {
+    console.warn("[register] RESEND_API_KEY missing; skipping confirmation emails");
+  }
+
   return NextResponse.json({
     id: reg.id,
     status,
     waitlist_position: waitlistPosition,
+    confirmation_email_sent: confirmationEmailSent,
   });
 }
