@@ -2,13 +2,17 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { InstagramGlyph } from "@/components/icons/SocialIcons";
 import { Container } from "@/components/ui/Container";
+import { Link } from "@/i18n/navigation";
+import { getResourcesPath } from "@/lib/localized-paths";
 import { site } from "@/lib/site";
 
 export function FinalCta() {
+  const locale = useLocale();
   const t = useTranslations("FinalCta");
+  const resourcesHref = getResourcesPath(locale);
 
   return (
     <section id="cta-final" className="scroll-mt-20 bg-foreground py-20 text-background dark:bg-card sm:py-28">
@@ -30,6 +34,13 @@ export function FinalCta() {
             {t("body")}
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              href={resourcesHref}
+              className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-lg border border-background/40 px-8 text-base font-semibold text-background transition-colors hover:bg-background/10 dark:border-border dark:text-foreground sm:w-auto"
+            >
+              {t("resources")}
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
             <a
               href={site.instagramUrl}
               target="_blank"

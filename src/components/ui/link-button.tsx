@@ -20,6 +20,7 @@ type ButtonLinkProps = {
   variant?: Variant;
   className?: string;
   external?: boolean;
+  ariaLabel?: string;
 };
 
 /** Enlaces con estilo de botón (CTAs con hash o externos). */
@@ -29,17 +30,18 @@ export function ButtonLink({
   variant = "primary",
   className = "",
   external,
+  ariaLabel,
 }: ButtonLinkProps) {
   const v = `${base} ${variants[variant]} ${className}`;
   if (external) {
     return (
-      <a href={href} className={v} target="_blank" rel="noopener noreferrer">
+      <a href={href} className={v} target="_blank" rel="noopener noreferrer" aria-label={ariaLabel}>
         {children}
       </a>
     );
   }
   return (
-    <Link href={href} className={v}>
+    <Link href={href} className={v} aria-label={ariaLabel}>
       {children}
     </Link>
   );

@@ -1,11 +1,12 @@
 import { ArrowRight, Calendar, Clock, DollarSign } from "lucide-react";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { InstagramGlyph } from "@/components/icons/SocialIcons";
 import { ClassPriorityModal, type ClassSyllabusRow } from "@/components/landing/ClassPriorityModal";
 import { FadeIn } from "@/components/landing/FadeIn";
 import { ButtonLink } from "@/components/ui/link-button";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
+import { getSiteBaseUrl } from "@/lib/site-url";
 import { site } from "@/lib/site";
 
 type ClassItem = {
@@ -18,12 +19,43 @@ type ClassItem = {
 };
 
 export async function Classes() {
+  const locale = await getLocale();
   const t = await getTranslations("Classes");
   const items = t.raw("items") as ClassItem[];
+  const base = getSiteBaseUrl();
+  const classesPath = locale === "en" ? "/en/classes" : "/clases";
+  const first = items[0];
+
+  const courseSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: first?.title ?? "De 0 a Aplicación",
+    description: first?.description ?? t("subtitle"),
+    inLanguage: locale,
+    provider: {
+      "@type": "Organization",
+      name: site.brandName,
+      url: base,
+    },
+    courseMode: "online",
+    educationalCredentialAwarded: "Certificate of completion",
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "USD",
+      price: "180",
+      availability: "https://schema.org/InStock",
+      url: `${base}${classesPath}`,
+    },
+    areaServed: ["Nicaragua", "Central America"],
+  };
 
   return (
     <Section id="clases" className="border-t border-border/60 bg-muted/30 dark:bg-muted/15">
       <Container>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+        />
         <FadeIn>
           <p className="section-eyebrow text-center">{t("eyebrow")}</p>
           <h2 className="section-heading mx-auto mt-3 max-w-2xl text-center text-3xl sm:text-4xl">

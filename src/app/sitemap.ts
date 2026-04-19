@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 import { getSiteBaseUrl } from "@/lib/site-url";
 import { createServiceRoleClient } from "@/lib/supabase-service";
 
-const SLUGS_ES = ["/", "/clases", "/comunidad", "/reto", "/events"];
-const SLUGS_EN = ["/en", "/en/classes", "/en/community", "/en/challenge", "/en/events"];
+const SLUGS_ES = ["/", "/clases", "/comunidad", "/reto", "/events", "/recursos"];
+const SLUGS_EN = ["/en", "/en/classes", "/en/community", "/en/challenge", "/en/events", "/en/resources"];
 const PROJECT_SLUGS = ["peluditos"] as const;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

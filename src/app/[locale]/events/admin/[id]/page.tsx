@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { redirect } from "next/navigation";
 import { Header } from "@/components/landing/Header";
@@ -12,6 +13,13 @@ import type { EventRow } from "@/lib/events/types";
 import { notFound } from "next/navigation";
 
 type Props = { params: Promise<{ locale: string; id: string }> };
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default async function EditEventPage({ params }: Props) {
   const { locale, id } = await params;

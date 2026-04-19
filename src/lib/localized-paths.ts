@@ -13,3 +13,7 @@ export function getRetoPath(locale: string) {
 export function getEventsPath(locale: string) {
   return "/events";
 }
+
+export function getResourcesPath(locale: string) {
+  return locale === "en" ? "/resources" : "/recursos";
+}

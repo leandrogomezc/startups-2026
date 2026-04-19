@@ -8,6 +8,7 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { getEventBySlug } from "@/lib/events/queries";
 import { getSiteBaseUrl } from "@/lib/site-url";
+import { localeAlternates } from "@/lib/seo-paths";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: event.title,
     description: event.description.slice(0, 160),
-    alternates: { canonical: path },
+    alternates: localeAlternates(locale, `/events/${slug}`, `/events/${slug}`),
     openGraph: {
       title: event.title,
       description: event.description.slice(0, 160),
@@ -46,11 +47,48 @@ export default async function EventSlugPage({ params }: Props) {
   if (!event) notFound();
 
   const t = await getTranslations({ locale, namespace: "Events" });
+  const base = getSiteBaseUrl();
+  const pageUrl = locale === "en" ? `${base}/en/events/${slug}` : `${base}/events/${slug}`;
+  const eventSchema = {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: event.title,
+    description: event.description,
+    eventAttendanceMode:
+      event.location_type === "online"
+        ? "https://schema.org/OnlineEventAttendanceMode"
+        : "https://schema.org/OfflineEventAttendanceMode",
+    startDate: event.starts_at,
+    endDate: event.ends_at,
+    eventStatus: "https://schema.org/EventScheduled",
+    url: pageUrl,
+    organizer: {
+      "@type": "Organization",
+      name: "Founders Club",
+      url: base,
+    },
+    location:
+      event.location_type === "online"
+        ? {
+            "@type": "VirtualLocation",
+            url: event.meet_url || pageUrl,
+          }
+        : {
+            "@type": "Place",
+            name: event.title,
+            address: event.venue_address || "Nicaragua",
+          },
+    image: event.cover_image_url ? [event.cover_image_url] : undefined,
+  };
 
   return (
     <>
       <Header />
       <main className="flex-1">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
+        />
         <Section>
           <Container>
             <EventDetail event={event} locale={locale} backLabel={t("backToEvents")} />

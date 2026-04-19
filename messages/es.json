@@ -60,10 +60,15 @@
       }
     ]
   },
+  "ChallengeCta": {
+    "lead": "Si querés acelerar tus resultados, podés pasar del reto a una ruta más guiada con clases de IA y acompañamiento de incubadora.",
+    "classes": "Ir a clases de IA",
+    "incubator": "Ver incubadora"
+  },
   "Classes": {
     "eyebrow": "Clases",
-    "title": "Formación práctica, pasando de la idea a un producto palpable.",
-    "subtitle": "Sesiones enfocadas en herramientas y criterio operativo. Talleres, mentorías 1:1 e invitados especiales.",
+    "title": "Clases en línea de inteligencia artificial para founders en Nicaragua.",
+    "subtitle": "Formación práctica para pasar de idea a producto con IA, no-code y sistemas de ejecución aplicados a Centroamérica.",
     "courseSummary": "$180 USD · 8 semanas · $90 USD mensuales",
     "scheduleHeading": "Horario",
     "syllabusHeading": "Programa",
@@ -152,8 +157,8 @@
   },
   "Community": {
     "eyebrow": "Comunidad",
-    "title": "Founders Club existe para que no construyás solo.",
-    "intro": "La comunidad de Founders Club reúne a founders y operadores que quieren avanzar con más criterio, más velocidad y menos ruido. Es un espacio para compartir avances, destrabar decisiones y mantenernos cerca de personas que también están construyendo.",
+    "title": "Una comunidad-incubadora para founders que quieren ejecutar mejor.",
+    "intro": "Founders Club funciona como comunidad-incubadora para founders y operadores que quieren avanzar con más criterio, más velocidad y menos ruido. Es un espacio para compartir avances, destrabar decisiones y construir con apoyo cercano en Nicaragua y Centroamérica.",
     "pillars": [
       {
         "title": "Conexión entre founders",
@@ -328,7 +333,7 @@
       },
       {
         "q": "¿Cuánto cuestan las clases?",
-        "a": "Cada clase tiene un costo y duración distinto. Contactanos al +50588216400 para más información."
+        "a": "El programa actual cuesta $180 USD en total (8 semanas, pagos de $90 USD mensuales). Completá el formulario de prioridad para confirmar tu cupo."
       },
       {
         "q": "¿Cómo me inscribo?",
@@ -378,8 +383,14 @@
     "title": "Dejá de planear. Empezá a construir.",
     "body": "Construimos el ecosistema desde la ejecución: seguí el reto, sumáte a las clases cuando encaje tu etapa, o mirá cómo se decide en público.",
     "instagram": "Seguir en Instagram",
+    "resources": "Ver recursos de IA",
     "newsletterLabel": "Newsletter",
     "newsletterPlaceholder": "tu@email.com"
+  },
+  "EventsSeo": {
+    "lead": "¿Querés acelerar más allá de los eventos? Sumate a las clases en línea de IA o a la comunidad-incubadora de Founders Club.",
+    "classes": "Ver clases de IA",
+    "incubator": "Ver incubadora"
   },
   "Events": {
     "navLabel": "Eventos",

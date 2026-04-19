@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Link } from "@/i18n/navigation";
 import type { EventWithCounts } from "@/lib/events/types";
 import { formatPrice, formatShortDate, isPast, spotsRemaining } from "@/lib/events/format";
+import { getClassesPath, getCommunityPath } from "@/lib/localized-paths";
 
 type Props = {
   events: EventWithCounts[];
@@ -17,7 +18,10 @@ type Props = {
 
 export function EventsList({ events, locale, loadError = false }: Props) {
   const t = useTranslations("Events");
+  const tSeo = useTranslations("EventsSeo");
   const [tab, setTab] = useState<"upcoming" | "past">("upcoming");
+  const classesHref = getClassesPath(locale);
+  const communityHref = getCommunityPath(locale);
 
   const upcoming = events.filter((e) => !isPast(e));
   const past = events.filter((e) => isPast(e));
@@ -61,11 +65,24 @@ export function EventsList({ events, locale, loadError = false }: Props) {
       {displayed.length === 0 ? (
         <p className="mt-12 text-center text-muted-foreground">{emptyMessage}</p>
       ) : (
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {displayed.map((event, i) => (
-            <EventCard key={event.id} event={event} locale={locale} index={i} />
-          ))}
-        </div>
+        <>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {displayed.map((event, i) => (
+              <EventCard key={event.id} event={event} locale={locale} index={i} />
+            ))}
+          </div>
+          <div className="mt-10 rounded-xl border border-border bg-card p-5">
+            <p className="text-sm leading-relaxed text-muted-foreground">{tSeo("lead")}</p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <Link href={classesHref} className="inline-flex rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground">
+                {tSeo("classes")}
+              </Link>
+              <Link href={communityHref} className="inline-flex rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground">
+                {tSeo("incubator")}
+              </Link>
+            </div>
+          </div>
+        </>
       )}
     </div>
   );

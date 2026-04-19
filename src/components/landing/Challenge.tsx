@@ -1,12 +1,15 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { FadeIn } from "@/components/landing/FadeIn";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
+import { Link } from "@/i18n/navigation";
 
 type Block = { label: string; text: string };
 
 export async function Challenge() {
+  const locale = await getLocale();
   const t = await getTranslations("Challenge");
+  const tc = await getTranslations("ChallengeCta");
   const blocks = t.raw("blocks") as Block[];
 
   return (
@@ -25,6 +28,23 @@ export async function Challenge() {
               </article>
             </FadeIn>
           ))}
+        </div>
+        <div className="mt-10 rounded-2xl border border-border bg-card p-6">
+          <p className="text-sm text-muted-foreground">{tc("lead")}</p>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <Link
+              href={locale === "en" ? "/classes" : "/clases"}
+              className="inline-flex rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
+            >
+              {tc("classes")}
+            </Link>
+            <Link
+              href={locale === "en" ? "/community" : "/comunidad"}
+              className="inline-flex rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground"
+            >
+              {tc("incubator")}
+            </Link>
+          </div>
         </div>
       </Container>
     </Section>

@@ -6,16 +6,25 @@ import { EventsList } from "@/components/events/EventsList";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { getPublishedEvents } from "@/lib/events/queries";
+import { getSiteBaseUrl } from "@/lib/site-url";
+import { localeAlternates } from "@/lib/seo-paths";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Events" });
+  const base = getSiteBaseUrl();
+  const path = locale === "en" ? "/en/events" : "/events";
   return {
     title: t("pageTitle"),
     description: t("pageDescription"),
-    alternates: { canonical: "/events" },
+    alternates: localeAlternates(locale, "/events", "/events"),
+    openGraph: {
+      title: t("pageTitle"),
+      description: t("pageDescription"),
+      url: new URL(path, `${base}/`).toString(),
+    },
   };
 }
 

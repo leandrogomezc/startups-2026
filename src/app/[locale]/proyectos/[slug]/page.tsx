@@ -7,6 +7,8 @@ import { ProjectDetail } from "@/components/landing/ProjectDetail";
 import { routing } from "@/i18n/routing";
 import { findRoadmapItemBySlug, getRoadmapSlugs } from "@/lib/roadmap-slugs";
 import type { RoadmapItemMsg } from "@/lib/roadmap-types";
+import { getSiteBaseUrl } from "@/lib/site-url";
+import { localeAlternates } from "@/lib/seo-paths";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -24,12 +26,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "Roadmap" });
   const items = t.raw("items") as RoadmapItemMsg[];
   const project = findRoadmapItemBySlug(items, slug);
+  const base = getSiteBaseUrl();
+  const path = locale === "en" ? `/en/proyectos/${slug}` : `/proyectos/${slug}`;
   if (!project) {
     return { title: "404" };
   }
   return {
     title: project.productName,
     description: project.description,
+    alternates: localeAlternates(locale, `/proyectos/${slug}`, `/proyectos/${slug}`),
+    openGraph: {
+      title: project.productName,
+      description: project.description,
+      url: new URL(path, `${base}/`).toString(),
+    },
   };
 }
 

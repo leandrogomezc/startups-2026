@@ -53,6 +53,7 @@ export function Hero() {
               href={communityHref}
               variant="primary"
               className="min-h-[52px] w-full px-8 text-base font-semibold shadow-lg sm:w-auto"
+              ariaLabel={locale === "en" ? "Startup incubator community in Nicaragua" : "Comunidad incubadora de startups en Nicaragua"}
             >
               <Users className="h-5 w-5 shrink-0" aria-hidden />
               {t("ctaPrimary")}
@@ -62,6 +63,7 @@ export function Hero() {
               href={classesHref}
               variant="secondary"
               className="min-h-[52px] w-full px-8 text-base font-medium sm:w-auto"
+              ariaLabel={locale === "en" ? "Online artificial intelligence classes in Nicaragua" : "Clases en línea de inteligencia artificial en Nicaragua"}
             >
               <GraduationCap className="h-5 w-5 shrink-0" aria-hidden />
               {t("ctaClasses")}

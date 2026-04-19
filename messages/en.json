@@ -60,10 +60,15 @@
       }
     ]
   },
+  "ChallengeCta": {
+    "lead": "If you want faster results, move from the challenge into a guided path with AI classes and incubator-level support.",
+    "classes": "Go to AI classes",
+    "incubator": "See incubator"
+  },
   "Classes": {
     "eyebrow": "Classes",
-    "title": "Hands-on training, going from idea to a tangible product.",
-    "subtitle": "Sessions focused on tools and operational judgment. Workshops, 1:1 mentoring and special guests.",
+    "title": "Online artificial intelligence classes for founders in Nicaragua.",
+    "subtitle": "Hands-on training to move from idea to shipped product with AI, no-code, and execution systems for Central America.",
     "courseSummary": "$180 USD · 8 weeks · $90 USD per month",
     "scheduleHeading": "Schedule",
     "syllabusHeading": "Syllabus",
@@ -152,8 +157,8 @@
   },
   "Community": {
     "eyebrow": "Community",
-    "title": "Founders Club exists so you don't have to build alone.",
-    "intro": "The Founders Club community brings together founders and operators who want to move with more clarity, more speed, and less noise. It's a space to share progress, unblock decisions, and stay close to people who are building too.",
+    "title": "An incubator-style community for founders who want better execution.",
+    "intro": "Founders Club operates as an incubator-style community for founders and operators who want more clarity, speed, and traction. It's a place to share progress, unblock decisions, and build with close support across Nicaragua and Central America.",
     "pillars": [
       {
         "title": "Founder-to-founder connection",
@@ -328,7 +333,7 @@
       },
       {
         "q": "How much do classes cost?",
-        "a": "Each class has a different price and duration. Contact us at +50588216400 for more information."
+        "a": "The current program costs $180 USD total (8 weeks, split into two monthly payments of $90 USD). Fill the priority form to confirm your spot."
       },
       {
         "q": "How do I sign up?",
@@ -378,8 +383,14 @@
     "title": "Stop planning. Start building.",
     "body": "We grow the ecosystem through execution: follow the monthly challenge, join a class when it fits your stage, or watch how decisions happen in public.",
     "instagram": "Follow on Instagram",
+    "resources": "View AI resources",
     "newsletterLabel": "Newsletter",
     "newsletterPlaceholder": "you@email.com"
+  },
+  "EventsSeo": {
+    "lead": "Want to move faster beyond events? Join our online AI classes or the Founders Club incubator community.",
+    "classes": "See AI classes",
+    "incubator": "See incubator"
   },
   "Events": {
     "navLabel": "Events",
