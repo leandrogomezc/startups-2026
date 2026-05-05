@@ -9,6 +9,8 @@ import { getPublishedEvents } from "@/lib/events/queries";
 import { getSiteBaseUrl } from "@/lib/site-url";
 import { localeAlternates } from "@/lib/seo-paths";
 
+export const dynamic = "force-dynamic";
+
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
