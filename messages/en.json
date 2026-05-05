@@ -69,6 +69,7 @@
     "eyebrow": "Classes",
     "title": "Online artificial intelligence classes for founders in Nicaragua.",
     "subtitle": "Hands-on training to move from idea to shipped product with AI, no-code, and execution systems for Central America.",
+    "emptyState": "There are no active cohorts at the moment. New cohorts are being planned.",
     "courseSummary": "$180 USD · 8 weeks · $90 USD per month",
     "scheduleHeading": "Schedule",
     "syllabusHeading": "Syllabus",
@@ -100,53 +101,7 @@
     "formSuccessBody": "We received your request. We'll be in touch soon. This window will close in a few seconds.",
     "formMailSubject": "First cohort priority — From Zero to App",
     "formMailBody": "Name: {name}\nPhone: {phone}\nEmail: {email}",
-    "items": [
-      {
-        "title": "From Zero to App",
-        "description": "A fully hands-on program for founders with or without prior tech experience. Through a guided, step-by-step approach, you go from the basics of programming logic to building and publishing your own working application.",
-        "statusMicrocopy": "May 26, 2026",
-        "schedule": "Starts May 19, 2026 · Tuesdays and Thursdays at 6:30 pm · online",
-        "syllabus": [
-          {
-            "label": "Week 1",
-            "title": "MVP definition, ICP, and smoke tests"
-          },
-          {
-            "label": "Week 2",
-            "title": "Key indicators for your startup"
-          },
-          {
-            "label": "Week 3",
-            "title": "Full-stack products with Lovable"
-          },
-          {
-            "label": "Week 4",
-            "title": "Introduction to GitHub, Vercel, and Supabase"
-          },
-          {
-            "label": "Week 5",
-            "title": "Automations with n8n"
-          },
-          {
-            "label": "Week 6",
-            "title": "Build your first chatbot with Cursor"
-          },
-          {
-            "label": "Week 7",
-            "title": "HITL and admin platforms"
-          },
-          {
-            "label": "Week 8",
-            "title": "Cybersecurity in your AI projects"
-          },
-          {
-            "label": "Final day",
-            "title": "Pitch Day"
-          }
-        ],
-        "footnote": "Enrollment: submit the priority form; we'll confirm payment options."
-      }
-    ]
+    "items": []
   },
   "ClassesTeaser": {
     "highlight": "Current cohort",

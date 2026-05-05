@@ -69,6 +69,7 @@
     "eyebrow": "Clases",
     "title": "Clases en línea de inteligencia artificial para founders en Nicaragua.",
     "subtitle": "Formación práctica para pasar de idea a producto con IA, no-code y sistemas de ejecución aplicados a Centroamérica.",
+    "emptyState": "No hay cohortes activas en este momento. Próximas cohortes en planificación.",
     "courseSummary": "$180 USD · 8 semanas · $90 USD mensuales",
     "scheduleHeading": "Horario",
     "syllabusHeading": "Programa",
@@ -100,53 +101,7 @@
     "formSuccessBody": "Recibimos tu solicitud. Te contactaremos pronto. Esta ventana se cerrará en unos segundos.",
     "formMailSubject": "Prioridad primera edición — De 0 a Aplicación",
     "formMailBody": "Nombre: {name}\nTeléfono: {phone}\nCorreo: {email}",
-    "items": [
-      {
-        "title": "De 0 a Aplicación",
-        "description": "Es un programa 100% práctico diseñado para founders con o sin experiencia previa en tecnología. A través de un enfoque guiado y paso a paso, llevándote desde los conceptos más básicos de la lógica de programación hasta la creación y publicación de tu propia aplicación funcional.",
-        "statusMicrocopy": "26 de mayo 2026",
-        "schedule": "Inicio 19 de mayo de 2026 · martes y jueves a las 6:30 pm · en línea",
-        "syllabus": [
-          {
-            "label": "Semana 1",
-            "title": "Definición del MVP, ICP y smoke tests"
-          },
-          {
-            "label": "Semana 2",
-            "title": "Indicadores claves para tu startup"
-          },
-          {
-            "label": "Semana 3",
-            "title": "Productos full stack con Lovable"
-          },
-          {
-            "label": "Semana 4",
-            "title": "Introducción a GitHub, Vercel y Supabase"
-          },
-          {
-            "label": "Semana 5",
-            "title": "Automatizaciones con n8n"
-          },
-          {
-            "label": "Semana 6",
-            "title": "Creá tu primer chatbot con Cursor"
-          },
-          {
-            "label": "Semana 7",
-            "title": "HITL y plataformas administrativas"
-          },
-          {
-            "label": "Semana 8",
-            "title": "Ciberseguridad en tus proyectos con IA"
-          },
-          {
-            "label": "Último día",
-            "title": "Pitch Day"
-          }
-        ],
-        "footnote": "Inscripción: completá el formulario de prioridad; te confirmamos medios de pago."
-      }
-    ]
+    "items": []
   },
   "ClassesTeaser": {
     "highlight": "Programa actual",
