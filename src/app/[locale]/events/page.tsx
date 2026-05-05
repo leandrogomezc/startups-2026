@@ -26,6 +26,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("pageTitle"),
       description: t("pageDescription"),
       url: new URL(path, `${base}/`).toString(),
+      images: [
+        {
+          url: locale === "en" ? "/en/opengraph-image" : "/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: t("pageTitle"),
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("pageTitle"),
+      description: t("pageDescription"),
+      images: [locale === "en" ? "/en/opengraph-image" : "/opengraph-image"],
     },
   };
 }
